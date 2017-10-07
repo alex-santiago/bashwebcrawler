@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Cache coherence - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Cache_coherence","wgTitle":"Cache coherence","wgCurRevisionId":803464407,"wgRevisionId":803464407,"wgArticleId":176865,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Cache coherency","Parallel computing","Concurrent computing","Consistency models"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Cache_coherence","wgRelevantArticleId":176865,"wgRequestId":"WdKDBQpAAEQAAA0Gv2cAAAAS","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgPopupsShouldSendModuleToUser":false,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1025017","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["ext.cite.a11y","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.charinsert-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.0-wmf.1"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/ea/Non_Coherent.gif"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Cache_coherence"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Cache_coherence&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Cache_coherence&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Cache_coherence"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Cache_coherence rootpage-Cache_coherence vector-nav-directionality skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Cache coherence</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright">
+<div class="thumbinner" style="width:372px;"><a href="/wiki/File:Cache_Coherency_Generic.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cache_Coherency_Generic.png/370px-Cache_Coherency_Generic.png" width="370" height="159" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cache_Coherency_Generic.png/555px-Cache_Coherency_Generic.png 1.5x, //upload.wikimedia.org/wikipedia/commons/a/a1/Cache_Coherency_Generic.png 2x" data-file-width="607" data-file-height="261" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Cache_Coherency_Generic.png" class="internal" title="Enlarge"></a></div>
+An illustration showing multiple caches of some memory, which acts as a shared resource</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Non_Coherent.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Non_Coherent.gif/220px-Non_Coherent.gif" width="220" height="123" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Non_Coherent.gif/330px-Non_Coherent.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Non_Coherent.gif/440px-Non_Coherent.gif 2x" data-file-width="640" data-file-height="359" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Non_Coherent.gif" class="internal" title="Enlarge"></a></div>
+Incoherent caches: The caches have different values of a single address location.</div>
+</div>
+</div>
+<p>In <a href="/wiki/Computer_architecture" title="Computer architecture">computer architecture</a>, <b>cache coherence</b> is the uniformity of shared resource data that ends up stored in multiple <a href="/wiki/Cache_(computing)" title="Cache (computing)">local caches</a>. When clients in a system maintain <a href="/wiki/CPU_cache" title="CPU cache">caches</a> of a common memory resource, problems may arise with incoherent data, which is particularly the case with <a href="/wiki/Central_processing_unit" title="Central processing unit">CPUs</a> in a <a href="/wiki/Multiprocessing" title="Multiprocessing">multiprocessing</a> system.</p>
+<p>In the illustration on the right, consider both the clients have a cached copy of a particular memory block from a previous read. Suppose the client on the bottom updates/changes that memory block, the client on the top could be left with an invalid cache of memory without any notification of the change. Cache coherence is intended to manage such conflicts by maintaining a coherent view of the data values in multiple caches.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Coherent.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/88/Coherent.gif/220px-Coherent.gif" width="220" height="123" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/88/Coherent.gif/330px-Coherent.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/88/Coherent.gif/440px-Coherent.gif 2x" data-file-width="640" data-file-height="359" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Coherent.gif" class="internal" title="Enlarge"></a></div>
+Coherent caches: The data in all the caches' copies is the same.</div>
+</div>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div class="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Definition"><span class="tocnumber">2</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Coherence_mechanisms"><span class="tocnumber">3</span> <span class="toctext">Coherence mechanisms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Snooping"><span class="tocnumber">3.1</span> <span class="toctext">Snooping</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Directory-based"><span class="tocnumber">3.2</span> <span class="toctext">Directory-based</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Coherence_protocols"><span class="tocnumber">4</span> <span class="toctext">Coherence protocols</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a <a href="/wiki/Shared_memory_architecture" class="mw-redirect" title="Shared memory architecture">shared memory</a> multiprocessor system with a separate cache memory for each processor, it is possible to have many copies of shared data: one copy in the main memory and one in the local cache of each processor that requested it. When one of the copies of data is changed, the other copies must reflect that change. Cache coherence is the discipline which ensures that the changes in the values of shared operands(data) are propagated throughout the system in a timely fashion.<sup id="cite_ref-:1_1-0" class="reference"><a href="#cite_note-:1-1">[1]</a></sup></p>
+<p>The following are the requirements for cache coherence:<sup id="cite_ref-:0_2-0" class="reference"><a href="#cite_note-:0-2">[2]</a></sup></p>
+<dl>
+<dt>Write Propagation</dt>
+<dd>Changes to the data in any cache must be propagated to other copies(of that cache line) in the peer caches.</dd>
+<dt>Transaction Serialization</dt>
+<dd>Reads/Writes to a single memory location must be seen by all processors in the same order.</dd>
+</dl>
+<p>Theoretically, coherence can be performed at the load/store <a href="/wiki/Granularity" title="Granularity">granularity</a>. However, in practice it is generally performed at the granularity of cache blocks.<sup id="cite_ref-:2_3-0" class="reference"><a href="#cite_note-:2-3">[3]</a></sup></p>
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=2" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Coherence defines the behavior of reads and writes to a single address location.<sup id="cite_ref-:0_2-1" class="reference"><a href="#cite_note-:0-2">[2]</a></sup></p>
+<p>In a multiprocessor system, consider that more than one processor has cached a copy of the memory location X. The following conditions are necessary to achieve cache coherence:<sup id="cite_ref-:3_4-0" class="reference"><a href="#cite_note-:3-4">[4]</a></sup></p>
+<ol>
+<li>In a read made by a processor P to a location X that follows a write by the same processor P to X, with no writes to X by another processor occurring between the write and the read instructions made by P, X must always return the value written by P.</li>
+<li>In a read made by a processor P1 to location X that follows a write by another processor P2 to X, with no other writes to X made by any processor occurring between the two accesses and with the read and write being sufficiently separated, X must always return the value written by P2. This condition defines the concept of coherent view of memory. Propagating the writes to the shared memory location ensures that all the caches have a coherent view of the memory. If processor P1 reads the old value of X, even after the write by P2, we can say that the memory is incoherent.</li>
+</ol>
+<p>The above conditions satisfy the Write Propagation criteria required for cache coherence. However, they are not sufficient as they do not satisfy the Transaction Serialization condition. To illustrate this better, consider the following example:</p>
+<p>A multi-processor system consists of four processors - P1, P2, P3 and P4, all containing cached copies of a shared variable <i>S</i> whose initial value is 0. Processor P1 changes the value of <i>S</i> (in its cached copy) to 10 following which processor P2 changes the value of <i>S</i> in its own cached copy to 20. If we ensure only write propagation, then P3 and P4 will certainly see the changes made to <i>S</i> by P1 and P2. However, P3 may see the change made by P1 after seeing the change made by P2 and hence return 10 on a read to <i>S</i>. P4 on the other hand may see changes made by P1 and P2 in the order in which they are made and hence return 20 on a read to <i>S</i>. The processors P3 and P4 now have an incoherent view of the memory.</p>
+<p>Therefore, in order to satisfy Transaction Serialization, and hence achieve Cache Coherence, the following condition along with the previous two mentioned in this section must be met:</p>
+<ul>
+<li>Writes to the same location must be sequenced. In other words, if location X received two different values A and B, in this order, from any two processors, the processors can never read location X as B and then read it as A. The location X must be seen with values A and B in that order.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></li>
+</ul>
+<p>The alternative definition of a coherent system is via the definition of <a href="/wiki/Sequential_consistency" title="Sequential consistency">sequential consistency</a> memory model: "the cache coherent system must appear to execute all threads’ loads and stores to a <i>single</i> memory location in a total order that respects the program order of each thread".<sup id="cite_ref-:2_3-1" class="reference"><a href="#cite_note-:2-3">[3]</a></sup> Thus, the only difference between the cache coherent system and sequentially consistent system is in the number of address locations the definition talks about (single memory location for a cache coherent system, and all memory locations for a sequentially consistent system).</p>
+<p>Another definition is: "a multiprocessor is cache consistent if all writes to the same memory location are performed in some sequential order".<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p>Rarely, but especially in algorithms, coherence can instead refer to the <a href="/wiki/Locality_of_reference" title="Locality of reference">locality of reference</a>.</p>
+<h2><span class="mw-headline" id="Coherence_mechanisms">Coherence mechanisms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=3" title="Edit section: Coherence mechanisms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The two most common mechanisms of ensuring coherency are <i><a href="/wiki/Bus_sniffing" class="mw-redirect" title="Bus sniffing">snooping</a></i> and <i><a href="/wiki/Directory-based_cache_coherence" title="Directory-based cache coherence">directory-based</a></i>, each having their own benefits and drawbacks. Snooping based protocols tend to be faster, if enough <a href="/wiki/Memory_bandwidth" title="Memory bandwidth">bandwidth</a> is available, since all transactions are a request/response seen by all processors. The drawback is that snooping isn't scalable. Every request must be broadcast to all nodes in a system, meaning that as the system gets larger, the size of the (logical or physical) bus and the bandwidth it provides must grow. Directories, on the other hand, tend to have longer latencies (with a 3 hop request/forward/respond) but use much less bandwidth since messages are point to point and not broadcast. For this reason, many of the larger systems (&gt;64 processors) use this type of cache coherence.</p>
+<h3><span class="mw-headline" id="Snooping"><a href="/wiki/Bus_sniffing" class="mw-redirect" title="Bus sniffing">Snooping</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=4" title="Edit section: Snooping">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl>
+<dd>First introduced in 1983,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> snooping is a process where the individual caches monitor address lines for accesses to memory locations that they have cached.<sup id="cite_ref-:3_4-1" class="reference"><a href="#cite_note-:3-4">[4]</a></sup> The <i><b>write invalidate protocols</b></i> and <i><b>write update protocols</b></i> make use of this mechanism.</dd>
+<dd>For the snooping mechanism, a snoop filter reduces the snooping traffic by maintaining a plurality of entries, each representing a cache line that may be owned by one or more nodes. When replacement of one of the entries is required, the snoop filter selects for replacement the entry representing the cache line or lines owned by the fewest nodes, as determined from a presence vector in each of the entries. A temporal or other type of algorithm is used to refine the selection if more than one cache line is owned by the fewest number of nodes.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></dd>
+</dl>
+<h3><span class="mw-headline" id="Directory-based">Directory-based</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=5" title="Edit section: Directory-based">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Directory-based_cache_coherence" title="Directory-based cache coherence">Directory-based cache coherence</a></div>
+<dl>
+<dd>In a directory-based system, the data being shared is placed in a common directory that maintains the coherence between caches. The directory acts as a filter through which the processor must ask permission to load an entry from the primary memory to its cache. When an entry is changed, the directory either updates or invalidates the other caches with that entry.</dd>
+</dl>
+<p><a href="/wiki/Distributed_shared_memory" title="Distributed shared memory">Distributed shared memory</a> systems mimic these mechanisms in an attempt to maintain consistency between blocks of memory in loosely coupled systems.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<h2><span class="mw-headline" id="Coherence_protocols">Coherence protocols</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=6" title="Edit section: Coherence protocols">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Coherence Protocols apply cache coherence in multiprocessor systems. The intention is that two clients must never see different values of the same shared data.</p>
+<p>The protocol must implement the basic requirements for coherence. It can be tailor made for the target system/application.</p>
+<p>Protocols can also be classified as Snooping(Snoopy/Broadcast) or Directory based. Typically, early systems used directory based protocols where a directory would keep a track of the data being shared and the sharers. In Snoopy protocols , the transaction request. (read/write/upgrade) are sent out to all processors. All processors snoop the request and respond appropriately.</p>
+<p>Write Propagation in Snoopy protocols can be implemented by either of the following:</p>
+<dl>
+<dt>Write Invalidate</dt>
+<dd>When a write operation is observed to a location that a cache has a copy of, the cache controller invalidates its own copy of the snooped memory location,and thus forcing reads from main memory of the new value on their next access.<sup id="cite_ref-:3_4-2" class="reference"><a href="#cite_note-:3-4">[4]</a></sup></dd>
+<dt>Write Update</dt>
+<dd>When a write operation is observed to a location that a cache has a copy of, the cache controller updates its own copy of the snooped memory location with the new data.</dd>
+</dl>
+<p>If the protocol design states that whenever any copy of the shared data is changed, all the other copies must be "updated" to reflect the change, then it is a <i><b>write update</b></i> protocol. If the design states that on a write to a cached copy by any processor requires other processors to discard/invalidate their cached copies, then it is a <i><b>write invalidate</b></i> protocol.</p>
+<p>However, scalability is one shortcoming of broadcast protocols.</p>
+<p>Various models and protocols have been devised for maintaining coherence, such as <a href="/wiki/MSI_protocol" title="MSI protocol">MSI</a>, <a href="/wiki/MESI_protocol" title="MESI protocol">MESI</a> (aka Illinois), <a href="/wiki/MOSI_protocol" title="MOSI protocol">MOSI</a>, <a href="/wiki/MOESI_protocol" title="MOESI protocol">MOESI</a>, <a href="/wiki/MERSI_protocol" title="MERSI protocol">MERSI</a>, <a href="/wiki/MESIF_protocol" title="MESIF protocol">MESIF</a>, <a href="/wiki/Write-once_(cache_coherence)" title="Write-once (cache coherence)">write-once</a>, and Synapse, Berkeley, <a href="/wiki/Firefly_(cache_coherence_protocol)" title="Firefly (cache coherence protocol)">Firefly</a> and <a href="/wiki/Dragon_protocol" title="Dragon protocol">Dragon protocol</a>.<sup id="cite_ref-:1_1-1" class="reference"><a href="#cite_note-:1-1">[1]</a></sup> In 2011, <a href="/wiki/ARM_Ltd" class="mw-redirect" title="ARM Ltd">ARM Ltd</a> proposed the AMBA 4 ACE<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> for handling coherency in <a href="/wiki/System_on_a_chip" title="System on a chip">SoC</a>s.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="/wiki/File:Internet_map_1024.jpg" class="image"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/28px-Internet_map_1024.jpg" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/42px-Internet_map_1024.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/56px-Internet_map_1024.jpg 2x" data-file-width="1280" data-file-height="1280" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="/wiki/Portal:Computer_science" title="Portal:Computer science">Computer science portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="/wiki/Memory_barrier" title="Memory barrier">Memory barrier</a></li>
+<li><a href="/wiki/Non-uniform_memory_access" title="Non-uniform memory access">Non-uniform memory access</a> (NUMA)</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-:1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-:1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">E. Thomadakis, Michael (2011). <a rel="nofollow" class="external text" href="http://sc.tamu.edu/systems/eos/nehalem.pdf"><i>The Architecture of the Nehalem Processor and Nehalem-EP SMP Platforms</i></a> <span style="font-size:85%;">(PDF)</span>. Texas A&amp;M University. p.&#160;30.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.aufirst=Michael&amp;rft.aulast=E.+Thomadakis&amp;rft.btitle=The+Architecture+of+the+Nehalem+Processor+and+Nehalem-EP+SMP+Platforms&amp;rft.date=2011&amp;rft.genre=book&amp;rft.pages=30&amp;rft.pub=Texas+A%26M+University&amp;rft_id=http%3A%2F%2Fsc.tamu.edu%2Fsystems%2Feos%2Fnehalem.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:0-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Yan,, Solihin,. <a rel="nofollow" class="external text" href="https://www.worldcat.org/oclc/884540034"><i>Fundamentals of parallel multicore architecture</i></a>. <a href="/wiki/OCLC" title="OCLC">OCLC</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/oclc/884540034">884540034</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.aufirst=Solihin%2C&amp;rft.aulast=Yan%2C&amp;rft.btitle=Fundamentals+of+parallel+multicore+architecture&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.worldcat.org%2Foclc%2F884540034&amp;rft_id=info%3Aoclcnum%2F884540034&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:2-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-:2_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:2_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Donald), Hill, Mark D. (Mark; Allen., Wood, David (2011-01-01). <a rel="nofollow" class="external text" href="https://www.worldcat.org/oclc/726930429"><i>A primer on memory consistency and cache coherence</i></a>. Morgan &amp; Claypool Publishers. <a href="/wiki/OCLC" title="OCLC">OCLC</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/oclc/726930429">726930429</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.au=Allen.%2C+Wood%2C+David&amp;rft.aufirst=Hill%2C+Mark+D.+%28Mark&amp;rft.aulast=Donald%29&amp;rft.btitle=A+primer+on+memory+consistency+and+cache+coherence&amp;rft.date=2011-01-01&amp;rft.genre=book&amp;rft.pub=Morgan+%26+Claypool+Publishers&amp;rft_id=https%3A%2F%2Fwww.worldcat.org%2Foclc%2F726930429&amp;rft_id=info%3Aoclcnum%2F726930429&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:3-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-:3_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:3_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:3_4-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Patterson and Hennessy. <i>Computer Organization and Design - 4th Edition</i>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-12-374493-7" title="Special:BookSources/978-0-12-374493-7">978-0-12-374493-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.au=Patterson+and+Hennessy&amp;rft.btitle=Computer+Organization+and+Design+-+4th+Edition&amp;rft.genre=book&amp;rft.isbn=978-0-12-374493-7&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Neupane, Mahesh (April 16, 2004). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20100620091706/http://cse.csusb.edu/schubert/tutorials/csci610/w04/MN_Cache_Coherence.pdf">"Cache Coherence"</a> (PDF). Archived from <a rel="nofollow" class="external text" href="http://cse.csusb.edu/schubert/tutorials/csci610/w04/MN_Cache_Coherence.pdf">the original</a> (PDF) on 20 June 2010.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation journal">Steinke, Robert C.; Nutt, Gary J. (2004-09-01). <a rel="nofollow" class="external text" href="http://doi.acm.org/10.1145/1017460.1017464">"A Unified Theory of Shared Memory Consistency"</a>. <i>J. ACM</i>. <b>51</b> (5): 800–849. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0004-5411">0004-5411</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F1017460.1017464">10.1145/1017460.1017464</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.atitle=A+Unified+Theory+of+Shared+Memory+Consistency&amp;rft.au=Nutt%2C+Gary+J.&amp;rft.aufirst=Robert+C.&amp;rft.aulast=Steinke&amp;rft.date=2004-09-01&amp;rft.genre=article&amp;rft.issn=0004-5411&amp;rft.issue=5&amp;rft.jtitle=J.+ACM&amp;rft.pages=800-849&amp;rft.volume=51&amp;rft_id=http%3A%2F%2Fdoi.acm.org%2F10.1145%2F1017460.1017464&amp;rft_id=info%3Adoi%2F10.1145%2F1017460.1017464&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal"><a rel="nofollow" class="external text" href="http://www.cs.ucr.edu/~ravi/Papers/NWConf/ravishankar_83.pdf">"Ravishankar, Chinya; Goodman, James (February 28, 1983). "Cache Implementation for Multiple Microprocessors<span style="padding-right:0.2em;">"</span>"</a> <span style="font-size:85%;">(PDF)</span>. <i>Proceedings of IEEE COMPCON: 346–350</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.atitle=Ravishankar%2C+Chinya%3B+Goodman%2C+James+%28February+28%2C+1983%29.+%22Cache+Implementation+for+Multiple+Microprocessors%22&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+IEEE+COMPCON%3A+346%E2%80%93350.&amp;rft_id=http%3A%2F%2Fwww.cs.ucr.edu%2F~ravi%2FPapers%2FNWConf%2Fravishankar_83.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Rasmus Ulfsnes (June 2013). <a rel="nofollow" class="external text" href="http://www.diva-portal.org/smash/get/diva2:649627/FULLTEXT01.pdf">"Design of a Snoop Filter for Snoop-Based Cache Coherency Protocols"</a> (PDF). <i>diva-portal.org</i>. Norwegian University of Science and Technology. Retrieved 2014-01-20.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://people.eecs.berkeley.edu/~pattrsn/252F96/Lecture18.pdf">https://people.eecs.berkeley.edu/~pattrsn/252F96/Lecture18.pdf</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation book">Kriouile. <i>Formal Analysis of the ACE Specification for Cache Coherent Systems-on-Chip. In Formal Methods for Industrial Critical Systems</i>. Springer Berlin Heidelberg. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-642-41010-9" title="Special:BookSources/978-3-642-41010-9">978-3-642-41010-9</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.au=Kriouile&amp;rft.btitle=Formal+Analysis+of+the+ACE+Specification+for+Cache+Coherent+Systems-on-Chip.+In+Formal+Methods+for+Industrial+Critical+Systems&amp;rft.genre=book&amp;rft.isbn=978-3-642-41010-9&amp;rft.pub=Springer+Berlin+Heidelberg&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cache_coherence&amp;action=edit&amp;section=9" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation book"><a href="/wiki/David_Patterson_(scientist)" class="mw-redirect" title="David Patterson (scientist)">Patterson, David</a>; <a href="/wiki/John_L._Hennessy" title="John L. Hennessy">Hennessy, John</a> (2009). <i>Computer Organization and Design</i> (4th ed.). <a href="/wiki/Morgan_Kaufmann" class="mw-redirect" title="Morgan Kaufmann">Morgan Kaufmann</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-12-374493-7" title="Special:BookSources/978-0-12-374493-7">978-0-12-374493-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.au=Hennessy%2C+John&amp;rft.aufirst=David&amp;rft.aulast=Patterson&amp;rft.btitle=Computer+Organization+and+Design&amp;rft.date=2009&amp;rft.edition=4th&amp;rft.genre=book&amp;rft.isbn=978-0-12-374493-7&amp;rft.pub=Morgan+Kaufmann&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Handy, Jim (1998). <i>The Cache Memory Book</i> (2nd ed.). <a href="/wiki/Morgan_Kaufmann" class="mw-redirect" title="Morgan Kaufmann">Morgan Kaufmann</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780123229809" title="Special:BookSources/9780123229809">9780123229809</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.aufirst=Jim&amp;rft.aulast=Handy&amp;rft.btitle=The+Cache+Memory+Book&amp;rft.date=1998&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=9780123229809&amp;rft.pub=Morgan+Kaufmann&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Sorin, Daniel; Hill, Mark; Wood, David (2011). <a rel="nofollow" class="external text" href="https://class.stanford.edu/c4x/Engineering/CS316/asset/A_Primer_on_Memory_Consistency_and_Coherence.pdf"><i>A Primer on Memory Consistency and Cache Coherence</i></a> <span style="font-size:85%;">(PDF)</span>. <a href="/w/index.php?title=Morgan_and_Claypool&amp;action=edit&amp;redlink=1" class="new" title="Morgan and Claypool (page does not exist)">Morgan and Claypool</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1608455645" title="Special:BookSources/978-1608455645">978-1608455645</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.au=Hill%2C+Mark&amp;rft.au=Wood%2C+David&amp;rft.aufirst=Daniel&amp;rft.aulast=Sorin&amp;rft.btitle=A+Primer+on+Memory+Consistency+and+Cache+Coherence&amp;rft.date=2011&amp;rft.genre=book&amp;rft.isbn=978-1608455645&amp;rft.pub=Morgan+and+Claypool&amp;rft_id=https%3A%2F%2Fclass.stanford.edu%2Fc4x%2FEngineering%2FCS316%2Fasset%2FA_Primer_on_Memory_Consistency_and_Coherence.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Steinke, Robert C.; Nutt, Gary J. (1 September 2004). "A unified theory of shared memory consistency". <i>Journal of the ACM</i>. <b>51</b> (5): 800–849. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F1017460.1017464">10.1145/1017460.1017464</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACache+coherence&amp;rft.atitle=A+unified+theory+of+shared+memory+consistency&amp;rft.au=Nutt%2C+Gary+J.&amp;rft.aufirst=Robert+C.&amp;rft.aulast=Steinke&amp;rft.date=2004-09-01&amp;rft.genre=article&amp;rft.issue=5&amp;rft.jtitle=Journal+of+the+ACM&amp;rft.pages=800-849&amp;rft.volume=51&amp;rft_id=info%3Adoi%2F10.1145%2F1017460.1017464&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Parallel_computing" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Parallel_computing" title="Template:Parallel computing"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Parallel_computing" title="Template talk:Parallel computing"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Parallel_computing&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Parallel_computing" style="font-size:114%;margin:0 4em"><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></div>
+</th>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">General</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Distributed_computing" title="Distributed computing">Distributed computing</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></li>
+<li><a href="/wiki/Massively_parallel" title="Massively parallel">Massively parallel</a></li>
+<li><a href="/wiki/Cloud_computing" title="Cloud computing">Cloud computing</a></li>
+<li><a href="/wiki/Supercomputer" title="Supercomputer">High-performance computing</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Manycore_processor" title="Manycore processor">Manycore processor</a></li>
+<li><a href="/wiki/General-purpose_computing_on_graphics_processing_units" title="General-purpose computing on graphics processing units">GPGPU</a></li>
+<li><a href="/wiki/Computer_network" title="Computer network">Computer network</a></li>
+<li><a href="/wiki/Systolic_array" title="Systolic array">Systolic array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Levels</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bit-level_parallelism" title="Bit-level parallelism">Bit</a></li>
+<li><a href="/wiki/Instruction-level_parallelism" title="Instruction-level parallelism">Instruction</a></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Thread</a></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Task</a></li>
+<li><a href="/wiki/Data_parallelism" title="Data parallelism">Data</a></li>
+<li><a href="/wiki/Memory-level_parallelism" title="Memory-level parallelism">Memory</a></li>
+<li><a href="/wiki/Loop-level_parallelism" title="Loop-level parallelism">Loop</a></li>
+<li><a href="/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Temporal_multithreading" title="Temporal multithreading">Temporal</a></li>
+<li><a href="/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">Simultaneous</a> (SMT)</li>
+<li><a href="/wiki/Speculative_multithreading" title="Speculative multithreading">Speculative</a> (SpMT)</li>
+<li><a href="/wiki/Preemption_(computing)" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="/wiki/Computer_multitasking#Cooperative_multitasking" title="Computer multitasking">Cooperative</a></li>
+<li><a href="/wiki/Bulldozer_(microarchitecture)#Bulldozer_core" title="Bulldozer (microarchitecture)">Clustered Multi-Thread</a> (CMT)</li>
+<li><a href="/wiki/Hardware_scout" title="Hardware scout">Hardware scout</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Theory</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Parallel_random-access_machine" title="Parallel random-access machine">PRAM model</a></li>
+<li><a href="/wiki/Analysis_of_parallel_algorithms" title="Analysis of parallel algorithms">Analysis of parallel algorithms</a></li>
+<li><a href="/wiki/Amdahl%27s_law" title="Amdahl's law">Amdahl's law</a></li>
+<li><a href="/wiki/Gustafson%27s_law" title="Gustafson's law">Gustafson's law</a></li>
+<li><a href="/wiki/Cost_efficiency" title="Cost efficiency">Cost efficiency</a></li>
+<li><a href="/wiki/Karp%E2%80%93Flatt_metric" title="Karp–Flatt metric">Karp–Flatt metric</a></li>
+<li><a href="/wiki/Parallel_slowdown" title="Parallel slowdown">Slowdown</a></li>
+<li><a href="/wiki/Speedup" title="Speedup">Speedup</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Elements</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Process_(computing)" title="Process (computing)">Process</a></li>
+<li><a href="/wiki/Thread_(computing)" title="Thread (computing)">Thread</a></li>
+<li><a href="/wiki/Fiber_(computer_science)" title="Fiber (computer science)">Fiber</a></li>
+<li><a href="/wiki/Instruction_window" title="Instruction window">Instruction window</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Coordination</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Memory_coherence" title="Memory coherence">Memory coherency</a></li>
+<li><a class="mw-selflink selflink">Cache coherency</a></li>
+<li><a href="/wiki/Cache_invalidation" title="Cache invalidation">Cache invalidation</a></li>
+<li><a href="/wiki/Barrier_(computer_science)" title="Barrier (computer science)">Barrier</a></li>
+<li><a href="/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">Synchronization</a></li>
+<li><a href="/wiki/Application_checkpointing" title="Application checkpointing">Application checkpointing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_programming" title="Computer programming">Programming</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Stream_processing" title="Stream processing">Stream processing</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow programming</a></li>
+<li><a href="/wiki/Parallel_programming_model" title="Parallel programming model">Models</a>
+<ul>
+<li><a href="/wiki/Implicit_parallelism" title="Implicit parallelism">Implicit parallelism</a></li>
+<li><a href="/wiki/Explicit_parallelism" title="Explicit parallelism">Explicit parallelism</a></li>
+<li><a href="/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">Concurrency</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Non-blocking_algorithm" title="Non-blocking algorithm">Non-blocking algorithm</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_hardware" title="Computer hardware">Hardware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Flynn%27s_taxonomy" title="Flynn's taxonomy">Flynn's taxonomy</a>
+<ul>
+<li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/Single_instruction,_multiple_threads" title="Single instruction, multiple threads">SIMT</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Dataflow_architecture" title="Dataflow architecture">Dataflow architecture</a></li>
+<li><a href="/wiki/Instruction_pipelining" title="Instruction pipelining">Pipelined processor</a></li>
+<li><a href="/wiki/Superscalar_processor" title="Superscalar processor">Superscalar processor</a></li>
+<li><a href="/wiki/Vector_processor" title="Vector processor">Vector processor</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessor</a>
+<ul>
+<li><a href="/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">symmetric</a></li>
+<li><a href="/wiki/Asymmetric_multiprocessing" title="Asymmetric multiprocessing">asymmetric</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Semiconductor_memory" title="Semiconductor memory">Memory</a>
+<ul>
+<li><a href="/wiki/Shared_memory" title="Shared memory">shared</a></li>
+<li><a href="/wiki/Distributed_memory" title="Distributed memory">distributed</a></li>
+<li><a href="/wiki/Distributed_shared_memory" title="Distributed shared memory">distributed shared</a></li>
+<li><a href="/wiki/Uniform_memory_access" title="Uniform memory access">UMA</a></li>
+<li><a href="/wiki/Non-uniform_memory_access" title="Non-uniform memory access">NUMA</a></li>
+<li><a href="/wiki/Cache-only_memory_architecture" title="Cache-only memory architecture">COMA</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Massively_parallel" title="Massively parallel">Massively parallel computer</a></li>
+<li><a href="/wiki/Computer_cluster" title="Computer cluster">Computer cluster</a></li>
+<li><a href="/wiki/Grid_computing" title="Grid computing">Grid computer</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Application_programming_interface" title="Application programming interface">APIs</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Ateji_PX" title="Ateji PX">Ateji PX</a></li>
+<li><a href="/wiki/Boost_(C%2B%2B_libraries)#Multithreading_.E2.80.93_Boost.Thread" title="Boost (C++ libraries)">Boost.Thread</a></li>
+<li><a href="/wiki/Charm%2B%2B" title="Charm++">Charm++</a></li>
+<li><a href="/wiki/Cilk" title="Cilk">Cilk</a></li>
+<li><a href="/wiki/Coarray_Fortran" title="Coarray Fortran">Coarray Fortran</a></li>
+<li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><a href="/wiki/Dryad_(programming)" title="Dryad (programming)">Dryad</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/Global_Arrays" title="Global Arrays">Global Arrays</a></li>
+<li><a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><a href="/wiki/OpenHMPP" title="OpenHMPP">OpenHMPP</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/Parallel_Extensions#Task_Parallel_Library" title="Parallel Extensions">TPL</a></li>
+<li><a href="/wiki/Parallel_Extensions#PLINQ" title="Parallel Extensions">PLINQ</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX_Threads" title="POSIX Threads">POSIX Threads</a></li>
+<li><a href="/wiki/RaftLib" title="RaftLib">RaftLib</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li>
+<li><a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">TBB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Problems</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Embarrassingly_parallel" title="Embarrassingly parallel">Embarrassingly parallel</a></li>
+<li><a href="/wiki/Software_lockout" title="Software lockout">Software lockout</a></li>
+<li><a href="/wiki/Scalability" title="Scalability">Scalability</a></li>
+<li><a href="/wiki/Race_condition#Computing" title="Race condition">Race condition</a></li>
+<li><a href="/wiki/Deadlock" title="Deadlock">Deadlock</a></li>
+<li><a href="/wiki/Deadlock#Livelock" title="Deadlock">Livelock</a></li>
+<li><a href="/wiki/Starvation_(computer_science)" title="Starvation (computer science)">Starvation</a></li>
+<li><a href="/wiki/Deterministic_algorithm" title="Deterministic algorithm">Deterministic algorithm</a></li>
+<li><a href="/wiki/Parallel_slowdown" title="Parallel slowdown">Parallel slowdown</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" />&#160;<a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Category: parallel computing</a></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Parallel_computing" class="extiw" title="c:Category:Parallel computing">Parallel computing</a> at Wikimedia Commons</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1277
+Cached time: 20171002181656
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.160 seconds
+Real time usage: 0.207 seconds
+Preprocessor visited node count: 722/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 41413/2097152 bytes
+Template argument size: 147/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+Lua time usage: 0.068/10.000 seconds
+Lua memory usage: 3.54 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  148.395      1 -total
+ 53.16%   78.890      1 Template:Reflist
+ 39.53%   58.660      8 Template:Cite_book
+ 15.21%   22.575      1 Template:Main
+ 13.97%   20.732      1 Template:Parallel_computing
+ 12.08%   17.923      1 Template:Navbox
+  8.40%   12.472      3 Template:Cite_journal
+  6.14%    9.117      1 Template:Portal
+  5.14%    7.634      1 Template:Category-inline
+  4.80%    7.124      2 Template:Icon
+-->
+</div>
+<!-- Saved in parser cache with key enwiki:pcache:idhash:176865-0!canonical and timestamp 20171002181656 and revision id 803464407
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Cache_coherence&amp;oldid=803464407">https://en.wikipedia.org/w/index.php?title=Cache_coherence&amp;oldid=803464407</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Cache_coherency" title="Category:Cache coherency">Cache coherency</a></li><li><a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Parallel computing</a></li><li><a href="/wiki/Category:Concurrent_computing" title="Category:Concurrent computing">Concurrent computing</a></li><li><a href="/wiki/Category:Consistency_models" title="Category:Consistency models">Consistency models</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Cache+coherence" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Cache+coherence" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Cache_coherence" title="View the content page [c]" accesskey="c">Article</a></span></li>
+							<li id="ca-talk"><span><a href="/wiki/Talk:Cache_coherence" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Cache_coherence">Read</a></span></li>
+							<li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Cache_coherence&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Cache_coherence&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Cache_coherence" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Cache_coherence" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Cache_coherence&amp;oldid=803464407" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Cache_coherence&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1025017" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Cache_coherence&amp;id=803464407" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Cache+coherence">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Cache+coherence&amp;action=show-selection-screen&amp;coll-download-url=%2Fw%2Findex.php%3Ftitle%3DSpecial%3ABook%26bookcmd%3Drender_article%26arttitle%3DCache%2Bcoherence%26returnto%3DCache%2Bcoherence%26oldid%3D803464407%26writer%3Drdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Cache_coherence&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AA%D9%86%D8%B8%D9%8A%D9%85_%D8%A7%D9%84%D9%83%D8%A7%D8%B4_%D9%81%D9%8A_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D9%81%D8%B1%D8%B9%D9%8A%D8%A9" title="تنظيم الكاش في المعالجات التفرعية – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Pam%C4%9B%C5%A5ov%C3%A1_koherence" title="Paměťová koherence – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Cache-Koh%C3%A4renz" title="Cache-Kohärenz – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Coherencia_de_cach%C3%A9" title="Coherencia de caché – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%B3%D8%AC%D8%A7%D9%85_%D8%AD%D8%A7%D9%81%D8%B8%D9%87_%D9%86%D9%87%D8%A7%D9%86" title="انسجام حافظه نهان – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Protocole_de_coh%C3%A9rence_de_cache" title="Protocole de cohérence de cache – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%BA%90%EC%8B%9C_%EC%9D%BC%EA%B4%80%EC%84%B1" title="캐시 일관성 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Coerenza_della_cache" title="Coerenza della cache – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7" title="キャッシュコヒーレンシ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Protocolos_de_coer%C3%AAncia" title="Protocolos de coerência – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%BA%D1%8D%D1%88%D0%B0" title="Когерентность кэша – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Cache_coherence" title="Cache coherence – Simple English" lang="simple" hreflang="simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9A%D0%BE%D1%85%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82_%D0%BA%D0%B5%D1%88%D0%B0" title="Кохерентност кеша – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/V%C3%A4limuistin_yhten%C3%A4isyys" title="Välimuistin yhtenäisyys – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/%C3%96n_bellek_tutarl%C4%B1l%C4%B1%C4%9F%C4%B1" title="Ön bellek tutarlılığı – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%BA%D0%B5%D1%88%D1%83" title="Когерентність кешу – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E5%8F%96%E4%B8%80%E8%87%B4%E6%80%A7" title="快取一致性 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>					</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1025017#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 2 October 2017, at 18:16.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wikimediafoundation.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Cache_coherence&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.160","walltime":"0.207","ppvisitednodes":{"value":722,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":41413,"limit":2097152},"templateargumentsize":{"value":147,"limit":2097152},"expansiondepth":{"value":7,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  148.395      1 -total"," 53.16%   78.890      1 Template:Reflist"," 39.53%   58.660      8 Template:Cite_book"," 15.21%   22.575      1 Template:Main"," 13.97%   20.732      1 Template:Parallel_computing"," 12.08%   17.923      1 Template:Navbox","  8.40%   12.472      3 Template:Cite_journal","  6.14%    9.117      1 Template:Portal","  5.14%    7.634      1 Template:Category-inline","  4.80%    7.124      2 Template:Icon"]},"scribunto":{"limitreport-timeusage":{"value":"0.068","limit":"10.000"},"limitreport-memusage":{"value":3708854,"limit":52428800}},"cachereport":{"origin":"mw1277","timestamp":"20171002181656","ttl":1900800,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":101,"wgHostname":"mw1273"});});</script>
+	</body>
+</html>

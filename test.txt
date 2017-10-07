@@ -1,0 +1,2934 @@
+   #[1]alternate [2]Edit this page [3]Wikipedia (en)
+
+Cloud computing
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [4]navigation, [5]search
+   For the winner of the 2017 Preakness Stakes, see [6]Cloud Computing
+   (horse).
+   Cloud computing metaphor: For a user, the network elements representing
+   the provider-rendered services are invisible, as if obscured by a
+   cloud.
+
+   Cloud computing is an [7]information technology (IT) paradigm, a model
+   for enabling ubiquitous access to shared pools of configurable
+   resources (such as computer networks, servers, storage, applications
+   and services),^[8][1]^[9][2] which can be rapidly [10]provisioned with
+   minimal management effort, often over the [11]Internet. Cloud computing
+   allows users and enterprises with various computing capabilities to
+   store and process data either in a privately-owned cloud, or on a
+   third-party server located in a [12]data center - thus making
+   data-accessing mechanisms more efficient and
+   reliable.^[13][3]^[[14]need quotation to verify] Cloud computing relies
+   on sharing of resources to achieve [15]coherence and [16]economy of
+   scale, similar to a [17]utility.
+
+   Advocates note that cloud computing allows [18]companies to avoid or
+   minimize up-front [19]IT infrastructure costs. As well, third-party
+   clouds enable organizations to focus on their [20]core businesses
+   instead of expending resources on computer infrastructure and
+   maintenance.^[21][4] Proponents also claim that cloud computing allows
+   enterprises to get their applications up and running faster, with
+   improved manageability and less maintenance, and that it enables IT
+   [22]teams to more rapidly adjust resources to meet fluctuating and
+   unpredictable [23]business demand.^[24][4]^[25][5]^[26][6] Cloud
+   providers typically use a [27]"pay-as-you-go" model. This could lead to
+   unexpectedly high charges if administrators are not familiarized with
+   cloud-pricing models.^[28][7]
+
+   In 2009 the availability of high-capacity networks, low-cost computers
+   and storage devices as well as the widespread adoption of [29]hardware
+   virtualization, [30]service-oriented architecture, and [31]autonomic
+   and [32]utility computing led to a growth in cloud
+   computing.^[33][8]^[34][9]^[35][10] Companies can scale up as computing
+   needs increase and then scale down again when demands
+   decrease.^[36][11] In 2013 it was reported^[[37]by whom?] that cloud
+   computing had become a highly demanded service or utility due to the
+   advantages of high computing power, cheap cost of services, high
+   performance, scalability, and accessibility - as well as availability.
+   Some cloud vendors experience growth rates of 50% per year,^[38][12]
+   but while cloud computing remains in a stage of infancy, it has
+   pitfalls that need to be addressed^[[39]by whom?] to make
+   cloud-computing services more reliable and
+   user-friendly.^[40][13]^[41][14]
+
+Contents
+
+     * [42]1 History
+          + [43]1.1 Origin of the term
+          + [44]1.2 1970s
+          + [45]1.3 1990s
+          + [46]1.4 2000s
+     * [47]2 Similar concepts
+     * [48]3 Characteristics
+     * [49]4 Service models
+          + [50]4.1 Infrastructure as a service (IaaS)
+          + [51]4.2 Platform as a service (PaaS)
+          + [52]4.3 Software as a service (SaaS)
+          + [53]4.4 Security as a service (SECaaS)
+          + [54]4.5 Mobile "backend" as a service (MBaaS)
+          + [55]4.6 Serverless computing
+     * [56]5 Cloud clients
+     * [57]6 Deployment models
+          + [58]6.1 Private cloud
+          + [59]6.2 Public cloud
+          + [60]6.3 Hybrid cloud
+          + [61]6.4 Others
+               o [62]6.4.1 Community cloud
+               o [63]6.4.2 Distributed cloud
+               o [64]6.4.3 Intercloud
+               o [65]6.4.4 Multicloud
+     * [66]7 Architecture
+          + [67]7.1 Cloud engineering
+     * [68]8 Security and privacy
+     * [69]9 Limitations and disadvantages
+     * [70]10 Emerging trends
+     * [71]11 See also
+     * [72]12 References
+     * [73]13 Further reading
+     * [74]14 External links
+
+History[[75]edit]
+
+Origin of the term[[76]edit]
+
+   The origin of the term cloud computing is unclear. The word cloud is
+   commonly used in science to describe a large agglomeration of objects
+   that visually appear from a distance as a cloud and describes any set
+   of things whose details are not further inspected in a given
+   context.^[77][15] Another explanation is that the old programs that
+   drew network schematics surrounded the icons for servers with a circle,
+   and a cluster of servers in a network diagram had several overlapping
+   circles, which resembled a cloud.^[78][16] In analogy to the above
+   usage, the word cloud was used as a metaphor for the Internet and a
+   standardized cloud-like shape was used to denote a network on telephony
+   schematics. Later it was used to depict the Internet in [79]computer
+   network diagrams. With this simplification, the implication is that the
+   specifics of how the end points of a network are connected are not
+   relevant for the purposes of understanding the diagram. The cloud
+   symbol was used to represent networks of computing equipment in the
+   original [80]ARPANET by as early as 1977,^[81][17] and the [82]CSNET by
+   1981^[83][18]--both predecessors to the Internet itself.
+
+   The term cloud has been used to refer to platforms for [84]distributed
+   computing. In [85]Wired's April 1994 feature "Bill and Andy's Excellent
+   Adventure II" on the [86]Apple spin-off [87]General Magic, [88]Andy
+   Hertzfeld commented on General Magic's distributed programming language
+   [89]Telescript that:
+
+     "The beauty of Telescript ... is that now, instead of just having a
+     device to program, we now have the entire Cloud out there, where a
+     single program can go and travel to many different sources of
+     information and create sort of a virtual service. No one had
+     conceived that before. The example Jim White [the designer of
+     Telescript, [90]X.400 and [91]ASN.1] uses now is a date-arranging
+     service where a software agent goes to the flower store and orders
+     flowers and then goes to the ticket shop and gets the tickets for
+     the show, and everything is communicated to both parties."
+
+   -- ^[92][19]
+
+   References to "cloud computing" in its modern sense appeared as early
+   as 1996, with the earliest known mention in a [93]Compaq internal
+   document.^[94][20] The popularization of the term can be traced to 2006
+   when Amazon.com introduced its [95]Elastic Compute Cloud.^[96][21]
+
+1970s[[97]edit]
+
+   During the 1960s, the initial concepts of time-sharing became
+   popularized via RJE ([98]Remote Job Entry);^[99][22] this terminology
+   was mostly associated with large vendors such as [100]IBM and [101]DEC.
+   Full time-sharing solutions were available by the early 1970s on such
+   platforms as Multics (on GE hardware), Cambridge CTSS, and the earliest
+   UNIX ports (on DEC hardware). Yet, the "data center" model where users
+   submitted jobs to operators to run on IBM mainframes was overwhelmingly
+   predominant.
+
+1990s[[102]edit]
+
+   In the 1990s, telecommunications companies, who previously offered
+   primarily dedicated point-to-point data circuits, began offering
+   [103]virtual private network (VPN) services with comparable quality of
+   service, but at a lower cost. By switching traffic as they saw fit to
+   balance server use, they could use overall network bandwidth more
+   effectively.^[[104]citation needed] They began to use the cloud symbol
+   to denote the demarcation point between what the provider was
+   responsible for and what users were responsible for. Cloud computing
+   extended this boundary to cover all servers as well as the network
+   infrastructure.^[105][23] As computers became more diffused, scientists
+   and technologists explored ways to make large-scale computing power
+   available to more users through time-sharing.^[[106]citation needed]
+   They experimented with algorithms to optimize the infrastructure,
+   platform, and applications to prioritize CPUs and increase efficiency
+   for end users.^[107][24]
+
+2000s[[108]edit]
+
+   Since 2000, cloud computing has come into existence. In early 2008,
+   [109]NASA's [110]OpenNebula, enhanced in the RESERVOIR European
+   Commission-funded project, became the first open-source software for
+   deploying private and hybrid clouds, and for the federation of
+   clouds.^[111][25] In the same year, efforts were focused on providing
+   [112]quality of service guarantees (as required by real-time
+   interactive applications) to cloud-based infrastructures, in the
+   framework of the IRMOS European Commission-funded project, resulting in
+   a real-time cloud environment.^[113][26]^[114][27] By mid-2008, Gartner
+   saw an opportunity for cloud computing "to shape the relationship among
+   consumers of IT services, those who use IT services and those who sell
+   them"^[115][28] and observed that "organizations are switching from
+   company-owned hardware and software assets to per-use service-based
+   models" so that the "projected shift to computing ... will result in
+   dramatic growth in IT products in some areas and significant reductions
+   in other areas."^[116][29]
+
+   In August 2006 [117]Amazon introduced its [118]Elastic Compute
+   Cloud.^[119][21] [120]Microsoft Azure was announced as "Azure" in
+   October 2008 and was released on 1 February 2010 as Windows Azure,
+   before being renamed to Microsoft Azure on 25 March 2014.^[121][30] In
+   July 2010, [122]Rackspace Hosting and [123]NASA jointly launched an
+   open-source cloud-software initiative known as [124]OpenStack. The
+   OpenStack project intended to help organizations offering
+   cloud-computing services running on standard hardware. The early code
+   came from NASA's [125]Nebula platform as well as from [126]Rackspace's
+   Cloud Files platform. As an open source offering and along with other
+   open-source solutions such as CloudStack, Ganeti and OpenNebula, it has
+   attracted attention by several key communities. Several studies aim at
+   comparing these open sources offerings based on a set of
+   criteria.^[127][31] ^[128][32] ^[129][33] ^[130][34] ^[131][35]
+   ^[132][36] ^[133][37]
+   On March 1, 2011, IBM announced the [134]IBM SmartCloud framework to
+   support [135]Smarter Planet.^[136][38] Among the various components of
+   the [137]Smarter Computing foundation, cloud computing is a critical
+   part. On June 7, 2012, Oracle announced the [138]Oracle
+   Cloud.^[139][39] While aspects of the Oracle Cloud are still in
+   development, this cloud offering is poised to be the first to provide
+   users with access to an integrated set of IT solutions, including the
+   Applications ([140]SaaS), Platform ([141]PaaS), and Infrastructure
+   ([142]IaaS) layers.^[143][40]^[144][41]^[145][42]
+
+   In April of 2008, [146]Google released [147]Google App Engine in
+   beta.^[148][43] In May of 2012, [149]Google Compute Engine was released
+   in preview, before being rolled out into General Availability in
+   December of 2013.^[150][44]
+
+Similar concepts[[151]edit]
+
+   Cloud computing is the result of the evolution and adoption of existing
+   technologies and paradigms. The goal of cloud computing is to allow
+   users to take benefit from all of these technologies, without the need
+   for deep knowledge about or expertise with each one of them. The cloud
+   aims to cut costs, and helps the users focus on their core business
+   instead of being impeded by IT obstacles.^[152][45] The main enabling
+   technology for cloud computing is [153]virtualization. Virtualization
+   software separates a physical computing device into one or more
+   "virtual" devices, each of which can be easily used and managed to
+   perform computing tasks. With [154]operating system-level
+   virtualization essentially creating a scalable system of multiple
+   independent computing devices, idle computing resources can be
+   allocated and used more efficiently. Virtualization provides the
+   agility required to speed up IT operations, and reduces cost by
+   increasing infrastructure [155]utilization. Autonomic computing
+   automates the process through which the user can provision resources
+   [156]on-demand. By minimizing user involvement, automation speeds up
+   the process, reduces labor costs and reduces the possibility of human
+   errors.^[157][45] Users routinely face difficult business problems.
+   Cloud computing adopts concepts from [158]Service-oriented Architecture
+   (SOA) that can help the user break these problems into [159]services
+   that can be integrated to provide a solution. Cloud computing provides
+   all of its resources as services, and makes use of the well-established
+   standards and best practices gained in the domain of SOA to allow
+   global and easy access to cloud services in a standardized way.
+
+   Cloud computing also leverages concepts from utility computing to
+   provide [160]metrics for the services used. Such metrics are at the
+   core of the public cloud pay-per-use models. In addition, measured
+   services are an essential part of the feedback loop in autonomic
+   computing, allowing services to scale on-demand and to perform
+   automatic failure recovery. Cloud computing is a kind of [161]grid
+   computing; it has evolved by addressing the QoS (quality of service)
+   and [162]reliability problems. Cloud computing provides the tools and
+   technologies to build data/compute intensive parallel applications with
+   much more affordable prices compared to traditional [163]parallel
+   computing techniques.^[164][45]
+
+   Cloud computing shares characteristics with:
+     * [165]Client-server model--Client-server computing refers broadly to
+       any [166]distributed application that distinguishes between service
+       providers (servers) and service requestors (clients).^[167][46]
+     * [168]Computer bureau--A [169]service bureau providing computer
+       services, particularly from the 1960s to 1980s.
+     * [170]Grid computing--"A form of distributed and parallel computing,
+       whereby a 'super and virtual computer' is composed of a
+       [171]cluster of networked, [172]loosely coupled computers acting in
+       concert to perform very large tasks."
+     * [173]Fog computing--Distributed computing paradigm that provides
+       data, compute, storage and application services closer to client or
+       near-user edge devices, such as network routers. Furthermore, fog
+       computing handles data at the network level, on smart devices and
+       on the end-user client side (e.g. mobile devices), instead of
+       sending data to a remote location for processing.
+     * [174]Dew computing--In the existing computing hierarchy, the Dew
+       computing is positioned as the ground level for the cloud and fog
+       computing paradigms. Compared to fog computing, which supports
+       emerging IoT applications that demand real-time and predictable
+       latency and the dynamic network reconfigurability, Dew computing
+       pushes the frontiers to computing applications, data, and low level
+       services away from centralized virtual nodes to the end
+       users.^[175][47]
+     * [176]Mainframe computer--Powerful computers used mainly by large
+       organizations for critical applications, typically bulk data
+       processing such as: [177]census; industry and consumer statistics;
+       police and secret intelligence services; [178]enterprise resource
+       planning; and financial [179]transaction processing.
+     * [180]Utility computing--The "packaging of [181]computing resources,
+       such as computation and storage, as a metered service similar to a
+       traditional public utility, such as
+       electricity."^[182][48]^[183][49]
+     * [184]Peer-to-peer--A distributed architecture without the need for
+       central coordination. Participants are both suppliers and consumers
+       of resources (in contrast to the traditional client-server model).
+     * Green computing
+     * [185]Cloud sandbox--A live, isolated computer environment in which
+       a program, code or file can run without affecting the application
+       in which it runs.
+
+Characteristics[[186]edit]
+
+   Cloud computing exhibits the following key characteristics:
+     * Agility for organizations may be improved, as cloud computing may
+       increase users' flexibility with re-provisioning, adding, or
+       expanding technological infrastructure resources.
+     * Cost reductions are claimed by cloud providers. A public-cloud
+       delivery model converts [187]capital expenditures (e.g., buying
+       servers) to [188]operational expenditure.^[189][50] This
+       purportedly lowers [190]barriers to entry, as infrastructure is
+       typically provided by a third party and need not be purchased for
+       one-time or infrequent intensive computing tasks. Pricing on a
+       utility computing basis is "fine-grained", with usage-based billing
+       options. As well, less in-house IT skills are required for
+       implementation of projects that use cloud computing.^[191][51] The
+       e-FISCAL project's state-of-the-art repository^[192][52] contains
+       several articles looking into cost aspects in more detail, most of
+       them concluding that costs savings depend on the type of activities
+       supported and the type of infrastructure available in-house.
+     * [193]Device and location independence^[194][53] enable users to
+       access systems using a web browser regardless of their location or
+       what device they use (e.g., PC, mobile phone). As infrastructure is
+       off-site (typically provided by a third-party) and accessed via the
+       Internet, users can connect to it from anywhere.^[195][51]
+     * [196]Maintenance of cloud computing applications is easier, because
+       they do not need to be installed on each user's computer and can be
+       accessed from different places (e.g., different work locations,
+       while travelling, etc.).
+     * [197]Multitenancy enables sharing of resources and costs across a
+       large pool of users thus allowing for:
+          + centralization of infrastructure in locations with lower costs
+            (such as real estate, electricity, etc.)
+          + peak-load capacity increases (users need not engineer and pay
+            for the resources and equipment to meet their highest possible
+            load-levels)
+          + utilisation and efficiency improvements for systems that are
+            often only 10-20% utilised.^[198][54]^[199][55]
+     * [200]Performance is monitored by IT experts from the service
+       provider, and consistent and loosely coupled architectures are
+       constructed using [201]web services as the system
+       interface.^[202][51]^[203][56]^[204][57]
+     * [205]Resource pooling is the provider's computing resources are
+       commingle to serve multiple consumers using a multi-tenant model
+       with different physical and virtual resources dynamically assigned
+       and reassigned according to user demand. There is a sense of
+       location independence in that the consumer generally have no
+       control or knowledge over the exact location of the provided
+       resource.[206][1]
+     * [207]Productivity may be increased when multiple users can work on
+       the same data simultaneously, rather than waiting for it to be
+       saved and emailed. Time may be saved as information does not need
+       to be re-entered when fields are matched, nor do users need to
+       install application software upgrades to their computer.^[208][58]
+     * Reliability improves with the use of multiple redundant sites,
+       which makes well-designed cloud computing suitable for
+       [209]business continuity and [210]disaster recovery.^[211][59]
+     * Scalability and [212]elasticity via dynamic ("on-demand")
+       [213]provisioning of resources on a fine-grained, self-service
+       basis in near real-time^[214][60]^[215][61] (Note, the VM startup
+       time varies by VM type, location, OS and cloud
+       providers^[216][60]), without users having to engineer for peak
+       loads.^[217][62]^[218][63]^[219][64] This gives the ability to
+       scale up when the usage need increases or down if resources are not
+       being used.^[220][65]
+     * [221]Security can improve due to centralization of data, increased
+       security-focused resources, etc., but concerns can persist about
+       loss of control over certain sensitive data, and the lack of
+       security for stored [222]kernels. Security is often as good as or
+       better than other traditional systems, in part because service
+       providers are able to devote resources to solving security issues
+       that many customers cannot afford to tackle or which they lack the
+       technical skills to address.^[223][66] However, the complexity of
+       security is greatly increased when data is distributed over a wider
+       area or over a greater number of devices, as well as in
+       multi-tenant systems shared by unrelated users. In addition, user
+       access to security [224]audit logs may be difficult or impossible.
+       Private cloud installations are in part motivated by users' desire
+       to retain control over the infrastructure and avoid losing control
+       of information security.
+
+   The [225]National Institute of Standards and Technology's definition of
+   cloud computing identifies "five essential characteristics":
+
+     On-demand self-service. A consumer can unilaterally provision
+     computing capabilities, such as server time and network storage, as
+     needed automatically without requiring human interaction with each
+     service provider.
+
+     Broad network access. Capabilities are available over the network
+     and accessed through standard mechanisms that promote use by
+     heterogeneous thin or thick client platforms (e.g., mobile phones,
+     tablets, [226]laptops, and workstations).
+
+     Resource pooling. The provider's computing resources are pooled to
+     serve multiple consumers using a multi-tenant model, with different
+     physical and virtual resources dynamically assigned and reassigned
+     according to consumer demand.
+
+     Rapid elasticity. Capabilities can be elastically provisioned and
+     released, in some cases automatically, to scale rapidly outward and
+     inward commensurate with demand. To the consumer, the capabilities
+     available for provisioning often appear unlimited and can be
+     appropriated in any quantity at any time.
+     Measured service. Cloud systems automatically control and optimize
+     resource use by leveraging a metering capability at some level of
+     abstraction appropriate to the type of service (e.g., storage,
+     processing, bandwidth, and active user accounts). Resource usage can
+     be monitored, controlled, and reported, providing transparency for
+     both the provider and consumer of the utilized service.
+
+   -- National Institute of Standards and Technology^[227][2]
+
+Service models[[228]edit]
+
+   Though [229]service-oriented architecture advocates "everything as a
+   service" (with the acronyms EaaS or XaaS,^[230][67] or simply
+   [231]aas),^[232][68] cloud-computing providers offer their "services"
+   according to different models, of which the three standard models per
+   [233]NIST are Infrastructure as a Service (IaaS), Platform as a Service
+   (PaaS), and Software as a Service (SaaS).^[234][2] These models offer
+   increasing abstraction; they are thus often portrayed as a layers in a
+   [235]stack: infrastructure-, platform- and
+   software-as-a-service,^[236][69] but these need not be related. For
+   example, one can provide SaaS implemented on physical machines (bare
+   metal), without using underlying PaaS or IaaS layers, and conversely
+   one can run a program on IaaS and access it directly, without wrapping
+   it as SaaS.
+   Cloud computing service models arranged as layers in a stack
+
+   The [237]NIST's definition of cloud computing defines the service
+   models as follows:^[238][2]
+
+     Software as a Service (SaaS). The capability provided to the
+     consumer is to use the provider's applications running on a cloud
+     infrastructure. The applications are accessible from various client
+     devices through either a thin client interface, such as a web
+     browser (e.g., web-based email), or a program interface. The
+     consumer does not manage or control the underlying cloud
+     infrastructure including network, servers, operating systems,
+     storage, or even individual application capabilities, with the
+     possible exception of limited user-specific application
+     configuration settings.
+
+     Platform as a Service (PaaS). The capability provided to the
+     consumer is to deploy onto the cloud infrastructure consumer-created
+     or acquired applications created using programming languages,
+     libraries, services, and tools supported by the provider. The
+     consumer does not manage or control the underlying cloud
+     infrastructure including network, servers, operating systems, or
+     storage, but has control over the deployed applications and possibly
+     configuration settings for the application-hosting environment.
+
+     Infrastructure as a Service (IaaS). The capability provided to the
+     consumer is to provision processing, storage, networks, and other
+     fundamental computing resources where the consumer is able to deploy
+     and run arbitrary software, which can include operating systems and
+     applications. The consumer does not manage or control the underlying
+     cloud infrastructure but has control over operating systems,
+     storage, and deployed applications; and possibly limited control of
+     select networking components (e.g., host firewalls).
+
+Infrastructure as a service (IaaS)[[239]edit]
+
+   See also: [240]Category:Cloud infrastructure
+
+   According to the [241]Internet Engineering Task Force (IETF), the most
+   basic cloud-service model is that of providers offering computing
+   infrastructure - [242]virtual machines and other resources - as a
+   service to subscribers. Infrastructure as a service (IaaS) refers to
+   online services that provide high-level [243]APIs used to
+   [244]dereference various low-level details of underlying network
+   infrastructure like physical computing resources, location, data
+   partitioning, scaling, security, backup etc. A [245]hypervisor, such as
+   [246]Xen, [247]Oracle VirtualBox, [248]Oracle VM, [249]KVM, [250]VMware
+   ESX/ESXi, or [251]Hyper-V, LXD, runs the virtual machines as guests.
+   Pools of hypervisors within the cloud operational system can support
+   large numbers of virtual machines and the ability to scale services up
+   and down according to customers' varying requirements. Linux containers
+   run in isolated partitions of a single [252]Linux kernel running
+   directly on the physical hardware. Linux [253]cgroups and namespaces
+   are the underlying Linux kernel technologies used to isolate, secure
+   and manage the containers. Containerisation offers higher performance
+   than virtualization, because there is no hypervisor overhead. Also,
+   container capacity auto-scales dynamically with computing load, which
+   eliminates the problem of over-provisioning and enables usage-based
+   billing.^[254][70] IaaS clouds often offer additional resources such as
+   a virtual-machine [255]disk-image library, raw [256]block storage, file
+   or [257]object storage, firewalls, load balancers, IP addresses,
+   [258]virtual local area networks (VLANs), and software
+   bundles.^[259][71]
+
+   IaaS-cloud providers supply these resources on-demand from their large
+   pools of equipment installed in [260]data centers. For [261]wide-area
+   connectivity, customers can use either the Internet or [262]carrier
+   clouds (dedicated [263]virtual private networks). To deploy their
+   applications, cloud users install operating-system images and their
+   application software on the cloud
+   infrastructure.^[264][72]^[[265]unreliable source?] In this model, the
+   cloud user patches and maintains the operating systems and the
+   application software. Cloud providers typically bill IaaS services on a
+   utility computing basis: cost reflects the amount of resources
+   allocated and consumed.^[266][73]^[267][74]^[268][75]^[269][76]
+
+Platform as a service (PaaS)[[270]edit]
+
+   Main article: [271]Platform as a service
+   See also: [272]Category:Cloud platforms
+
+   PaaS vendors offer a development environment to application developers.
+   The provider typically develops toolkit and standards for development
+   and channels for distribution and payment. In the PaaS models, cloud
+   providers deliver a [273]computing platform, typically including
+   operating system, programming-language execution environment, database,
+   and web server. Application developers can develop and run their
+   software solutions on a cloud platform without the cost and complexity
+   of buying and managing the underlying hardware and software layers.
+   With some PaaS offers like [274]Microsoft Azure and [275]Google App
+   Engine, the underlying computer and storage resources scale
+   automatically to match application demand so that the cloud user does
+   not have to allocate resources manually. The latter has also been
+   proposed by an architecture aiming to facilitate real-time in cloud
+   environments.^[276][77]^[[277]need quotation to verify] Even more
+   specific application types can be provided via PaaS, such as media
+   encoding as provided by services like bitcodin.com^[278][78] or
+   media.io.^[279][79]
+
+   Some integration and data management providers have also embraced
+   specialized applications of PaaS as delivery models for data solutions.
+   Examples include iPaaS (Integration Platform as a Service) and dPaaS
+   (Data Platform as a Service). iPaaS enables customers to develop,
+   execute and govern integration flows.^[280][80] Under the iPaaS
+   integration model, customers drive the development and deployment of
+   integrations without installing or managing any hardware or
+   middleware.^[281][81] dPaaS delivers integration--and
+   data-management--products as a fully managed service.^[282][82] Under
+   the dPaaS model, the PaaS provider, not the customer, manages the
+   development and execution of data solutions by building tailored data
+   applications for the customer. dPaaS users retain transparency and
+   control over data through [283]data-visualization tools.^[284][83]
+   Platform as a Service (PaaS) consumers do not manage or control the
+   underlying cloud infrastructure including network, servers, operating
+   systems, or storage, but have control over the deployed applications
+   and possibly configuration settings for the application-hosting
+   environment.
+
+   A recent specialized PaaS is the [285]Blockchain as a Service (BaaS),
+   that some vendors such as IBM Bluemix have already included in their
+   PaaS offering.^[286][84]
+
+Software as a service (SaaS)[[287]edit]
+
+   Main article: [288]Software as a service
+
+   In the software as a service (SaaS) model, users gain access to
+   application software and databases. Cloud providers manage the
+   infrastructure and platforms that run the applications. SaaS is
+   sometimes referred to as "on-demand software" and is usually priced on
+   a pay-per-use basis or using a subscription fee.^[289][85] In the SaaS
+   model, cloud providers install and operate application software in the
+   cloud and cloud users access the software from cloud clients. Cloud
+   users do not manage the cloud infrastructure and platform where the
+   application runs. This eliminates the need to install and run the
+   application on the cloud user's own computers, which simplifies
+   maintenance and support. Cloud applications differ from other
+   applications in their scalability--which can be achieved by cloning
+   tasks onto multiple [290]virtual machines at run-time to meet changing
+   work demand.^[291][86] [292]Load balancers distribute the work over the
+   set of virtual machines. This process is transparent to the cloud user,
+   who sees only a single access-point. To accommodate a large number of
+   cloud users, cloud applications can be [293]multitenant, meaning that
+   any machine may serve more than one cloud-user organization.
+
+   The pricing model for SaaS applications is typically a monthly or
+   yearly flat fee per user,^[294][87] so prices become scalable and
+   adjustable if users are added or removed at any point.^[295][88]
+   Proponents claim that SaaS gives a [296]business the potential to
+   reduce IT operational costs by outsourcing hardware and software
+   maintenance and support to the cloud provider. This enables the
+   business to reallocate IT operations costs away from hardware/software
+   spending and from personnel expenses, towards meeting other goals. In
+   addition, with applications hosted centrally, updates can be released
+   without the need for users to install new software. One drawback of
+   SaaS comes with storing the users' data on the cloud provider's server.
+   As a result,^[[297]citation needed] there could be unauthorized access
+   to the data. For this reason, users are increasingly^[[298]quantify]
+   adopting intelligent third-party [299]key-management systems to help
+   secure their data.^[[300]citation needed]
+
+Security as a service (SECaaS)[[301]edit]
+
+   Main article: [302]Security as a service
+
+   Security as a service (SECaaS) is a [303]business model in which a
+   large [304]service provider integrates their security services into a
+   corporate infrastructure on a subscription basis more cost effectively
+   than most individuals or corporations can provide on their own, when
+   [305]total cost of ownership is considered. In this scenario, security
+   is delivered as a [306]service from the cloud,^[307][89] without
+   requiring on-premises hardware avoiding substantial capital outlays.
+   These security services often include [308]authentication,
+   [309]anti-virus, [310]anti-malware/spyware, [311]intrusion detection,
+   and [312]security event management, among others.^[313][90]
+
+Mobile "backend" as a service (MBaaS)[[314]edit]
+
+   Main article: [315]Mobile backend as a service
+
+   In the mobile "backend" as a service (m) model, also known as backend
+   as a service (BaaS), [316]web app and [317]mobile app developers are
+   provided with a way to link their applications to [318]cloud storage
+   and cloud computing services with [319]application programming
+   interfaces (APIs) exposed to their applications and custom
+   [320]software development kits (SDKs). Services include user
+   management, [321]push notifications, integration with [322]social
+   networking services^[323][91] and more. This is a relatively recent
+   model in cloud computing,^[324][92] with most BaaS [325]startups dating
+   from 2011 or later^[326][93]^[327][94]^[328][95] but trends indicate
+   that these services are gaining significant mainstream traction with
+   enterprise consumers.^[329][96]
+
+Serverless computing[[330]edit]
+
+   Main article: [331]Serverless computing
+
+   Serverless computing is a cloud computing code [332]execution model in
+   which the cloud provider fully manages starting and stopping
+   [333]virtual machines as necessary to serve requests, and requests are
+   billed by an abstract measure of the resources required to satisfy the
+   request, rather than per virtual machine, per hour.^[334][97] Despite
+   the name, it does not actually involve running code without
+   servers.^[335][97] Serverless computing is so named because the
+   business or person that owns the system does not have to purchase, rent
+   or provision servers or virtual machines for the [336]back-end code to
+   run on.
+
+Cloud clients[[337]edit]
+
+   See also: [338]Category:Cloud clients and [339]Cloud API
+
+   Users access cloud computing using networked client devices, such as
+   [340]desktop computers, [341]laptops, [342]tablets and [343]smartphones
+   and any [344]Ethernet-enabled device such as Home Automation Gadgets.
+   Some of these devices--cloud clients--rely on cloud computing for all
+   or a majority of their applications so as to be essentially useless
+   without it. Examples are [345]thin clients and the browser-based
+   [346]Chromebook. Many cloud applications do not require specific
+   software on the client and instead use a web browser to interact with
+   the cloud application. With [347]Ajax and [348]HTML5 these [349]Web
+   user interfaces can achieve a similar, or even better, [350]look and
+   feel to native applications. Some cloud applications, however, support
+   specific client software dedicated to these applications (e.g.,
+   [351]virtual desktop clients and most email clients). Some legacy
+   applications (line of business applications that until now have been
+   prevalent in thin client computing) are delivered via a screen-sharing
+   technology.
+
+Deployment models[[352]edit]
+
+   Cloud computing types
+
+Private cloud[[353]edit]
+
+   Private cloud is cloud infrastructure operated solely for a single
+   organization, whether managed internally or by a third-party, and
+   hosted either internally or externally.^[354][2] Undertaking a private
+   cloud project requires significant engagement to virtualize the
+   business environment, and requires the organization to reevaluate
+   decisions about existing resources. It can improve business, but every
+   step in the project raises security issues that must be addressed to
+   prevent serious vulnerabilities. Self-run [355]data centers^[356][98]
+   are generally capital intensive. They have a significant physical
+   footprint, requiring allocations of space, hardware, and environmental
+   controls. These assets have to be refreshed periodically, resulting in
+   additional capital expenditures. They have attracted criticism because
+   users "still have to buy, build, and manage them" and thus do not
+   benefit from less hands-on management,^[357][99] essentially "[lacking]
+   the economic model that makes cloud computing such an intriguing
+   concept".^[358][100]^[359][101]
+
+Public cloud[[360]edit]
+
+   A cloud is called a "public cloud" when the services are rendered over
+   a network that is open for public use. Public cloud services may be
+   free.^[361][102] Technically there may be little or no difference
+   between public and private cloud architecture, however, security
+   consideration may be substantially different for services
+   (applications, storage, and other resources) that are made available by
+   a service provider for a public audience and when communication is
+   effected over a non-trusted network. Generally, public cloud service
+   providers like [362]Amazon Web Services (AWS), Microsoft and Google own
+   and operate the infrastructure at their [363]data center and access is
+   generally via the Internet. AWS and Microsoft also offer direct connect
+   services called "AWS Direct Connect" and "Azure ExpressRoute"
+   respectively, such connections require customers to purchase or lease a
+   private connection to a peering point offered by the cloud
+   provider.^[364][51]
+
+Hybrid cloud[[365]edit]
+
+   Hybrid cloud is a composition of two or more clouds (private, community
+   or public) that remain distinct entities but are bound together,
+   offering the benefits of multiple deployment models. Hybrid cloud can
+   also mean the ability to connect collocation, managed and/or dedicated
+   services with cloud resources.^[366][2] [367]Gartner, Inc. defines a
+   hybrid cloud service as a cloud computing service that is composed of
+   some combination of private, public and community cloud services, from
+   different service providers.^[368][103] A hybrid cloud service crosses
+   isolation and provider boundaries so that it can't be simply put in one
+   category of private, public, or community cloud service. It allows one
+   to extend either the capacity or the capability of a cloud service, by
+   aggregation, integration or customization with another cloud service.
+
+   Varied use cases for hybrid cloud composition exist. For example, an
+   organization may store sensitive client data in house on a private
+   cloud application, but interconnect that application to a business
+   intelligence application provided on a public cloud as a software
+   service.^[369][104] This example of hybrid cloud extends the
+   capabilities of the enterprise to deliver a specific business service
+   through the addition of externally available public cloud services.
+   Hybrid cloud adoption depends on a number of factors such as data
+   security and compliance requirements, level of control needed over
+   data, and the applications an organization uses.^[370][105]
+
+   Another example of hybrid cloud is one where [371]IT organizations use
+   public cloud computing resources to meet temporary capacity needs that
+   can not be met by the private cloud.^[372][106] This capability enables
+   hybrid clouds to employ cloud bursting for scaling across
+   clouds.^[373][2] Cloud bursting is an application deployment model in
+   which an application runs in a private cloud or data center and
+   "bursts" to a public cloud when the demand for computing capacity
+   increases. A primary advantage of cloud bursting and a hybrid cloud
+   model is that an organization pays for extra compute resources only
+   when they are needed.^[374][107] Cloud bursting enables data centers to
+   create an in-house IT infrastructure that supports average workloads,
+   and use cloud resources from public or private clouds, during spikes in
+   processing demands.^[375][108] The specialized model of hybrid cloud,
+   which is built atop heterogeneous hardware, is called "Cross-platform
+   Hybrid Cloud". A cross-platform hybrid cloud is usually powered by
+   different CPU architectures, for example, x86-64 and ARM, underneath.
+   Users can transparently deploy and scale applications without knowledge
+   of the cloud's hardware diversity.^[376][109] This kind of cloud
+   emerges from the raise of ARM-based system-on-chip for server-class
+   computing.
+
+Others[[377]edit]
+
+Community cloud[[378]edit]
+
+   [379]Community cloud shares infrastructure between several
+   organizations from a specific community with common concerns (security,
+   compliance, jurisdiction, etc.), whether managed internally or by a
+   third-party, and either hosted internally or externally. The costs are
+   spread over fewer users than a public cloud (but more than a private
+   cloud), so only some of the cost savings potential of cloud computing
+   are realized.^[380][2]
+
+Distributed cloud[[381]edit]
+
+   A cloud computing platform can be assembled from a distributed set of
+   machines in different locations, connected to a single network or hub
+   service. It is possible to distinguish between two types of distributed
+   clouds: public-resource computing and volunteer cloud.
+     * Public-resource computing--This type of distributed cloud results
+       from an expansive definition of cloud computing, because they are
+       more akin to distributed computing than cloud computing.
+       Nonetheless, it is considered a sub-class of cloud computing, and
+       some examples include distributed computing platforms such as
+       [382]BOINC and [383]Folding@Home.
+     * Volunteer cloud--Volunteer cloud computing is characterized as the
+       intersection of public-resource computing and cloud computing,
+       where a cloud computing infrastructure is built using volunteered
+       resources. Many challenges arise from this type of infrastructure,
+       because of the volatility of the resources used to built it and the
+       dynamic environment it operates in. It can also be called
+       peer-to-peer clouds, or ad-hoc clouds. An interesting effort in
+       such direction is Cloud@Home, it aims to implement a cloud
+       computing infrastructure using volunteered resources providing a
+       business-model to incentivize contributions through financial
+       restitution.^[384][110]
+
+Intercloud[[385]edit]
+
+   Main article: [386]Intercloud
+
+   The [387]Intercloud^[388][111] is an interconnected global "cloud of
+   clouds"^[389][112]^[390][113] and an extension of the Internet "network
+   of networks" on which it is based. The focus is on direct
+   [391]interoperability between public cloud service providers, more so
+   than between providers and consumers (as is the case for hybrid- and
+   multi-cloud).^[392][114]^[393][115]^[394][116]
+
+Multicloud[[395]edit]
+
+   Main article: [396]Multicloud
+
+   Multicloud is the use of multiple cloud computing services in a single
+   heterogeneous architecture to reduce reliance on single vendors,
+   increase flexibility through choice, mitigate against disasters, etc.
+   It differs from hybrid cloud in that it refers to multiple cloud
+   services, rather than multiple deployment modes (public, private,
+   legacy).^[397][117]^[398][118]^[399][119]
+
+Architecture[[400]edit]
+
+   Cloud computing sample architecture
+
+   Cloud architecture,^[401][120] the [402]systems architecture of the
+   [403]software systems involved in the delivery of cloud computing,
+   typically involves multiple cloud components communicating with each
+   other over a loose coupling mechanism such as a messaging queue.
+   Elastic provision implies intelligence in the use of tight or loose
+   coupling as applied to mechanisms such as these and others.
+
+Cloud engineering[[404]edit]
+
+   [405]Cloud engineering is the application of [406]engineering
+   disciplines to cloud computing. It brings a systematic approach to the
+   high-level concerns of commercialization, standardization, and
+   governance in conceiving, developing, operating and maintaining cloud
+   computing systems. It is a multidisciplinary method encompassing
+   contributions from diverse areas such as [407]systems, [408]software,
+   [409]web, [410]performance, [411]information, [412]security,
+   [413]platform, [414]risk, and [415]quality engineering.
+
+Security and privacy[[416]edit]
+
+   Main article: [417]Cloud computing issues
+
+   Cloud computing poses privacy concerns because the service provider can
+   access the data that is in the cloud at any time. It could accidentally
+   or deliberately alter or even delete information.^[418][121] Many cloud
+   providers can share information with third parties if necessary for
+   purposes of law and order even without a warrant. That is permitted in
+   their privacy policies, which users must agree to before they start
+   using cloud services. Solutions to privacy include policy and
+   legislation as well as end users' choices for how data is
+   stored.^[419][121] Users can encrypt data that is processed or stored
+   within the cloud to prevent unauthorized access.^[420][3]^[421][121]
+
+   According to the Cloud Security Alliance, the top three threats in the
+   cloud are Insecure Interfaces and API's, Data Loss & Leakage, and
+   Hardware Failure--which accounted for 29%, 25% and 10% of all cloud
+   security outages respectively. Together, these form shared technology
+   vulnerabilities. In a cloud provider platform being shared by different
+   users there may be a possibility that information belonging to
+   different customers resides on same data server. Therefore, Information
+   leakage may arise by mistake when information for one customer is given
+   to other.^[422][122] Additionally, [423]Eugene Schultz, chief
+   technology officer at Emagined Security, said that hackers are spending
+   substantial time and effort looking for ways to penetrate the cloud.
+   "There are some real Achilles' heels in the cloud infrastructure that
+   are making big holes for the bad guys to get into". Because data from
+   hundreds or thousands of companies can be stored on large cloud
+   servers, hackers can theoretically gain control of huge stores of
+   information through a single attack--a process he called
+   "hyperjacking". Some examples of this include the Dropbox security
+   breach, and iCloud 2014 leak.^[424][123] Dropbox had been breached in
+   October 2014, having over 7 million of its users passwords stolen by
+   hackers in an effort to get monetary value from it by Bitcoins (BTC).
+   By having these passwords, they are able to read private data as well
+   as have this data be indexed by search engines (making the information
+   public).^[425][123] There is the problem of legal ownership of the data
+   (If a user stores some data in the cloud, can the cloud provider profit
+   from it?). Many Terms of Service agreements are silent on the question
+   of ownership.^[426][124] Physical control of the computer equipment
+   (private cloud) is more secure than having the equipment off site and
+   under someone else's control (public cloud). This delivers great
+   incentive to public cloud computing service providers to prioritize
+   building and maintaining strong management of secure
+   services.^[427][125] Some small businesses that don't have expertise in
+   [428]IT security could find that it's more secure for them to use a
+   public cloud. There is the risk that end users do not understand the
+   issues involved when signing on to a cloud service (persons sometimes
+   don't read the many pages of the terms of service agreement, and just
+   click "Accept" without reading). This is important now that cloud
+   computing is becoming popular and required for some services to work,
+   for example for an [429]intelligent personal assistant (Apple's
+   [430]Siri or [431]Google Now). Fundamentally, private cloud is seen as
+   more secure with higher levels of control for the owner, however public
+   cloud is seen to be more flexible and requires less time and money
+   investment from the user.^[432][126]
+
+Limitations and disadvantages[[433]edit]
+
+   According to [434]Bruce Schneier, "The downside is that you will have
+   limited customization options. Cloud computing is cheaper because of
+   [435]economics of scale, and - like any outsourced task - you tend to
+   get what you get. A restaurant with a limited menu is cheaper than a
+   personal chef who can cook anything you want. Fewer options at a much
+   cheaper price: it's a feature, not a bug." He also suggests that "the
+   cloud provider might not meet your legal needs" and that businesses
+   need to weigh the benefits of cloud computing against the
+   risks.^[436][127] In cloud computing, the control of the back end
+   infrastructure is limited to the cloud vendor only. Cloud providers
+   often decide on the management policies, which moderates what the cloud
+   users are able to do with their deployment.^[437][128] Cloud users are
+   also limited to the control and management of their applications, data
+   and services.^[438][129] This includes data caps, which are placed on
+   cloud users by the cloud vendor allocating certain amount of bandwidth
+   for each customer and are often shared among other cloud
+   users.^[439][130]
+
+   Privacy and [440]confidentiality are big concerns in some activities.
+   For instance, sworn translators working under the stipulations of an
+   [441]NDA, might face problems regarding [442]sensitive data that are
+   not [443]encrypted.^[444][131]
+
+Emerging trends[[445]edit]
+
+   Cloud computing is still a subject of research.^[446][132] A driving
+   factor in the evolution of cloud computing has been [447]chief
+   technology officers seeking to minimize risk of internal outages and
+   mitigate the complexity of housing network and computing hardware
+   in-house.^[448][133] Major cloud technology companies invest billions
+   of dollars per year in cloud [449]Research and Development. For
+   example, in 2011 Microsoft committed 90 percent of its $9.6 billion
+   [450]R&D budget to its cloud.^[451][134] Research by investment bank
+   Centaur Partners in late 2015 forecasted that SaaS revenue would grow
+   from $13.5 billion in 2011 to $32.8 billion in 2016.^[452][135]
+   .^[453][136]
+
+   [454]https://www.pcworld.idg.com.au/article/614885/how-virtual-data-roo
+   m-boosting-mergers-aquisitions/
+
+See also[[455]edit]
+
+     * [456]Computer networking portal
+
+     * [457]Category: Cloud computing providers
+     * [458]Category: Cloud platforms
+     * [459]Cloud computing security
+     * [460]Cloud computing comparison
+     * [461]Cloud management
+     * [462]Cloud research
+     * [463]Cloud storage
+     * [464]Edge computing
+     * [465]eScience
+     * [466]Microservices
+     * [467]Mobile cloud computing
+     * [468]Personal cloud
+     * [469]Robot as a Service
+     * [470]Service-Oriented Architecture
+     * [471]Ubiquitous computing
+     * [472]Web computing
+     * [473]Cloud collaboration
+
+References[[474]edit]
+
+    1. [475]^ Hassan, Qusay (2011). [476]"Demystifying Cloud Computing"
+       (PDF). The Journal of Defense Software Engineering. CrossTalk. 2011
+       (Jan/Feb): 16-21. Retrieved 11 December 2008.
+    2. ^ [477]^a [478]^b [479]^c [480]^d [481]^e [482]^f [483]^g [484]^h
+       Peter Mell and Timothy Grance (September 2011). [485]The NIST
+       Definition of Cloud Computing (Technical report). National
+       Institute of Standards and Technology: U.S. Department of Commerce.
+       [486]doi:[487]10.6028/NIST.SP.800-145. Special publication
+       800-145. CS1 maint: Uses authors parameter ([488]link)
+    3. ^ [489]^a [490]^b M. Haghighat, S. Zonouz, & M. Abdel-Mottaleb
+       (2015). [491]CloudID: Trustworthy Cloud-based and Cross-Enterprise
+       Biometric Identification. Expert Systems with Applications, 42(21),
+       7905-7916.
+    4. ^ [492]^a [493]^b [494]"What is Cloud Computing?". Amazon Web
+       Services. 2013-03-19. Retrieved 2013-03-20.
+    5. [495]^ Baburajan, Rajani (2011-08-24). [496]"The Rising Cloud
+       Storage Market Opportunity Strengthens Vendors". It.tmcnet.com.
+       Retrieved 2011-12-02.
+    6. [497]^ Oestreich, Ken, (2010-11-15). [498]"Converged
+       Infrastructure". CTO Forum. Thectoforum.com. Archived from [499]the
+       original on 2012-01-13. Retrieved 2011-12-02. CS1 maint: Multiple
+       names: authors list ([500]link)
+    7. [501]^ [502]"Where's The Rub: Cloud Computing's Hidden Costs".
+       2014-02-27. Retrieved 2014-07-14.
+    8. [503]^ [504]"Cloud Computing: Clash of the clouds". The Economist.
+       2009-10-15. Retrieved 2009-11-03.
+    9. [505]^ [506]"Gartner Says Cloud Computing Will Be As Influential As
+       E-business". Gartner. Retrieved 2010-08-22.
+   10. [507]^ Gruman, Galen (2008-04-07). [508]"What cloud computing
+       really means". [509]InfoWorld. Retrieved 2009-06-02.
+   11. [510]^ Dealey, C. [511]"Cloud Computing Working Group",
+       [512]Network Centric Operations Industry Consortium - NCOIC, 2013
+   12. [513]^ [514]"The economy is flat so why are financials Cloud
+       vendors growing at more than 90 percent per annum?". FSN. March 5,
+       2013.
+   13. [515]^ [516]"Realization of Interoperability & Portability Among
+       Open Clouds by Using Agent's Mobility & Intelligence -
+       TechRepublic". TechRepublic. Retrieved 2015-10-24.
+   14. [517]^ [518]"Interoperability and Portability among Open Clouds
+       Using FIPA Agent / 978-3-659-24863-4 / 9783659248634 / 3659248630".
+       www.lap-publishing.com. Retrieved 24 October 2015.
+   15. [519]^ Hassan, Qusay F.; Riad, laa M.; Hassan, Ahmed E. (2012).
+       [520]"Software reuse in the emerging cloud computing era". In
+       [521]Yang, Hongji; Liu, Xiaodong. Understanding Cloud Computing
+       (PDF)|format= requires |url= ([522]help). Hershey, PA: Information
+       Science Reference. pp. 204-227. [523]ISBN [524]978-1-4666-0897-9.
+       [525]doi:[526]10.4018/978-1-4666-0897-9.ch009. Retrieved 11
+       December 2014.
+   16. [527]^ Schmidt, Eric; Rosenberg, Jonathan (2014). [528]How Google
+       Works. Grand Central Publishing. p. 11.
+       [529]ISBN [530]978-1-4555-6059-2.
+   17. [531]^ [532]"Internet History 1977".
+   18. [533]^ [534]"National Science Foundation, "Diagram of CSNET,"
+       1981".
+   19. [535]^ Steven Levy (April 1994). [536]"Bill and Andy's Excellent
+       Adventure II". Wired.
+   20. [537]^ Antonio Regalado (31 October 2011). [538]"Who Coined 'Cloud
+       Computing'?". Technology Review. MIT. Retrieved 31 July 2013.
+   21. ^ [539]^a [540]^b [541]"Announcing Amazon Elastic Compute Cloud
+       (Amazon EC2) - beta". Amazon.com. 24 August 2006. Retrieved 31 May
+       2014.
+   22. [542]^ White, J.E. [543]"Network Specifications for Remote Job
+       Entry and Remote Job Output Retrieval at UCSB". tools.ietf.org.
+       Retrieved 2016-03-21.
+   23. [544]^ [545]"July, 1993 meeting report from the IP over ATM working
+       group of the IETF". [546]CH: Switch. Archived from [547]the
+       original on 2012-07-10. Retrieved 2010-08-22.
+   24. [548]^ Corbató, Fernando J. [549]"An Experimental Time-Sharing
+       System". SJCC Proceedings. MIT. Retrieved 3 July 2012.
+   25. [550]^ Rochwerger, B.; Breitgand, D.; Levy, E.; Galis, A.; Nagin,
+       K.; Llorente, I. M.; Montero, R.; Wolfsthal, Y.; Elmroth, E.;
+       Caceres, J.; Ben-Yehuda, M.; Emmerich, W.; Galan, F. "The Reservoir
+       model and architecture for open federated cloud computing". IBM
+       Journal of Research and Development. 53 (4): 4:1-4:11.
+       [551]doi:[552]10.1147/JRD.2009.5429058.
+   26. [553]^ Kyriazis, D; A Menychtas; G Kousiouris; K Oberle; T Voith; M
+       Boniface; E Oliveros; T Cucinotta; S Berger (November 2010). "A
+       Real-time Service Oriented Infrastructure". International
+       Conference on Real-Time and Embedded Systems (RTES 2010).
+       Singapore.
+   27. [554]^ Gogouvitis, Spyridon; Konstanteli, Kleopatra; Waldschmidt,
+       Stefan; Kousiouris, George; Katsaros, Gregory; Menychtas, Andreas;
+       Kyriazis, Dimosthenis; Varvarigou, Theodora (2012). "Workflow
+       management for soft real-time interactive applications in
+       virtualized environments". Future Generation Computer Systems. 28
+       (1): 193-209. [555]ISSN [556]0167-739X.
+       [557]doi:[558]10.1016/j.future.2011.05.017.
+   28. [559]^ [560]Keep an eye on cloud computing, Amy Schurr, Network
+       World, 2008-07-08, citing the [561]Gartner report, "Cloud Computing
+       Confusion Leads to Opportunity". Retrieved 2009-09-11.
+   29. [562]^ Gartner (2008-08-18). [563]"Gartner Says Worldwide IT
+       Spending on Pace to Surpass Trillion in 2008".
+   30. [564]^ [565]"Windows Azure General Availability". The Official
+       Microsoft Blog. Microsoft. 2010-02-01. Retrieved 2015-05-03.
+   31. [566]^ DZone, "Apache CloudStack vs. OpenStack: Which Is the
+       Best?",
+       [567]https://dzone.com/articles/apache-cloudstack-vs-openstack-whic
+       h-is-the-best
+   32. [568]^ SoftwareInsider, "OpenNebula vs OpenStack",
+       [569]http://cloud-computing.softwareinsider.com/compare/70-322/Open
+       Nebula-Project-vs-OpenStack-Foundation
+   33. [570]^ Kostantos, Konstantinos, et al. "OPEN-source IaaS fit for
+       purpose: a comparison between OpenNebula and OpenStack."
+       International Journal of Electronic Business Management 11.3 (2013)
+   34. [571]^ L. Albertson, "OpenStack vs. Ganeti", LinuxFest Northwest
+       2017
+   35. [572]^ Qevani, Elton, et al. "What can OpenStack adopt from a
+       Ganeti-based open-source IaaS?." Cloud Computing (CLOUD), 2014 IEEE
+       7th International Conference on. IEEE, 2014
+   36. [573]^ Von Laszewski, Gregor, et al. "Comparison of multiple cloud
+       frameworks.", IEEE 5th International Conference on Cloud Computing
+       (CLOUD), 2012.
+   37. [574]^ Diaz, Javier et al. " Abstract Image Management and
+       Universal Image Registration for Cloud and HPC Infrastructures ",
+       IEEE 5th International Conference on Cloud Computing (CLOUD), 2012
+   38. [575]^ [576]"Launch of IBM Smarter Computing". Archived from
+       [577]the original on 20 April 2013. Retrieved 1 March 2011.
+   39. [578]^ [579]"Launch of Oracle Cloud". Retrieved 28 February 2014.
+   40. [580]^ [581]"Oracle Cloud, Enterprise-Grade Cloud Solutions: SaaS,
+       PaaS, and IaaS". Retrieved 12 October 2014.
+   41. [582]^ [583]"Larry Ellison Doesn't Get the Cloud: The Dumbest Idea
+       of 2013". Forbes.com. Retrieved 12 October 2014.
+   42. [584]^ [585]"Oracle Disrupts Cloud Industry with End-to-End
+       Approach". Forbes.com. Retrieved 12 October 2014.
+   43. [586]^ [587]"Introducing Google App Engine + our new blog". Google
+       Developer Blog. 2008-04-07. Retrieved 2017-03-07.
+   44. [588]^ [589]"Google Compute Engine is now Generally Available with
+       expanded OS support, transparent maintenance, and lower prices".
+       Google Developers Blog. 2013-12-02. Retrieved 2017-03-07.
+   45. ^ [590]^a [591]^b [592]^c HAMDAQA, Mohammad (2012). [593]Cloud
+       Computing Uncovered: A Research Landscape (PDF). Elsevier Press.
+       pp. 41-85. [594]ISBN [595]0-12-396535-7.
+   46. [596]^ [597]"Distributed Application Architecture" (PDF). Sun
+       Microsystem. Retrieved 2009-06-16.
+   47. [598]^ Skala, Karolj; Davidovic, Davor; Afgan, Enis; Sovic, Ivan;
+       Sojat, Zorislav (2015-12-31). [599]"Scalable Distributed Computing
+       Hierarchy: Cloud, Fog and Dew Computing". Open Journal of Cloud
+       Computing. RobPub. 2 (1): 16-24. [600]ISSN [601]2199-1987.
+   48. [602]^ [603]"It's probable that you've misunderstood 'Cloud
+       Computing' until now". TechPluto. Retrieved 2010-09-14.
+   49. [604]^ Danielson, Krissi (2008-03-26). [605]"Distinguishing Cloud
+       Computing from Utility Computing". Ebizq.net. Retrieved
+       2010-08-22.
+   50. [606]^ [607]"Recession Is Good For Cloud Computing - Microsoft
+       Agrees". CloudAve. Retrieved 2010-08-22.
+   51. ^ [608]^a [609]^b [610]^c [611]^d [612]"Defining 'Cloud Services'
+       and "Cloud Computing"". IDC. 2008-09-23. Retrieved 2010-08-22.
+   52. [613]^ [614]"e-FISCAL project state of the art repository".
+   53. [615]^ Farber, Dan (2008-06-25). [616]"The new geek chic: Data
+       centers". [617]CNET News. Retrieved 2010-08-22.
+   54. [618]^ [619]"Jeff Bezos' Risky Bet". Business Week.
+   55. [620]^ He, Sijin; Guo, L.; Guo, Y.; Ghanem, M. [621]"Improving
+       Resource Utilisation in the Cloud Environment Using Multivariate
+       Probabilistic Models". 2012 2012 IEEE 5th International Conference
+       on Cloud Computing (CLOUD): 574-581.
+       [622]ISBN [623]978-1-4673-2892-0.
+       [624]doi:[625]10.1109/CLOUD.2012.66.
+   56. [626]^ He, Qiang, et al. "Formulating Cost-Effective Monitoring
+       Strategies for Service-based Systems." (2013): 1-1.
+   57. [627]^ A Self-adaptive hierarchical monitoring mechanism for Clouds
+       [628]Elsevier.com
+   58. [629]^ [630]Heather Smith (23 May 2013). [631]Xero For Dummies.
+       John Wiley & Sons. pp. 37-. [632]ISBN [633]978-1-118-57252-8.
+   59. [634]^ King, Rachael (2008-08-04). [635]"Cloud Computing: Small
+       Companies Take Flight". Bloomberg BusinessWeek. Retrieved
+       2010-08-22.
+   60. ^ [636]^a [637]^b Mao, Ming; M. Humphrey (2012). [638]"A
+       Performance Study on the VM Startup Time in the Cloud". Proceedings
+       of 2012 IEEE 5th International Conference on Cloud Computing
+       (Cloud2012): 423. [639]ISBN [640]978-1-4673-2892-0.
+       [641]doi:[642]10.1109/CLOUD.2012.103.
+   61. [643]^ Dario Bruneo, Salvatore Distefano, Francesco Longo, Antonio
+       Puliafito, Marco Scarpa: [644]Workload-Based Software Rejuvenation
+       in Cloud Systems. IEEE Trans. Computers 62(6): 1072-1085 (2013)
+   62. [645]^ [646]"Defining and Measuring Cloud Elasticity". KIT Software
+       Quality Departement. Retrieved 13 August 2011.
+   63. [647]^ [648]"Economies of Cloud Scale Infrastructure". Cloud Slam
+       2011. Retrieved 13 May 2011.
+   64. [649]^ He, Sijin; L. Guo; Y. Guo; C. Wu; M. Ghanem; R. Han.
+       [650]"Elastic Application Container: A Lightweight Approach for
+       Cloud Resource Provisioning". 2012 IEEE 26th International
+       Conference on Advanced Information Networking and Applications
+       (AINA): 15-22. [651]ISBN [652]978-1-4673-0714-7.
+       [653]doi:[654]10.1109/AINA.2012.74.
+   65. [655]^ Marston, Sean; Li, Zhi; Bandyopadhyay, Subhajyoti; Zhang,
+       Juheng; Ghalsasi, Anand (2011-04-01). [656]"Cloud computing - The
+       business perspective". Decision Support Systems. 51 (1): 176-189.
+       [657]doi:[658]10.1016/j.dss.2010.12.006.
+   66. [659]^ Mills, Elinor (2009-01-27). [660]"Cloud computing security
+       forecast: Clear skies". CNET News. Retrieved 2010-08-22.
+   67. [661]^ Duan, Yucong; Fu, Guohua; Zhou, Nianjun; Sun, Xiaobing;
+       Narendra, Nanjangud; Hu, Bo. [662]"Everything as a Service (XaaS)
+       on the Cloud: Origins, Current and Future Trends". [663]IEEE.
+   68. [664]^ Kurdi, Heba; Li, Maozhen; Al-Raweshidy, H. S. (2010).
+       "Taxonomy of Grid Systems". In Antonopoulos, Nick. [665]Handbook of
+       Research on P2P and Grid Systems for Service-Oriented Computing:
+       Models, Methodologies and Applications. IGI Global research
+       collection. IGI Global. p. 34. [666]ISBN [667]978-1-61520-687-2.
+       Retrieved 2015-07-29. "Nowadays Service-Oriented Architecture (SOA)
+       has become as [sic] the main architectural model of many IT
+       initiatives including grid, cloud and everything as a service
+       (Essa\XaaS\aas) computing."
+   69. [668]^ Alcaraz Calero, Jose M.; König, Benjamin; Kirschnick,
+       Johannes (2012). "Cross-Layer Monitoring in Cloud Computing". In
+       Rashvand, Habib F.; Kavian, Yousef S. [669]Using Cross-Layer
+       Techniques for Communication Systems. Premier reference source. IGI
+       Global. p. 329. [670]ISBN [671]978-1-4666-0961-7. Retrieved
+       2015-07-29. "Cloud Computing provides services on a stack composed
+       of three service layers (Hurwitz, Bloor, Kaufman, & Halper, 2009):
+       Infrastructure as a Service (IaaS), Platform as a Service (PaaS),
+       and Software as a Service (SaaS)."
+   70. [672]^ [673]"ElasticHosts Blog". Elastichosts. 2014-04-01.
+       Retrieved 2016-06-02.
+   71. [674]^ Amies, Alex; Sluiman, Harm; Tong, Qiang Guo; Liu, Guo Ning
+       (July 2012). "Infrastructure as a Service Cloud Concepts".
+       [675]Developing and Hosting Applications on the Cloud. IBM Press.
+       [676]ISBN [677]978-0-13-306684-5.
+   72. [678]^ Ananich, Anthony (February 20, 2016). [679]"What is IaaS?".
+       ananich.pro. Retrieved 2016-02-20.
+   73. [680]^ [681]"Amazon EC2 Pricing". aws.amazon.com. Retrieved 7 July
+       2014.
+   74. [682]^ [683]"Compute Engine Pricing". cloud.google.com. Retrieved 7
+       July 2014.
+   75. [684]^ [685]"Microsoft Azure Virtual Machines Pricing Details".
+       azure.microsoft.com. Retrieved 7 July 2014.
+   76. [686]^ [687]"cloud.ca".
+   77. [688]^ Boniface, M.; et al. (2010), [689]Platform-as-a-Service
+       Architecture for Real-Time Quality of Service Management in Clouds,
+       5th International Conference on Internet and Web Applications and
+       Services (ICIW), Barcelona, Spain: IEEE, pp. 155-160,
+       [690]doi:[691]10.1109/ICIW.2010.91
+   78. [692]^ [693]"bitcodin - cloud based transcoding and streaming".
+       Retrieved 22 April 2015.
+   79. [694]^ [695]"media.io". Media.io. Retrieved 21 July 2017.
+   80. [696]^ Gartner. [697]"Gartner IT Glossary". Retrieved 6 July 2015.
+   81. [698]^ Gartner; Massimo Pezzini; Paolo Malinverno; Eric Thoo.
+       [699]"Gartner Reference Model for Integration PaaS". Retrieved 16
+       January 2013.
+   82. [700]^ Loraine Lawson. [701]"IT Business Edge". Retrieved 6 July
+       2015.
+   83. [702]^ Enterprise CIO Forum; Gabriel Lowy. [703]"The Value of Data
+       Platform-as-a-Service (dPaaS)". Archived from [704]the original on
+       19 April 2015. Retrieved 6 July 2015.
+   84. [705]^ [706]"Blockchain as a Service (BaaS) | Microsoft Azure".
+       azure.microsoft.com. Retrieved 2016-08-22.
+   85. [707]^ [708]"Definition of: SaaS". PC Magazine Encyclopedia.
+       [709]Ziff Davis. Retrieved 14 May 2014.
+   86. [710]^ Hamdaqa, Mohammad. [711]A Reference Model for Developing
+       Cloud Applications (PDF).
+   87. [712]^ Chou, Timothy. [713]Introduction to Cloud Computing:
+       Business & Technology.
+   88. [714]^ [715]"HVD: the cloud's silver lining" (PDF). Intrinsic
+       Technology. Retrieved 30 August 2012. ^[[716]permanent dead link]
+   89. [717]^ Furfaro, A.; Garro, A.; Tundis, A. (2014-10-01).
+       [718]"Towards Security as a Service (SecaaS): On the modeling of
+       Security Services for Cloud Computing". 2014 International Carnahan
+       Conference on Security Technology (ICCST): 1-6.
+       [719]doi:[720]10.1109/CCST.2014.6986995.
+   90. [721]^ [722]"Definition of Security as a Service".
+   91. [723]^ Carney, Michael. [724]"AnyPresence partners with Heroku to
+       beef up its enterprise mBaaS offering". [725]PandoDaily. Retrieved
+       24 June 2013.
+   92. [726]^ Alex Williams (11 October 2012). [727]"Kii Cloud Opens Doors
+       For Mobile Developer Platform With 25 Million End Users".
+       TechCrunch. Retrieved 16 October 2012.
+   93. [728]^ Aaron Tan (30 September 2012). [729]"FatFractal ups the ante
+       in backend-as-a-service market". Techgoondu.com. Retrieved 16
+       October 2012.
+   94. [730]^ Dan Rowinski (9 November 2011). [731]"Mobile Backend As A
+       Service Parse Raises $5.5 Million in Series A Funding". ReadWrite.
+       Retrieved 23 October 2012.
+   95. [732]^ Pankaj Mishra (7 January 2014). [733]"MobStac Raises $2
+       Million in Series B To Help Brands Leverage Mobile Commerce".
+       TechCrunch. Retrieved 22 May 2014.
+   96. [734]^ [735]"built.io Is Building an Enterprise MBaas Platform for
+       IoT". programmableweb. Retrieved 3 March 2014.
+   97. ^ [736]^a [737]^b Miller, Ron (24 Nov 2015). [738]"AWS Lambda Makes
+       Serverless Applications A Reality". [739]TechCrunch. Retrieved 10
+       July 2016.
+   98. [740]^ [741]"Self-Run Private Cloud Computing Solution -
+       GovConnection". govconnection.com. 2014. Retrieved April 15, 2014.
+   99. [742]^ Foley, John. [743]"Private Clouds Take Shape".
+       InformationWeek. Retrieved 2010-08-22.
+   100. [744]^ Haff, Gordon (2009-01-27). [745]"Just don't call them
+       private clouds". CNET News. Retrieved 2010-08-22.
+   101. [746]^ [747]"There's No Such Thing As A Private Cloud".
+       InformationWeek. 2010-06-30. Retrieved 2010-08-22.
+   102. [748]^ Rouse, Margaret. [749]"What is public cloud?". Definition
+       from Whatis.com. Retrieved 12 October 2014.
+   103. [750]^ [751]"Mind the Gap: Here Comes Hybrid Cloud - Thomas
+       Bittman". Thomas Bittman. Retrieved 22 April 2015.
+   104. [752]^ [753]"Business Intelligence Takes to Cloud for Small
+       Businesses". CIO.com. 2014-06-04. Retrieved 2014-06-04.
+   105. [754]^ Désiré Athow. [755]"Hybrid cloud: is it right for your
+       business?". TechRadar. Retrieved 22 April 2015.
+   106. [756]^ Metzler, Jim; Taylor, Steve. (2010-08-23) [757]"Cloud
+       computing: Reality vs. fiction", Network World.
+   107. [758]^ Rouse, Margaret. [759]"Definition: Cloudbursting", May
+       2011. SearchCloudComputing.com.
+   108. [760]^ [761]"How Cloudbursting "Rightsizes" the Data Center".
+   109. [762]^ Kaewkasi, Chanwit (3 May 2015). [763]"Cross-Platform Hybrid
+       Cloud with Docker".
+   110. [764]^ Vincenzo D. Cunsolo, Salvatore Distefano, Antonio
+       Puliafito, Marco Scarpa: [765]Volunteer Computing and Desktop
+       Cloud: The Cloud@Home Paradigm. IEEE International Symposium on
+       Network Computing and Applications, NCA 2009, pp 134-139
+   111. [766]^ Bernstein, David; Ludvigson, Erik; Sankar, Krishna;
+       Diamond, Steve; Morrow, Monique (2009-05-24). [767]"Blueprint for
+       the Intercloud - Protocols and Formats for Cloud Computing
+       Interoperability". IEEE Computer Society: 328-336.
+       [768]ISBN [769]978-1-4244-3851-8.
+       [770]doi:[771]10.1109/ICIW.2009.55.
+   112. [772]^ [773]"Kevin Kelly: A Cloudbook for the Cloud". Kk.org.
+       Retrieved 2010-08-22.
+   113. [774]^ [775]"Intercloud is a global cloud of clouds". Samj.net.
+       2009-06-22. Retrieved 2010-08-22.
+   114. [776]^ [777]"Vint Cerf: Despite Its Age, The Internet is Still
+       Filled with Problems". Readwriteweb.com. Retrieved 2010-08-22.
+   115. [778]^ [779]"SP360: Service Provider: From India to Intercloud".
+       Blogs.cisco.com. Retrieved 2010-08-22.
+   116. [780]^ Canada (2007-11-29). [781]"Head in the clouds? Welcome to
+       the future". The Globe and Mail. Toronto. Retrieved 2010-08-22.
+   117. [782]^ Rouse, Margaret. [783]"What is a multi-cloud strategy".
+       SearchCloudApplications. Retrieved 3 July 2014.
+   118. [784]^ King, Rachel. [785]"Pivotal's head of products: We're
+       moving to a multi-cloud world". ZDnet. Retrieved 3 July 2014.
+   119. [786]^ [787]Multcloud manage multiple cloud accounts. Retrieved on
+       06 August 2014
+   120. [788]^ [789]"Building GrepTheWeb in the Cloud, Part 1: Cloud
+       Architectures". Developer.amazonwebservices.com. Retrieved 22
+       August 2010.
+   121. ^ [790]^a [791]^b [792]^c [793]"Cloud Computing Privacy Concerns
+       on Our Doorstep".
+   122. [794]^ Chhibber, A (2013). [795]"SECURITY ANALYSIS OF CLOUD
+       COMPUTING" (PDF). International Journal of Advanced Research in
+       Engineering and Applied Sciences. 2 (3): 2278-6252. Retrieved 27
+       February 2015.
+   123. ^ [796]^a [797]^b [798]"Google Drive, Dropbox, Box and iCloud
+       Reach the Top 5 Cloud Storage Security Breaches List".
+       psg.hitachi-solutions.com. Retrieved 2015-11-22.
+   124. [799]^ Maltais, Michelle (26 April 2012). [800]"Who owns your
+       stuff in the cloud?". Los Angeles Times. Retrieved 2012-12-14.
+   125. [801]^ [802]"Security of virtualization, cloud computing divides
+       IT and security pros". Network World. 2010-02-22. Retrieved
+       2010-08-22.
+   126. [803]^ [804]"The Bumpy Road to Private Clouds". Retrieved 8
+       October 2014.
+   127. [805]^ [806]"Should Companies Do Most of Their Computing in the
+       Cloud? (Part 1) - Schneier on Security". www.schneier.com.
+       Retrieved 2016-02-28.
+   128. [807]^ [808]"Disadvantages of Cloud Computing (Part 1) - Limited
+       control and flexibility". www.cloudacademy.com. Retrieved
+       2016-11-03.
+   129. [809]^ [810]"The real limits of cloud computing". www.itworld.com.
+       Retrieved 2016-11-03.
+   130. [811]^ [812]"The real limits of cloud computing". www.itworld.com.
+       Retrieved 2016-11-03.
+   131. [813]^ Karra, Maria. [814]"Cloud solutions for translation, yes or
+       no?". [815]IAPTI.org. Retrieved 23 February 2017.
+   132. [816]^ Smith, David Mitchell. [817]"Hype Cycle for Cloud
+       Computing, 2013". Gartner. Retrieved 3 July 2014.
+   133. [818]^ [819]"The evolution of Cloud Computing". Retrieved 22 April
+       2015.
+   134. [820]^ [821]"Microsoft Says to Spend 90% of R&D on Cloud
+       Strategy". Retrieved 22 April 2015.
+   135. [822]^ [823]"Roundup of Cloud Computing Forecasts And Market
+       Estimates, 2014". Forbes. Retrieved 2015-11-22.
+   136. [824]^ [825]"How the Virtual Data Room is boosting Mergers and
+       Acquisitions". PcWorld. Retrieved 2017-02-27.
+
+Further reading[[826]edit]
+
+     * Millard, Christopher (2013). [827]Cloud Computing Law. Oxford
+       University Press. [828]ISBN [829]978-0-19-967168-7.
+     * Singh, Jatinder; Powles, Julia; Pasquier, Thomas; Bacon, Jean (July
+       2015). "Data Flow Management and Compliance in Cloud Computing".
+       IEEE Cloud Computing. 2 (4): 24-32.
+       [830]doi:[831]10.1109/MCC.2015.69.
+     * Armbrust, Michael; Stoica, Ion; Zaharia, Matei; Fox, Armando;
+       Griffith, Rean; Joseph, Anthony D.; Katz, Randy; Konwinski, Andy;
+       Lee, Gunho; Patterson, David; Rabkin, Ariel (1 April 2010). "A view
+       of cloud computing". Communications of the ACM. 53 (4): 50.
+       [832]doi:[833]10.1145/1721654.1721672.
+     * Hu, Tung-Hui (2015). A Prehistory of the Cloud. MIT Press.
+       [834]ISBN [835]978-0-262-02951-3.
+     * Mell, P. (2011, September 31). The NIST Definition of Cloud
+       Computing. Retrieved November 1, 2015, from National Institute of
+       Standards and Technology website:
+       http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf
+
+External links[[836]edit]
+
+   Wikimedia Commons has media related to [837]Cloud computing.
+     * [838]v
+     * [839]t
+     * [840]e
+
+   Cloud computing
+   [841]Applications
+     * [842]Box
+     * [843]Enstratius
+     * [844]Google
+          + [845]G Suite
+          + [846]Docs, Sheets and Slides
+     * [847]HP Cloud (closed)
+     * [848]Microsoft Online
+     * [849]Rackspace
+     * [850]Salesforce
+
+   [851]Platforms
+     * [852]Alpha7
+     * [853]Amazon
+     * [854]AppScale
+     * [855]Box
+     * [856]Bluemix
+     * [857]Cloud Foundry
+     * [858]Cocaine (PaaS)
+     * [859]Engine Yard
+     * [860]Enstratius
+     * [861]eXo Platform
+     * [862]Helion
+     * [863]GE Predix
+     * [864]Google App Engine
+     * [865]GreenQloud
+     * [866]Heroku
+     * [867]Inktank
+     * [868]Jelastic
+     * [869]Mendix
+     * [870]Microsoft Azure
+     * [871]OutSystems
+     * [872]openQRM
+     * [873]OpenShift
+     * [874]RightScale
+     * [875]Force.com
+     * [876]SAP Cloud Platform
+     * [877]VMware vCloud Air
+
+   [878]Infrastructure
+     * [879]Amazon
+     * [880]Abiquo Enterprise Edition
+     * [881]CloudStack
+     * [882]CtrlS
+     * [883]Cloud4c
+     * [884]DigitalOcean
+     * [885]EMC Atmos
+     * [886]Enstratius
+     * [887]Eucalyptus
+     * [888]Fujitsu
+     * [889]GoGrid
+     * [890]Google Cloud Platform
+     * [891]GreenButton
+     * [892]GreenQloud
+     * [893]IBM cloud computing
+     * [894]iland
+     * [895]Joyent
+     * [896]Lunacloud
+     * [897]Nimbula
+     * [898]Nimbus
+     * [899]OpenNebula
+     * [900]OpenStack
+     * [901]OrionVM
+     * [902]Rackspace Cloud
+     * [903]SoftLayer
+     * [904]Zadara Storage
+     * [905]libvirt
+     * [906]libguestfs
+     * [907]OVirt
+     * [908]Virtual Machine Manager
+     * [909]Wakame-vdc
+     * [910]Virtual Private Cloud OnDemand
+
+   Technologies
+     * [911]Cloud database
+     * [912]Data centers
+     * [913]Distributed file system for cloud
+     * [914]Hardware virtualization
+     * [915]Internet
+     * [916]Networking
+     * [917]Security
+     * [918]Structured storage
+     * [919]Virtual appliance
+     * [920]Web APIs
+     * [921]Virtual private cloud
+
+     * Category [922]Category
+     * Commons page [923]Commons
+
+     * [924]v
+     * [925]t
+     * [926]e
+
+   [927]Parallel computing
+   General
+     * [928]Distributed computing
+     * [929]Parallel computing
+     * [930]Massively parallel
+     * Cloud computing
+     * [931]High-performance computing
+     * [932]Multiprocessing
+     * [933]Manycore processor
+     * [934]GPGPU
+     * [935]Computer network
+     * [936]Systolic array
+
+   Levels
+     * [937]Bit
+     * [938]Instruction
+     * [939]Thread
+     * [940]Task
+     * [941]Data
+     * [942]Memory
+     * [943]Loop
+     * [944]Pipeline
+
+   [945]Multithreading
+     * [946]Temporal
+     * [947]Simultaneous (SMT)
+     * [948]Speculative (SpMT)
+     * [949]Preemptive
+     * [950]Cooperative
+     * [951]Clustered Multi-Thread (CMT)
+     * [952]Hardware scout
+
+   Theory
+     * [953]PRAM model
+     * [954]Analysis of parallel algorithms
+     * [955]Amdahl's law
+     * [956]Gustafson's law
+     * [957]Cost efficiency
+     * [958]Karp-Flatt metric
+     * [959]Slowdown
+     * [960]Speedup
+
+   Elements
+     * [961]Process
+     * [962]Thread
+     * [963]Fiber
+     * [964]Instruction window
+
+   Coordination
+     * [965]Multiprocessing
+     * [966]Memory coherency
+     * [967]Cache coherency
+     * [968]Cache invalidation
+     * [969]Barrier
+     * [970]Synchronization
+     * [971]Application checkpointing
+
+   [972]Programming
+     * [973]Stream processing
+     * [974]Dataflow programming
+     * [975]Models
+          + [976]Implicit parallelism
+          + [977]Explicit parallelism
+          + [978]Concurrency
+     * [979]Non-blocking algorithm
+
+   [980]Hardware
+     * [981]Flynn's taxonomy
+          + [982]SISD
+          + [983]SIMD
+          + [984]SIMT
+          + [985]MISD
+          + [986]MIMD
+     * [987]Dataflow architecture
+     * [988]Pipelined processor
+     * [989]Superscalar processor
+     * [990]Vector processor
+     * [991]Multiprocessor
+          + [992]symmetric
+          + [993]asymmetric
+     * [994]Memory
+          + [995]shared
+          + [996]distributed
+          + [997]distributed shared
+          + [998]UMA
+          + [999]NUMA
+          + [1000]COMA
+     * [1001]Massively parallel computer
+     * [1002]Computer cluster
+     * [1003]Grid computer
+
+   [1004]APIs
+     * [1005]Ateji PX
+     * [1006]Boost.Thread
+     * [1007]Charm++
+     * [1008]Cilk
+     * [1009]Coarray Fortran
+     * [1010]CUDA
+     * [1011]Dryad
+     * [1012]C++ AMP
+     * [1013]Global Arrays
+     * [1014]MPI
+     * [1015]OpenMP
+     * [1016]OpenCL
+     * [1017]OpenHMPP
+     * [1018]OpenACC
+     * [1019]TPL
+     * [1020]PLINQ
+     * [1021]PVM
+     * [1022]POSIX Threads
+     * [1023]RaftLib
+     * [1024]UPC
+     * [1025]TBB
+
+   Problems
+     * [1026]Embarrassingly parallel
+     * [1027]Software lockout
+     * [1028]Scalability
+     * [1029]Race condition
+     * [1030]Deadlock
+     * [1031]Livelock
+     * [1032]Starvation
+     * [1033]Deterministic algorithm
+     * [1034]Parallel slowdown
+
+     * Category  [1035]Category: parallel computing
+     * Commons page Media related to [1036]Parallel computing at Wikimedia
+       Commons
+
+   [1037]Authority control
+     * [1038]GND: [1039]7623494-0
+     * [1040]NDL: [1041]01155705
+
+   Retrieved from
+   "[1042]https://en.wikipedia.org/w/index.php?title=Cloud_computing&oldid
+   =803638643"
+   [1043]Categories:
+     * [1044]Cloud computing
+     * [1045]Cloud infrastructure
+
+   Hidden categories:
+     * [1046]CS1 maint: Uses authors parameter
+     * [1047]CS1 maint: Multiple names: authors list
+     * [1048]Pages using citations with format and no URL
+     * [1049]All articles with dead external links
+     * [1050]Articles with dead external links from July 2017
+     * [1051]Articles with permanently dead external links
+     * [1052]Wikipedia indefinitely move-protected pages
+     * [1053]Articles prone to spam from January 2017
+     * [1054]Wikipedia articles needing factual verification from August
+       2017
+     * [1055]Articles with specifically marked weasel-worded phrases from
+       August 2017
+     * [1056]All articles with unsourced statements
+     * [1057]Articles with unsourced statements from July 2015
+     * [1058]All articles lacking reliable references
+     * [1059]Articles lacking reliable references from February 2016
+     * [1060]Wikipedia articles needing factual verification from July
+       2015
+     * [1061]Wikipedia articles with GND identifiers
+
+Navigation menu
+
+Personal tools
+
+     * Not logged in
+     * [1062]Talk
+     * [1063]Contributions
+     * [1064]Create account
+     * [1065]Log in
+
+Namespaces
+
+     * [1066]Article
+     * [1067]Talk
+
+Variants
+
+Views
+
+     * [1068]Read
+     * [1069]Edit
+     * [1070]View history
+
+More
+
+Search
+
+   ____________________ Search Go
+
+Navigation
+
+     * [1071]Main page
+     * [1072]Contents
+     * [1073]Featured content
+     * [1074]Current events
+     * [1075]Random article
+     * [1076]Donate to Wikipedia
+     * [1077]Wikipedia store
+
+Interaction
+
+     * [1078]Help
+     * [1079]About Wikipedia
+     * [1080]Community portal
+     * [1081]Recent changes
+     * [1082]Contact page
+
+Tools
+
+     * [1083]What links here
+     * [1084]Related changes
+     * [1085]Upload file
+     * [1086]Special pages
+     * [1087]Permanent link
+     * [1088]Page information
+     * [1089]Wikidata item
+     * [1090]Cite this page
+
+Print/export
+
+     * [1091]Create a book
+     * [1092]Download as PDF
+     * [1093]Printable version
+
+In other projects
+
+     * [1094]Wikimedia Commons
+
+Languages
+
+     * [1095]Afrikaans
+     * [1096]a+l+e+r+b+y+tm
+     * [1097]Az@rbaycanca
+     * [1098]¬¾²¾
+     * [1099]Basa Banyumasan
+     * [1100]Belaruskaya
+     * [1101]B"lgarski
+     * [1102]Català
+     * [1103]Cestina
+     * [1104]Dansk
+     * [1105]Deutsch
+     * [1106]Eesti
+     * [1107]Español
+     * [1108]Esperanto
+     * [1109]Euskara
+     * [1110]f+a+r+s+
+     * [1111]Français
+     * [1112]Frysk
+     * [1113]¢¶/Hak-kâ-ngî
+     * [1114]­´
+     * [1115]¹¿¨¦
+     * [1116]Bahasa Indonesia
+     * [1117]Íslenska
+     * [1118]Italiano
+     * [1119]E+B+R+J+T+
+     * [1120]¨¨¡
+     * [1121]¥ £
+     * [1122]azasha
+     * [1123]Latina
+     * [1124]Latviesu
+     * [1125]Lietuviu
+     * [1126]Magyar
+     * [1127]Makedonski
+     * [1128]®²¯¾³
+     * [1129]®°¾
+     * [1130]Bahasa Melayu
+     * [1131]Mongol
+     * [1132]Nederlands
+     * [1133]¥¬
+     * [1134]Norsk
+     * [1135]¡¼¿
+     * [1136]O;Szbekcha/v%zbekcha
+     * [1137]Polski
+     * [1138]Português
+     * [1139]Româna
+     * [1140]Russkij
+     * [1141]Simple English
+     * [1142]Slovencina
+     * [1143]Slovenscina
+     * [1144]Srpski / srpski
+     * [1145]Suomi
+     * [1146]Svenska
+     * [1147]¤®¿´
+     * [1148]¤²
+     * [1149]¢
+     * [1150]To·ik£
+     * [1151]Türkçe
+     * [1152]Ukrayins'ka
+     * [1153]a+r+d+w+
+     * [1154]Tie>'ng Vie>-.t
+     * [1155]Winaray
+     * [1156]µ
+     * [1157]­
+
+   [1158]Edit links
+
+     * This page was last edited on 3 October 2017, at 18:53.
+     * Text is available under the [1159]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. By
+       using this site, you agree to the [1160]Terms of Use and
+       [1161]Privacy Policy. Wikipedia® is a registered trademark of the
+       [1162]Wikimedia Foundation, Inc., a non-profit organization.
+
+     * [1163]Privacy policy
+     * [1164]About Wikipedia
+     * [1165]Disclaimers
+     * [1166]Contact Wikipedia
+     * [1167]Developers
+     * [1168]Cookie statement
+     * [1169]Mobile view
+
+     * [1170]Wikimedia Foundation
+     * [1171]Powered by MediaWiki
+
+References
+
+   Visible links
+   1. android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Cloud_computing
+   2. file:///w/index.php?title=Cloud_computing&action=edit
+   3. file:///w/opensearch_desc.php
+   4. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#mw-head
+   5. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#p-search
+   6. file:///wiki/Cloud_Computing_(horse)
+   7. file:///wiki/Information_technology
+   8. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-1
+   9. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+  10. file:///wiki/Provisioning
+  11. file:///wiki/Internet
+  12. file:///wiki/Data_center
+  13. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-cloudid-3
+  14. file:///wiki/Wikipedia:Verifiability
+  15. file:///wiki/Coherence_(disambiguation)
+  16. file:///wiki/Economies_of_scale
+  17. file:///wiki/Public_utility
+  18. file:///wiki/Company
+  19. file:///wiki/IT_infrastructure
+  20. file:///wiki/Core_business
+  21. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-aws.amazon-4
+  22. file:///wiki/Team
+  23. file:///wiki/Market_(economics)
+  24. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-aws.amazon-4
+  25. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-5
+  26. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-6
+  27. file:///wiki/Pay_as_you_go_(disambiguation)
+  28. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-7
+  29. file:///wiki/Hardware_virtualization
+  30. file:///wiki/Service-oriented_architecture
+  31. file:///wiki/Autonomic_computing
+  32. file:///wiki/Utility_computing
+  33. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-8
+  34. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-gartner-9
+  35. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-really-10
+  36. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-11
+  37. file:///wiki/Wikipedia:Manual_of_Style/Words_to_watch#Unsupported_attributions
+  38. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-12
+  39. file:///wiki/Wikipedia:Manual_of_Style/Words_to_watch#Unsupported_attributions
+  40. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-13
+  41. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-14
+  42. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#History
+  43. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Origin_of_the_term
+  44. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#1970s
+  45. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#1990s
+  46. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#2000s
+  47. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Similar_concepts
+  48. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Characteristics
+  49. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Service_models
+  50. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Infrastructure_as_a_service_.28IaaS.29
+  51. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Platform_as_a_service_.28PaaS.29
+  52. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Software_as_a_service_.28SaaS.29
+  53. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Security_as_a_service_.28SECaaS.29
+  54. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Mobile_.22backend.22_as_a_service_.28MBaaS.29
+  55. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Serverless_computing
+  56. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Cloud_clients
+  57. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Deployment_models
+  58. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Private_cloud
+  59. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Public_cloud
+  60. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Hybrid_cloud
+  61. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Others
+  62. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Community_cloud
+  63. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Distributed_cloud
+  64. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Intercloud
+  65. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Multicloud
+  66. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Architecture
+  67. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Cloud_engineering
+  68. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Security_and_privacy
+  69. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Limitations_and_disadvantages
+  70. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Emerging_trends
+  71. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#See_also
+  72. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#References
+  73. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#Further_reading
+  74. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#External_links
+  75. file:///w/index.php?title=Cloud_computing&action=edit&section=1
+  76. file:///w/index.php?title=Cloud_computing&action=edit&section=2
+  77. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-15
+  78. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-16
+  79. file:///wiki/Computer_network_diagram
+  80. file:///wiki/ARPANET
+  81. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-17
+  82. file:///wiki/CSNET
+  83. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-18
+  84. file:///wiki/Distributed_computing
+  85. file:///wiki/Wired_(magazine)
+  86. file:///wiki/Apple_Inc.
+  87. file:///wiki/General_Magic
+  88. file:///wiki/Andy_Hertzfeld
+  89. file:///wiki/Telescript_(programming_language)
+  90. file:///wiki/X.400
+  91. file:///wiki/ASN.1
+  92. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-19
+  93. file:///wiki/Compaq
+  94. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-20
+  95. file:///wiki/Amazon_Elastic_Compute_Cloud
+  96. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Amazon.com-21
+  97. file:///w/index.php?title=Cloud_computing&action=edit&section=3
+  98. file:///wiki/Remote_Job_Entry
+  99. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-22
+ 100. file:///wiki/IBM
+ 101. file:///wiki/Digital_Equipment_Corporation
+ 102. file:///w/index.php?title=Cloud_computing&action=edit&section=4
+ 103. file:///wiki/Virtual_private_network
+ 104. file:///wiki/Wikipedia:Citation_needed
+ 105. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-23
+ 106. file:///wiki/Wikipedia:Citation_needed
+ 107. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-MITCorbato-24
+ 108. file:///w/index.php?title=Cloud_computing&action=edit&section=5
+ 109. file:///wiki/NASA
+ 110. file:///wiki/OpenNebula
+ 111. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-25
+ 112. file:///wiki/Quality_of_service
+ 113. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-26
+ 114. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Gogouvitis2012-27
+ 115. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-28
+ 116. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-29
+ 117. file:///wiki/Amazon.com
+ 118. file:///wiki/Amazon_Elastic_Compute_Cloud
+ 119. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Amazon.com-21
+ 120. file:///wiki/Microsoft_Azure
+ 121. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-avail-30
+ 122. file:///wiki/Rackspace
+ 123. file:///wiki/NASA
+ 124. file:///wiki/OpenStack
+ 125. file:///wiki/Nebula_(computing_platform)
+ 126. file:///wiki/Rackspace_Cloud#Cloud_Files
+ 127. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-31
+ 128. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-32
+ 129. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-33
+ 130. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-34
+ 131. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-35
+ 132. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-36
+ 133. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-37
+ 134. file:///wiki/IBM_cloud_computing#IBM_SmartCloud
+ 135. file:///wiki/Smarter_Planet
+ 136. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-38
+ 137. file:///wiki/Smarter_Computing
+ 138. file:///wiki/Oracle_Corporation#Services
+ 139. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-39
+ 140. file:///wiki/SaaS
+ 141. file:///wiki/PaaS
+ 142. file:///wiki/IaaS
+ 143. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-40
+ 144. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-41
+ 145. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-42
+ 146. file:///wiki/Google
+ 147. file:///wiki/Google_App_Engine
+ 148. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-43
+ 149. file:///wiki/Google_Compute_Engine
+ 150. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-44
+ 151. file:///w/index.php?title=Cloud_computing&action=edit&section=6
+ 152. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-HAM2012-45
+ 153. file:///wiki/Virtualization
+ 154. file:///wiki/Operating_system%E2%80%93level_virtualization
+ 155. file:///wiki/Utilization
+ 156. file:///wiki/Code_on_demand
+ 157. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-HAM2012-45
+ 158. file:///wiki/Service-oriented_Architecture
+ 159. file:///wiki/Service_(systems_architecture)
+ 160. file:///wiki/Performance_metric
+ 161. file:///wiki/Grid_computing
+ 162. file:///wiki/Reliability_(computer_networking)
+ 163. file:///wiki/Parallel_computing
+ 164. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-HAM2012-45
+ 165. file:///wiki/Client%E2%80%93server_model
+ 166. file:///wiki/Distributed_application
+ 167. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-46
+ 168. file:///wiki/Computer_bureau
+ 169. file:///wiki/Service_bureau
+ 170. file:///wiki/Grid_computing
+ 171. file:///wiki/Cluster_(computing)
+ 172. file:///wiki/Loose_coupling
+ 173. file:///wiki/Fog_computing
+ 174. file:///w/index.php?title=Dew_computing&action=edit&redlink=1
+ 175. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-skala-47
+ 176. file:///wiki/Mainframe_computer
+ 177. file:///wiki/Census
+ 178. file:///wiki/Enterprise_resource_planning
+ 179. file:///wiki/Transaction_processing
+ 180. file:///wiki/Utility_computing
+ 181. file:///wiki/Computational_resource
+ 182. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-It.27s_you.27ve-48
+ 183. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-49
+ 184. file:///wiki/Peer-to-peer
+ 185. file:///wiki/Sandbox_(Cloud)
+ 186. file:///w/index.php?title=Cloud_computing&action=edit&section=7
+ 187. file:///wiki/Capital_expenditure
+ 188. file:///wiki/Operational_expenditure
+ 189. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-50
+ 190. file:///wiki/Barriers_to_entry
+ 191. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-idc-51
+ 192. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-52
+ 193. file:///wiki/Device_independence
+ 194. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-yarmis-53
+ 195. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-idc-51
+ 196. file:///wiki/Software_maintenance
+ 197. file:///wiki/Multitenancy
+ 198. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-amazon-54
+ 199. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-55
+ 200. file:///wiki/Computer_performance
+ 201. file:///wiki/Web_services
+ 202. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-idc-51
+ 203. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-56
+ 204. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Elsevier.com-57
+ 205. file:///wiki/Pooling_(resource_management)
+ 206. https://www.uengr.com/cloud-computing-introduction-and-characteristics/
+ 207. file:///wiki/Productivity
+ 208. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Smith2013-58
+ 209. file:///wiki/Business_continuity
+ 210. file:///wiki/Disaster_recovery
+ 211. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-59
+ 212. file:///wiki/Elasticity_(cloud_computing)
+ 213. file:///wiki/Provisioning
+ 214. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-vmstartuptime2012-60
+ 215. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-61
+ 216. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-vmstartuptime2012-60
+ 217. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-62
+ 218. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-63
+ 219. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-He_15.E2.80.9322-64
+ 220. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-65
+ 221. file:///wiki/Computer_security
+ 222. file:///wiki/Kernel_(operating_system)
+ 223. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-66
+ 224. file:///wiki/Audit_log
+ 225. file:///wiki/National_Institute_of_Standards_and_Technology
+ 226. file:///wiki/Laptop
+ 227. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 228. file:///w/index.php?title=Cloud_computing&action=edit&section=8
+ 229. file:///wiki/Service-oriented_architecture
+ 230. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-67
+ 231. file:///wiki/As_a_service
+ 232. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-68
+ 233. file:///wiki/NIST
+ 234. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 235. file:///wiki/Solution_stack
+ 236. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-69
+ 237. file:///wiki/NIST
+ 238. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 239. file:///w/index.php?title=Cloud_computing&action=edit&section=9
+ 240. file:///wiki/Category:Cloud_infrastructure
+ 241. file:///wiki/Internet_Engineering_Task_Force
+ 242. file:///wiki/Virtual_machine
+ 243. file:///wiki/Api
+ 244. file:///wiki/Indirection
+ 245. file:///wiki/Hypervisor
+ 246. file:///wiki/Xen
+ 247. file:///wiki/VirtualBox
+ 248. file:///wiki/Oracle_VM_Server_for_x86
+ 249. file:///wiki/Kernel-based_Virtual_Machine
+ 250. file:///wiki/VMware_ESX
+ 251. file:///wiki/Hyper-V
+ 252. file:///wiki/Linux_kernel
+ 253. file:///wiki/Cgroups
+ 254. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-70
+ 255. file:///wiki/Disk_image
+ 256. file:///wiki/Block_storage
+ 257. file:///wiki/Object_storage
+ 258. file:///wiki/VLAN
+ 259. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-DHAC-71
+ 260. file:///wiki/Data_centers
+ 261. file:///wiki/Wide_area_network
+ 262. file:///wiki/Carrier_cloud
+ 263. file:///wiki/Virtual_private_network
+ 264. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-72
+ 265. file:///wiki/Wikipedia:Identifying_reliable_sources
+ 266. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-73
+ 267. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-74
+ 268. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-75
+ 269. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-76
+ 270. file:///w/index.php?title=Cloud_computing&action=edit&section=10
+ 271. file:///wiki/Platform_as_a_service
+ 272. file:///wiki/Category:Cloud_platforms
+ 273. file:///wiki/Computing_platform
+ 274. file:///wiki/Microsoft_Azure
+ 275. file:///wiki/Google_App_Engine
+ 276. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-77
+ 277. file:///wiki/Wikipedia:Verifiability
+ 278. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-78
+ 279. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-79
+ 280. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-GartnerGlossary-80
+ 281. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-GartnerReferenceModel-81
+ 282. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-ITBusinessEdge-82
+ 283. file:///wiki/Data_visualization
+ 284. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-EnterpriseCIOForum-83
+ 285. file:///wiki/Blockchain_(database)
+ 286. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-84
+ 287. file:///w/index.php?title=Cloud_computing&action=edit&section=11
+ 288. file:///wiki/Software_as_a_service
+ 289. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-85
+ 290. file:///wiki/Virtual_machines
+ 291. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-hamdaqa-86
+ 292. file:///wiki/Load_balancer
+ 293. file:///wiki/Multitenant
+ 294. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Chou-87
+ 295. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-88
+ 296. file:///wiki/Business
+ 297. file:///wiki/Wikipedia:Citation_needed
+ 298. file:///wiki/Wikipedia:Manual_of_Style/Dates_and_numbers
+ 299. file:///wiki/Key_management
+ 300. file:///wiki/Wikipedia:Citation_needed
+ 301. file:///w/index.php?title=Cloud_computing&action=edit&section=12
+ 302. file:///wiki/Security_as_a_service
+ 303. file:///wiki/Business_model
+ 304. file:///wiki/Service_provider
+ 305. file:///wiki/Total_cost_of_ownership
+ 306. file:///wiki/Cloud_service
+ 307. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-89
+ 308. file:///wiki/Authentication
+ 309. file:///wiki/Anti-virus
+ 310. file:///wiki/Anti-malware
+ 311. file:///wiki/Intrusion_detection
+ 312. file:///w/index.php?title=Security_event&action=edit&redlink=1
+ 313. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-90
+ 314. file:///w/index.php?title=Cloud_computing&action=edit&section=13
+ 315. file:///wiki/Mobile_backend_as_a_service
+ 316. file:///wiki/Web_app
+ 317. file:///wiki/Mobile_app
+ 318. file:///wiki/Cloud_storage
+ 319. file:///wiki/Application_programming_interface
+ 320. file:///wiki/Software_development_kit
+ 321. file:///wiki/Push_technology
+ 322. file:///wiki/Social_networking_service
+ 323. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-PandoDailyAP-91
+ 324. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Williams1-92
+ 325. file:///wiki/Startup_company
+ 326. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Tan12-93
+ 327. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Rowinski11-94
+ 328. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-Mishra-95
+ 329. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-built.io-96
+ 330. file:///w/index.php?title=Cloud_computing&action=edit&section=14
+ 331. file:///wiki/Serverless_computing
+ 332. file:///wiki/Execution_(computing)
+ 333. file:///wiki/Virtual_machines
+ 334. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-techcrunch-lambda-97
+ 335. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-techcrunch-lambda-97
+ 336. file:///wiki/Back-end_database
+ 337. file:///w/index.php?title=Cloud_computing&action=edit&section=15
+ 338. file:///wiki/Category:Cloud_clients
+ 339. file:///w/index.php?title=Cloud_API&action=edit&redlink=1
+ 340. file:///wiki/Desktop_computers
+ 341. file:///wiki/Laptop
+ 342. file:///wiki/Tablet_computer
+ 343. file:///wiki/Smartphones
+ 344. file:///wiki/Ethernet
+ 345. file:///wiki/Thin_clients
+ 346. file:///wiki/Chromebook
+ 347. file:///wiki/Ajax_(programming)
+ 348. file:///wiki/HTML5
+ 349. file:///wiki/Web_user_interface
+ 350. file:///wiki/Look_and_feel
+ 351. file:///wiki/Desktop_virtualization
+ 352. file:///w/index.php?title=Cloud_computing&action=edit&section=16
+ 353. file:///w/index.php?title=Cloud_computing&action=edit&section=17
+ 354. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 355. file:///wiki/Data_center
+ 356. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-98
+ 357. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-iwpc-99
+ 358. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-100
+ 359. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-101
+ 360. file:///w/index.php?title=Cloud_computing&action=edit&section=18
+ 361. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-102
+ 362. file:///wiki/Amazon_Web_Services
+ 363. file:///wiki/Data_center
+ 364. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-idc-51
+ 365. file:///w/index.php?title=Cloud_computing&action=edit&section=19
+ 366. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 367. file:///wiki/Gartner
+ 368. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-103
+ 369. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-104
+ 370. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-105
+ 371. file:///wiki/Information_technology
+ 372. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-106
+ 373. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 374. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-107
+ 375. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-108
+ 376. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-109
+ 377. file:///w/index.php?title=Cloud_computing&action=edit&section=20
+ 378. file:///w/index.php?title=Cloud_computing&action=edit&section=21
+ 379. file:///wiki/Community_cloud
+ 380. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-nist-2
+ 381. file:///w/index.php?title=Cloud_computing&action=edit&section=22
+ 382. file:///wiki/BOINC
+ 383. file:///wiki/Folding@Home
+ 384. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-110
+ 385. file:///w/index.php?title=Cloud_computing&action=edit&section=23
+ 386. file:///wiki/Intercloud
+ 387. file:///wiki/Intercloud
+ 388. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-111
+ 389. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-kk-112
+ 390. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-113
+ 391. file:///wiki/Interoperability
+ 392. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-114
+ 393. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-115
+ 394. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-116
+ 395. file:///w/index.php?title=Cloud_computing&action=edit&section=24
+ 396. file:///wiki/Multicloud
+ 397. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-rouse-117
+ 398. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-king-118
+ 399. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-119
+ 400. file:///w/index.php?title=Cloud_computing&action=edit&section=25
+ 401. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-120
+ 402. file:///wiki/Systems_architecture
+ 403. file:///wiki/Software_systems
+ 404. file:///w/index.php?title=Cloud_computing&action=edit&section=26
+ 405. file:///wiki/Cloud_engineering
+ 406. file:///wiki/Engineering
+ 407. file:///wiki/Systems_engineering
+ 408. file:///wiki/Software_engineering
+ 409. file:///wiki/Web_engineering
+ 410. file:///wiki/Performance_engineering
+ 411. file:///wiki/Information_engineering
+ 412. file:///wiki/Security_engineering
+ 413. file:///wiki/Platform_engineering
+ 414. file:///wiki/Risk_analysis_(engineering)
+ 415. file:///wiki/Quality_control
+ 416. file:///w/index.php?title=Cloud_computing&action=edit&section=27
+ 417. file:///wiki/Cloud_computing_issues
+ 418. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-ryan-121
+ 419. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-ryan-121
+ 420. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-cloudid-3
+ 421. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-ryan-121
+ 422. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-122
+ 423. file:///wiki/Eugene_Schultz
+ 424. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-psg.hitachi-solutions.com-123
+ 425. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-psg.hitachi-solutions.com-123
+ 426. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-124
+ 427. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-125
+ 428. file:///wiki/Information_technology
+ 429. file:///wiki/Intelligent_personal_assistant
+ 430. file:///wiki/Siri
+ 431. file:///wiki/Google_Now
+ 432. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-126
+ 433. file:///w/index.php?title=Cloud_computing&action=edit&section=28
+ 434. file:///wiki/Bruce_Schneier
+ 435. file:///wiki/Economies_of_scale
+ 436. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-127
+ 437. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-128
+ 438. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-129
+ 439. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-130
+ 440. file:///wiki/Confidentiality
+ 441. file:///wiki/Non-disclosure_agreement
+ 442. file:///wiki/Sensitive_data
+ 443. file:///wiki/Encrypt
+ 444. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-131
+ 445. file:///w/index.php?title=Cloud_computing&action=edit&section=29
+ 446. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-ghc-132
+ 447. file:///wiki/Chief_technology_officer
+ 448. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-133
+ 449. file:///wiki/Research_and_Development
+ 450. file:///wiki/Research_and_development
+ 451. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-134
+ 452. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-135
+ 453. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_note-136
+ 454. https://www.pcworld.idg.com.au/article/614885/how-virtual-data-room-boosting-mergers-aquisitions/
+ 455. file:///w/index.php?title=Cloud_computing&action=edit&section=30
+ 456. file:///wiki/Portal:Computer_networking
+ 457. file:///wiki/Category:Cloud_computing_providers
+ 458. file:///wiki/Category:Cloud_platforms
+ 459. file:///wiki/Cloud_computing_security
+ 460. file:///wiki/Cloud_computing_comparison
+ 461. file:///wiki/Cloud_management
+ 462. file:///wiki/Cloud_research
+ 463. file:///wiki/Cloud_storage
+ 464. file:///wiki/Edge_computing
+ 465. file:///wiki/EScience
+ 466. file:///wiki/Microservices
+ 467. file:///wiki/Mobile_cloud_computing
+ 468. file:///wiki/Personal_cloud
+ 469. file:///wiki/Robot_as_a_Service
+ 470. file:///wiki/Service-Oriented_Architecture
+ 471. file:///wiki/Ubiquitous_computing
+ 472. file:///wiki/Web_computing
+ 473. file:///wiki/Cloud_collaboration
+ 474. file:///w/index.php?title=Cloud_computing&action=edit&section=31
+ 475. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-1
+ 476. http://www.crosstalkonline.org/storage/issue-archives/2011/201101/201101-Hassan.pdf
+ 477. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-0
+ 478. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-1
+ 479. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-2
+ 480. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-3
+ 481. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-4
+ 482. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-5
+ 483. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-6
+ 484. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-nist_2-7
+ 485. https://dx.doi.org/10.6028/NIST.SP.800-145
+ 486. file:///wiki/Digital_object_identifier
+ 487. file://doi.org/10.6028%2FNIST.SP.800-145
+ 488. file:///wiki/Category:CS1_maint:_Uses_authors_parameter
+ 489. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-cloudid_3-0
+ 490. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-cloudid_3-1
+ 491. https://dx.doi.org/10.1016/j.eswa.2015.06.025
+ 492. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-aws.amazon_4-0
+ 493. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-aws.amazon_4-1
+ 494. http://aws.amazon.com/what-is-cloud-computing/
+ 495. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-5
+ 496. http://it.tmcnet.com/channels/cloud-storage/articles/211183-rising-cloud-storage-market-opportunity-strengthens-vendors.htm
+ 497. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-6
+ 498. https://web.archive.org/web/20120113094920/http://www.thectoforum.com/content/converged-infrastructure-0
+ 499. http://www.thectoforum.com/content/converged-infrastructure-0
+ 500. file:///wiki/Category:CS1_maint:_Multiple_names:_authors_list
+ 501. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-7
+ 502. https://www.forbes.com/sites/centurylink/2014/02/27/wheres-the-rub-cloud-computings-hidden-costs/
+ 503. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-8
+ 504. http://www.economist.com/displaystory.cfm?story_id=14637206
+ 505. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-gartner_9-0
+ 506. http://www.gartner.com/it/page.jsp?id=707508
+ 507. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-really_10-0
+ 508. http://www.infoworld.com/d/cloud-computing/what-cloud-computing-really-means-031
+ 509. file:///wiki/InfoWorld
+ 510. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-11
+ 511. https://www.ncoic.org/technology/technical-team/cloud-computing-wg
+ 512. http://www.ncoic.org/
+ 513. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-12
+ 514. http://www.fsn.co.uk/channel_outsourcing/the_economy_is_flat_so_why_are_financials_cloud_vendors_growing_at_more_than_90_percent_per_annum#.UbmtsPlJPGA/
+ 515. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-13
+ 516. http://www.techrepublic.com/resource-library/whitepapers/realization-of-interoperability-portability-among-open-clouds-by-using-agent-s-mobility-intelligence/
+ 517. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-14
+ 518. https://www.lap-publishing.com/catalog/details//store/gb/book/978-3-659-24863-4/interoperability-and-portability-among-open-clouds-using-fipa-agent
+ 519. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-15
+ 520. http://www.igi-global.com/chapter/software-reuse-emerging-cloud-computing/65173
+ 521. file:///wiki/Hongji_Yang
+ 522. file:///wiki/Help:CS1_errors#format_missing_url
+ 523. file:///wiki/International_Standard_Book_Number
+ 524. file:///wiki/Special:BookSources/978-1-4666-0897-9
+ 525. file:///wiki/Digital_object_identifier
+ 526. file://doi.org/10.4018%2F978-1-4666-0897-9.ch009
+ 527. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-16
+ 528. http://www.howgoogleworks.net/
+ 529. file:///wiki/International_Standard_Book_Number
+ 530. file:///wiki/Special:BookSources/978-1-4555-6059-2
+ 531. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-17
+ 532. http://www.computerhistory.org/internet_history/internet_history_70s.html
+ 533. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-18
+ 534. http://gu.friends-partners.org/Bookwriting/PART_I/Chapter_I/Total/Insertions/NSF/CSNET/CSNET.html
+ 535. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-19
+ 536. http://archive.wired.com/wired/archive/2.04/general.magic_pr.html
+ 537. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-20
+ 538. http://www.technologyreview.com/news/425970/who-coined-cloud-computing/
+ 539. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Amazon.com_21-0
+ 540. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Amazon.com_21-1
+ 541. https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/
+ 542. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-22
+ 543. https://tools.ietf.org/html/rfc105
+ 544. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-23
+ 545. https://archive.is/20120710170149/http://mirror.switch.ch/ftp/doc/ietf/ipatm/atm-minutes-93jul.txt
+ 546. file:///wiki/Switzerland
+ 547. http://mirror.switch.ch/ftp/doc/ietf/ipatm/atm-minutes-93jul.txt
+ 548. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-MITCorbato_24-0
+ 549. http://larch-www.lcs.mit.edu:8001/~corbato/sjcc62/
+ 550. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-25
+ 551. file:///wiki/Digital_object_identifier
+ 552. file://doi.org/10.1147%2FJRD.2009.5429058
+ 553. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-26
+ 554. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Gogouvitis2012_27-0
+ 555. file:///wiki/International_Standard_Serial_Number
+ 556. file://www.worldcat.org/issn/0167-739X
+ 557. file:///wiki/Digital_object_identifier
+ 558. file://doi.org/10.1016%2Fj.future.2011.05.017
+ 559. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-28
+ 560. http://www.networkworld.com/newsletters/itlead/2008/070708itlead1.html
+ 561. file:///wiki/Gartner
+ 562. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-29
+ 563. http://www.gartner.com/it/page.jsp?id=742913
+ 564. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-avail_30-0
+ 565. http://blogs.technet.com/b/microsoft_blog/archive/2010/02/01/windows-azure-general-availability.aspx
+ 566. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-31
+ 567. https://dzone.com/articles/apache-cloudstack-vs-openstack-which-is-the-best
+ 568. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-32
+ 569. http://cloud-computing.softwareinsider.com/compare/70-322/OpenNebula-Project-vs-OpenStack-Foundation
+ 570. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-33
+ 571. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-34
+ 572. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-35
+ 573. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-36
+ 574. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-37
+ 575. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-38
+ 576. https://web.archive.org/web/20130420162543/https://www-304.ibm.com/connections/blogs/IBMSmarterSystems/date/201102?lang=en_us
+ 577. https://www-304.ibm.com/connections/blogs/IBMSmarterSystems/date/201102?lang=en_us
+ 578. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-39
+ 579. https://www.theregister.co.uk/2012/06/07/oracle_cloud_rehash_platinum_services/
+ 580. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-40
+ 581. https://cloud.oracle.com/home
+ 582. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-41
+ 583. https://www.forbes.com/sites/oracle/2012/10/09/larry-ellison-doesnt-get-the-cloud-the-dumbest-idea-of-2013/
+ 584. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-42
+ 585. https://www.forbes.com/sites/oracle/2012/10/03/oracle-disrupts-cloud-industry-with-end-to-end-approach/
+ 586. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-43
+ 587. http://googleappengine.blogspot.nl/2008/04/introducing-google-app-engine-our-new.html
+ 588. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-44
+ 589. http://googledevelopers.blogspot.nl/2013/12/google-compute-engine-is-now-generally.html
+ 590. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-HAM2012_45-0
+ 591. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-HAM2012_45-1
+ 592. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-HAM2012_45-2
+ 593. http://www.stargroup.uwaterloo.ca/~mhamdaqa/publications/Cloud_Computing_Uncovered.pdf
+ 594. file:///wiki/International_Standard_Book_Number
+ 595. file:///wiki/Special:BookSources/0-12-396535-7
+ 596. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-46
+ 597. http://java.sun.com/developer/Books/jdbc/ch07.pdf
+ 598. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-skala_47-0
+ 599. http://www.ronpub.com/publications/ojcc/OJCC_2015v2i1n03_Skala.html
+ 600. file:///wiki/International_Standard_Serial_Number
+ 601. file://www.worldcat.org/issn/2199-1987
+ 602. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-It.27s_you.27ve_48-0
+ 603. http://portal.acm.org/citation.cfm?id=1496091.1496100&coll=&dl=ACM&CFID=21518680&CFTOKEN=18800807
+ 604. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-49
+ 605. http://www.ebizq.net/blogs/saasweek/2008/03/distinguishing_cloud_computing/
+ 606. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-50
+ 607. http://www.cloudave.com/link/recession-is-good-for-cloud-computing-microsoft-agrees
+ 608. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-idc_51-0
+ 609. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-idc_51-1
+ 610. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-idc_51-2
+ 611. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-idc_51-3
+ 612. http://blogs.idc.com/ie/?p=190
+ 613. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-52
+ 614. http://www.efiscal.eu/state-of-the-art
+ 615. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-yarmis_53-0
+ 616. http://news.cnet.com/8301-13953_3-9977049-80.html
+ 617. file:///wiki/CNET_News
+ 618. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-amazon_54-0
+ 619. http://www.businessweek.com/magazine/content/06_46/b4009001.htm
+ 620. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-55
+ 621. http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6253553
+ 622. file:///wiki/International_Standard_Book_Number
+ 623. file:///wiki/Special:BookSources/978-1-4673-2892-0
+ 624. file:///wiki/Digital_object_identifier
+ 625. file://doi.org/10.1109%2FCLOUD.2012.66
+ 626. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-56
+ 627. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Elsevier.com_57-0
+ 628. https://dx.doi.org/10.1016/j.jss.2011.11.1043
+ 629. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Smith2013_58-0
+ 630. file:///wiki/Heather_Smith_(author)
+ 631. https://books.google.com/books?id=drOF19aBKfgC&pg=PT37
+ 632. file:///wiki/International_Standard_Book_Number
+ 633. file:///wiki/Special:BookSources/978-1-118-57252-8
+ 634. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-59
+ 635. http://www.businessweek.com/technology/content/aug2008/tc2008083_619516.htm
+ 636. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-vmstartuptime2012_60-0
+ 637. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-vmstartuptime2012_60-1
+ 638. http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6253534&isnumber=6253471
+ 639. file:///wiki/International_Standard_Book_Number
+ 640. file:///wiki/Special:BookSources/978-1-4673-2892-0
+ 641. file:///wiki/Digital_object_identifier
+ 642. file://doi.org/10.1109%2FCLOUD.2012.103
+ 643. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-61
+ 644. http://doi.ieeecomputersociety.org/10.1109/TC.2013.30
+ 645. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-62
+ 646. http://digbib.ubka.uni-karlsruhe.de/volltexte/1000023476
+ 647. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-63
+ 648. https://www.youtube.com/watch?v=nfDsY3f4nVI
+ 649. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-He_15.E2.80.9322_64-0
+ 650. http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6184989
+ 651. file:///wiki/International_Standard_Book_Number
+ 652. file:///wiki/Special:BookSources/978-1-4673-0714-7
+ 653. file:///wiki/Digital_object_identifier
+ 654. file://doi.org/10.1109%2FAINA.2012.74
+ 655. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-65
+ 656. http://www.sciencedirect.com/science/article/pii/S0167923610002393
+ 657. file:///wiki/Digital_object_identifier
+ 658. file://doi.org/10.1016%2Fj.dss.2010.12.006
+ 659. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-66
+ 660. http://news.cnet.com/8301-1009_3-10150569-83.html
+ 661. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-67
+ 662. http://ieeexplore.ieee.org/document/7214098/
+ 663. file:///wiki/IEEE
+ 664. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-68
+ 665. https://books.google.com/books?id=WWsNz5V6aEcC
+ 666. file:///wiki/International_Standard_Book_Number
+ 667. file:///wiki/Special:BookSources/978-1-61520-687-2
+ 668. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-69
+ 669. https://books.google.com/books?id=0KWeBQAAQBAJ
+ 670. file:///wiki/International_Standard_Book_Number
+ 671. file:///wiki/Special:BookSources/978-1-4666-0961-7
+ 672. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-70
+ 673. https://www.elastichosts.com/blog/elastic-containers/#thetechnicaldetails
+ 674. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-DHAC_71-0
+ 675. http://www.ibmpressbooks.com/bookstore/product.asp?isbn=9780133066845
+ 676. file:///wiki/International_Standard_Book_Number
+ 677. file:///wiki/Special:BookSources/978-0-13-306684-5
+ 678. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-72
+ 679. http://ananich.pro/2016/02/what-is-iaas/
+ 680. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-73
+ 681. http://aws.amazon.com/ec2/pricing/
+ 682. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-74
+ 683. https://cloud.google.com/products/compute-engine/#pricing
+ 684. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-75
+ 685. http://azure.microsoft.com/en-us/pricing/details/virtual-machines/
+ 686. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-76
+ 687. https://cloud.ca/
+ 688. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-77
+ 689. https://dx.doi.org/10.1109/ICIW.2010.91
+ 690. file:///wiki/Digital_object_identifier
+ 691. file://doi.org/10.1109%2FICIW.2010.91
+ 692. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-78
+ 693. http://www.bitcodin.com/
+ 694. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-79
+ 695. http://www.media.io/
+ 696. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-GartnerGlossary_80-0
+ 697. http://www.gartner.com/it-glossary/information-platform-as-a-service-ipaas
+ 698. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-GartnerReferenceModel_81-0
+ 699. http://www.gartner.com/id=1729256
+ 700. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-ITBusinessEdge_82-0
+ 701. http://www.itbusinessedge.com/blogs/integration/liaisons-data-platform-as-a-service-includes-data-mapping.html
+ 702. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-EnterpriseCIOForum_83-0
+ 703. https://web.archive.org/web/20150419045605/http://www.enterprisecioforum.com/en/blogs/gabriellowy/value-data-platform-service-dpaas
+ 704. http://www.enterprisecioforum.com/en/blogs/gabriellowy/value-data-platform-service-dpaas
+ 705. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-84
+ 706. https://azure.microsoft.com/en-gb/solutions/blockchain/
+ 707. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-85
+ 708. https://www.pcmag.com/encyclopedia/term/56112/saas
+ 709. file:///wiki/Ziff_Davis
+ 710. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-hamdaqa_86-0
+ 711. http://www.stargroup.uwaterloo.ca/~mhamdaqa/publications/A%20REFERENCEMODELFORDEVELOPINGCLOUD%20APPLICATIONS.pdf
+ 712. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Chou_87-0
+ 713. https://www.scribd.com/doc/64699897/Introduction-to-Cloud-Computing-Business-and-Technology
+ 714. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-88
+ 715. http://www.intrinsictechnology.co.uk/FileUploads/HVD_Whitepaper.pdf
+ 716. file:///wiki/Wikipedia:Link_rot
+ 717. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-89
+ 718. http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6986995
+ 719. file:///wiki/Digital_object_identifier
+ 720. file://doi.org/10.1109%2FCCST.2014.6986995
+ 721. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-90
+ 722. http://searchsecurity.techtarget.com/definition/Security-as-a-Service
+ 723. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-PandoDailyAP_91-0
+ 724. http://pandodaily.com/2013/06/24/anypresence-partners-with-heroku-to-beef-up-its-enterprise-mbaas-offering/
+ 725. file:///wiki/PandoDaily
+ 726. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Williams1_92-0
+ 727. https://techcrunch.com/2012/10/11/kii-cloud-opens-doors-for-mobile-developer-platform-with-25-million-end-users/
+ 728. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Tan12_93-0
+ 729. http://www.techgoondu.com/2012/09/30/fatfractal-ups-the-ante-in-backend-as-a-service/
+ 730. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Rowinski11_94-0
+ 731. http://readwrite.com/2011/11/09/mobile-backend-as-a-service-pa
+ 732. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-Mishra_95-0
+ 733. https://techcrunch.com/2014/01/07/mobstac-raises-2-million-in-series-b-to-help-brands-leverage-mobile-commerce/
+ 734. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-built.io_96-0
+ 735. http://blog.programmableweb.com/2014/03/03/built-io-is-building-an-enterprise-mbaas-platform-for-iot/
+ 736. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-techcrunch-lambda_97-0
+ 737. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-techcrunch-lambda_97-1
+ 738. https://techcrunch.com/2015/11/24/aws-lamda-makes-serverless-applications-a-reality/
+ 739. file:///wiki/TechCrunch
+ 740. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-98
+ 741. http://www.govconnection.com/IPA/PM/Info/Cloud-Computing/Self-Run-Private-Cloud.htm
+ 742. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-iwpc_99-0
+ 743. http://www.informationweek.com/news/services/business/showArticle.jhtml?articleID=209904474
+ 744. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-100
+ 745. http://news.cnet.com/8301-13556_3-10150841-61.html
+ 746. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-101
+ 747. http://www.informationweek.com/cloud-computing/theres-no-such-thing-as-a-private-cloud/229207922
+ 748. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-102
+ 749. http://searchcloudcomputing.techtarget.com/definition/public-cloud
+ 750. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-103
+ 751. http://blogs.gartner.com/thomas_bittman/2012/09/24/mind-the-gap-here-comes-hybrid-cloud/
+ 752. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-104
+ 753. http://www.cio.com/article/753708/Business_Intelligence_Takes_to_Cloud_for_Small_Businesses
+ 754. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-105
+ 755. http://www.techradar.com/news/internet/cloud-services/hybrid-cloud-is-it-right-for-your-business--1261343
+ 756. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-106
+ 757. http://www.networkworld.com/newsletters/frame/2010/082310wan1.html
+ 758. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-107
+ 759. http://searchcloudcomputing.techtarget.com/definition/cloud-bursting
+ 760. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-108
+ 761. http://insights.dice.com/2012/06/21/how-cloudbursting-rightsizes-the-data-center/
+ 762. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-109
+ 763. https://medium.com/@chanwit/cross-platform-hybrid-cloud-with-docker-ded000f792fb
+ 764. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-110
+ 765. http://doi.ieeecomputersociety.org/10.1109/NCA.2009.41
+ 766. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-111
+ 767. http://www2.computer.org/portal/web/csdl/doi/10.1109/ICIW.2009.55
+ 768. file:///wiki/International_Standard_Book_Number
+ 769. file:///wiki/Special:BookSources/978-1-4244-3851-8
+ 770. file:///wiki/Digital_object_identifier
+ 771. file://doi.org/10.1109%2FICIW.2009.55
+ 772. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-kk_112-0
+ 773. http://www.kk.org/thetechnium/archives/2007/11/a_cloudbook_for.php
+ 774. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-113
+ 775. http://samj.net/2009/06/22/the-intercloud-is-a-global-cloud-of-clouds/
+ 776. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-114
+ 777. http://www.readwriteweb.com/archives/vint_cerf_despite_its_age_the.php?mtcCampaign=2765
+ 778. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-115
+ 779. http://blogs.cisco.com/sp/comments/from_india_to_intercloud/
+ 780. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-116
+ 781. https://www.theglobeandmail.com/technology/head-in-the-clouds-welcome-to-the-future/article698926/
+ 782. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-rouse_117-0
+ 783. http://searchcloudapplications.techtarget.com/definition/multi-cloud-strategy
+ 784. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-king_118-0
+ 785. http://www.zdnet.com/pivotals-head-of-products-were-moving-to-a-multi-cloud-world-7000030737/
+ 786. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-119
+ 787. http://www.groovypost.com/reviews/multcloud-manage-multiple-cloud-accounts/
+ 788. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-120
+ 789. http://developer.amazonwebservices.com/connect/entry.jspa?externalID=1632&categoryID=100
+ 790. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-ryan_121-0
+ 791. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-ryan_121-1
+ 792. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-ryan_121-2
+ 793. http://cacm.acm.org/magazines/2011/1/103200-cloud-computing-privacy-concerns-on-our-doorstep/fulltext
+ 794. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-122
+ 795. http://garph.co.uk/IJAREAS/Mar2013/6.pdf
+ 796. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-psg.hitachi-solutions.com_123-0
+ 797. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-psg.hitachi-solutions.com_123-1
+ 798. https://psg.hitachi-solutions.com/credeon/blog/google-drive-dropbox-box-and-icloud-reach-the-top-5-cloud-storage-security-breaches-list
+ 799. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-124
+ 800. http://articles.latimes.com/2012/apr/26/business/la-fi-tech-savvy-cloud-services-20120426
+ 801. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-125
+ 802. https://www.networkworld.com/article/2244954/virtualization/security-of-virtualization--cloud-computing-divides-it-and-security-pros.html
+ 803. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-126
+ 804. http://www.computerworld.com/article/2549867/data-center/the-bumpy-road-to-private-clouds.html
+ 805. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-127
+ 806. https://www.schneier.com/blog/archives/2015/06/should_companie.html
+ 807. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-128
+ 808. https://cloudacademy.com/blog/disadvantages-of-cloud-computing/
+ 809. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-129
+ 810. https://www.itworld.com/article/2726566/cloud-computing/the-real-limits-of-cloud-computing.html
+ 811. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-130
+ 812. https://www.itworld.com/article/2726566/cloud-computing/the-real-limits-of-cloud-computing.html
+ 813. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-131
+ 814. https://www.iapti.org/articles/art34-using-cloud-solutions-for-translation-yes-or-no.html
+ 815. file:///wiki/IAPTI
+ 816. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-ghc_132-0
+ 817. https://www.gartner.com/doc/2573318/hype-cycle-cloud-computing-
+ 818. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-133
+ 819. http://www.hello-cirro.co.uk/evolution-of-cloud-computing/
+ 820. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-134
+ 821. http://cloudtimes.org/2011/04/12/microsoft-says-to-spend-90-of-rd-on-cloud-strategy/
+ 822. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-135
+ 823. https://www.forbes.com/sites/louiscolumbus/2014/03/14/roundup-of-cloud-computing-forecasts-and-market-estimates-2014/
+ 824. file:///Users/alexandresilva/Documents/Langara/term4/classes/WMDD4950-Security%20%26%20Cloud%20%26%20Server%20Admn/project/bashwebcrawler/sites/cloud_computing.html#cite_ref-136
+ 825. https://www.pcworld.idg.com.au/article/614885/how-virtual-data-room-boosting-mergers-aquisitions//
+ 826. file:///w/index.php?title=Cloud_computing&action=edit&section=32
+ 827. https://global.oup.com/academic/product/cloud-computing-law-9780199671687?cc=gb&lang=en&
+ 828. file:///wiki/International_Standard_Book_Number
+ 829. file:///wiki/Special:BookSources/978-0-19-967168-7
+ 830. file:///wiki/Digital_object_identifier
+ 831. file://doi.org/10.1109%2FMCC.2015.69
+ 832. file:///wiki/Digital_object_identifier
+ 833. file://doi.org/10.1145%2F1721654.1721672
+ 834. file:///wiki/International_Standard_Book_Number
+ 835. file:///wiki/Special:BookSources/978-0-262-02951-3
+ 836. file:///w/index.php?title=Cloud_computing&action=edit&section=33
+ 837. https://commons.wikimedia.org/wiki/Category:Cloud_computing
+ 838. file:///wiki/Template:Cloud_computing
+ 839. file:///wiki/Template_talk:Cloud_computing
+ 840. file://en.wikipedia.org/w/index.php?title=Template:Cloud_computing&action=edit
+ 841. file:///wiki/Software_as_a_service
+ 842. file:///wiki/Box_(company)
+ 843. file:///wiki/Enstratius
+ 844. file:///wiki/Google
+ 845. file:///wiki/G_Suite
+ 846. file:///wiki/Google_Docs,_Sheets_and_Slides
+ 847. file:///wiki/HP_Cloud
+ 848. file:///wiki/Microsoft_Online_Services
+ 849. file:///wiki/Rackspace
+ 850. file:///wiki/Salesforce.com
+ 851. file:///wiki/Platform_as_a_service
+ 852. file:///wiki/Alpha7
+ 853. file:///wiki/Amazon_Web_Services
+ 854. file:///wiki/AppScale
+ 855. file:///wiki/Box_(company)
+ 856. file:///wiki/Bluemix
+ 857. file:///wiki/Cloud_Foundry
+ 858. file:///wiki/Cocaine_(PaaS)
+ 859. file:///wiki/Engine_Yard
+ 860. file:///wiki/Enstratius
+ 861. file:///wiki/EXo_Platform
+ 862. file:///wiki/HPE_Helion
+ 863. file:///wiki/Predix_(software)
+ 864. file:///wiki/Google_App_Engine
+ 865. file:///wiki/GreenQloud
+ 866. file:///wiki/Heroku
+ 867. file:///wiki/Inktank_Storage
+ 868. file:///wiki/Jelastic
+ 869. file:///wiki/Mendix
+ 870. file:///wiki/Microsoft_Azure
+ 871. file:///wiki/OutSystems
+ 872. file:///wiki/OpenQRM
+ 873. file:///wiki/OpenShift
+ 874. file:///wiki/RightScale
+ 875. file:///wiki/Salesforce.com#Force.com
+ 876. file:///wiki/SAP_Cloud_Platform
+ 877. file:///wiki/VMware_vCloud_Air
+ 878. file:///wiki/Infrastructure_as_a_service
+ 879. file:///wiki/Amazon_Web_Services
+ 880. file:///wiki/Abiquo_Enterprise_Edition
+ 881. file:///wiki/Apache_CloudStack
+ 882. file:///wiki/CtrlS
+ 883. file:///w/index.php?title=Cloud4c&action=edit&redlink=1
+ 884. file:///wiki/DigitalOcean
+ 885. file:///wiki/EMC_Atmos
+ 886. file:///wiki/Enstratius
+ 887. file:///wiki/Eucalyptus_(software)
+ 888. file:///wiki/FUJITSU_Cloud_IaaS_Trusted_Public_S5
+ 889. file:///wiki/GoGrid
+ 890. file:///wiki/Google_Cloud_Platform
+ 891. file:///wiki/GreenButton
+ 892. file:///wiki/GreenQloud
+ 893. file:///wiki/IBM_cloud_computing
+ 894. file:///wiki/Iland
+ 895. file:///wiki/Joyent
+ 896. file:///wiki/Lunacloud
+ 897. file:///wiki/Nimbula
+ 898. file:///wiki/Nimbus_(cloud_computing)
+ 899. file:///wiki/OpenNebula
+ 900. file:///wiki/OpenStack
+ 901. file:///wiki/OrionVM
+ 902. file:///wiki/Rackspace_Cloud
+ 903. file:///wiki/SoftLayer
+ 904. file:///wiki/Zadara_Storage
+ 905. file:///wiki/Libvirt
+ 906. file:///wiki/Libguestfs
+ 907. file:///wiki/OVirt
+ 908. file:///wiki/Virtual_Machine_Manager
+ 909. file:///wiki/Wakame-vdc
+ 910. file:///wiki/Virtual_Private_Cloud_OnDemand
+ 911. file:///wiki/Cloud_database
+ 912. file:///wiki/Data_center
+ 913. file:///wiki/Distributed_file_system_for_cloud
+ 914. file:///wiki/Hardware_virtualization
+ 915. file:///wiki/Internet
+ 916. file:///wiki/Computer_network
+ 917. file:///wiki/Cloud_computing_security
+ 918. file:///wiki/Comparison_of_structured_storage_software
+ 919. file:///wiki/Virtual_appliance
+ 920. file:///wiki/Web_API
+ 921. file:///wiki/Virtual_private_cloud
+ 922. file:///wiki/Category:Cloud_computing
+ 923. https://commons.wikimedia.org/wiki/Category:Cloud_computing
+ 924. file:///wiki/Template:Parallel_computing
+ 925. file:///wiki/Template_talk:Parallel_computing
+ 926. file://en.wikipedia.org/w/index.php?title=Template:Parallel_computing&action=edit
+ 927. file:///wiki/Parallel_computing
+ 928. file:///wiki/Distributed_computing
+ 929. file:///wiki/Parallel_computing
+ 930. file:///wiki/Massively_parallel
+ 931. file:///wiki/Supercomputer
+ 932. file:///wiki/Multiprocessing
+ 933. file:///wiki/Manycore_processor
+ 934. file:///wiki/General-purpose_computing_on_graphics_processing_units
+ 935. file:///wiki/Computer_network
+ 936. file:///wiki/Systolic_array
+ 937. file:///wiki/Bit-level_parallelism
+ 938. file:///wiki/Instruction-level_parallelism
+ 939. file:///wiki/Task_parallelism
+ 940. file:///wiki/Task_parallelism
+ 941. file:///wiki/Data_parallelism
+ 942. file:///wiki/Memory-level_parallelism
+ 943. file:///wiki/Loop-level_parallelism
+ 944. file:///wiki/Pipeline_(computing)
+ 945. file:///wiki/Multithreading_(computer_architecture)
+ 946. file:///wiki/Temporal_multithreading
+ 947. file:///wiki/Simultaneous_multithreading
+ 948. file:///wiki/Speculative_multithreading
+ 949. file:///wiki/Preemption_(computing)
+ 950. file:///wiki/Computer_multitasking#Cooperative_multitasking
+ 951. file:///wiki/Bulldozer_(microarchitecture)#Bulldozer_core
+ 952. file:///wiki/Hardware_scout
+ 953. file:///wiki/Parallel_random-access_machine
+ 954. file:///wiki/Analysis_of_parallel_algorithms
+ 955. file:///wiki/Amdahl%27s_law
+ 956. file:///wiki/Gustafson%27s_law
+ 957. file:///wiki/Cost_efficiency
+ 958. file:///wiki/Karp%E2%80%93Flatt_metric
+ 959. file:///wiki/Parallel_slowdown
+ 960. file:///wiki/Speedup
+ 961. file:///wiki/Process_(computing)
+ 962. file:///wiki/Thread_(computing)
+ 963. file:///wiki/Fiber_(computer_science)
+ 964. file:///wiki/Instruction_window
+ 965. file:///wiki/Multiprocessing
+ 966. file:///wiki/Memory_coherence
+ 967. file:///wiki/Cache_coherence
+ 968. file:///wiki/Cache_invalidation
+ 969. file:///wiki/Barrier_(computer_science)
+ 970. file:///wiki/Synchronization_(computer_science)
+ 971. file:///wiki/Application_checkpointing
+ 972. file:///wiki/Computer_programming
+ 973. file:///wiki/Stream_processing
+ 974. file:///wiki/Dataflow_programming
+ 975. file:///wiki/Parallel_programming_model
+ 976. file:///wiki/Implicit_parallelism
+ 977. file:///wiki/Explicit_parallelism
+ 978. file:///wiki/Concurrency_(computer_science)
+ 979. file:///wiki/Non-blocking_algorithm
+ 980. file:///wiki/Computer_hardware
+ 981. file:///wiki/Flynn%27s_taxonomy
+ 982. file:///wiki/SISD
+ 983. file:///wiki/SIMD
+ 984. file:///wiki/Single_instruction,_multiple_threads
+ 985. file:///wiki/MISD
+ 986. file:///wiki/MIMD
+ 987. file:///wiki/Dataflow_architecture
+ 988. file:///wiki/Instruction_pipelining
+ 989. file:///wiki/Superscalar_processor
+ 990. file:///wiki/Vector_processor
+ 991. file:///wiki/Multiprocessing
+ 992. file:///wiki/Symmetric_multiprocessing
+ 993. file:///wiki/Asymmetric_multiprocessing
+ 994. file:///wiki/Semiconductor_memory
+ 995. file:///wiki/Shared_memory
+ 996. file:///wiki/Distributed_memory
+ 997. file:///wiki/Distributed_shared_memory
+ 998. file:///wiki/Uniform_memory_access
+ 999. file:///wiki/Non-uniform_memory_access
+1000. file:///wiki/Cache-only_memory_architecture
+1001. file:///wiki/Massively_parallel
+1002. file:///wiki/Computer_cluster
+1003. file:///wiki/Grid_computing
+1004. file:///wiki/Application_programming_interface
+1005. file:///wiki/Ateji_PX
+1006. file:///wiki/Boost_(C%2B%2B_libraries)#Multithreading_.E2.80.93_Boost.Thread
+1007. file:///wiki/Charm%2B%2B
+1008. file:///wiki/Cilk
+1009. file:///wiki/Coarray_Fortran
+1010. file:///wiki/CUDA
+1011. file:///wiki/Dryad_(programming)
+1012. file:///wiki/C%2B%2B_AMP
+1013. file:///wiki/Global_Arrays
+1014. file:///wiki/Message_Passing_Interface
+1015. file:///wiki/OpenMP
+1016. file:///wiki/OpenCL
+1017. file:///wiki/OpenHMPP
+1018. file:///wiki/OpenACC
+1019. file:///wiki/Parallel_Extensions#Task_Parallel_Library
+1020. file:///wiki/Parallel_Extensions#PLINQ
+1021. file:///wiki/Parallel_Virtual_Machine
+1022. file:///wiki/POSIX_Threads
+1023. file:///wiki/RaftLib
+1024. file:///wiki/Unified_Parallel_C
+1025. file:///wiki/Threading_Building_Blocks
+1026. file:///wiki/Embarrassingly_parallel
+1027. file:///wiki/Software_lockout
+1028. file:///wiki/Scalability
+1029. file:///wiki/Race_condition#Computing
+1030. file:///wiki/Deadlock
+1031. file:///wiki/Deadlock#Livelock
+1032. file:///wiki/Starvation_(computer_science)
+1033. file:///wiki/Deterministic_algorithm
+1034. file:///wiki/Parallel_slowdown
+1035. file:///wiki/Category:Parallel_computing
+1036. https://commons.wikimedia.org/wiki/Category:Parallel_computing
+1037. file:///wiki/Help:Authority_control
+1038. file:///wiki/Integrated_Authority_File
+1039. http://d-nb.info/gnd/7623494-0
+1040. file:///wiki/National_Diet_Library
+1041. https://id.ndl.go.jp/auth/ndlna/01155705
+1042. https://en.wikipedia.org/w/index.php?title=Cloud_computing&oldid=803638643
+1043. file:///wiki/Help:Category
+1044. file:///wiki/Category:Cloud_computing
+1045. file:///wiki/Category:Cloud_infrastructure
+1046. file:///wiki/Category:CS1_maint:_Uses_authors_parameter
+1047. file:///wiki/Category:CS1_maint:_Multiple_names:_authors_list
+1048. file:///wiki/Category:Pages_using_citations_with_format_and_no_URL
+1049. file:///wiki/Category:All_articles_with_dead_external_links
+1050. file:///wiki/Category:Articles_with_dead_external_links_from_July_2017
+1051. file:///wiki/Category:Articles_with_permanently_dead_external_links
+1052. file:///wiki/Category:Wikipedia_indefinitely_move-protected_pages
+1053. file:///wiki/Category:Articles_prone_to_spam_from_January_2017
+1054. file:///wiki/Category:Wikipedia_articles_needing_factual_verification_from_August_2017
+1055. file:///wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_August_2017
+1056. file:///wiki/Category:All_articles_with_unsourced_statements
+1057. file:///wiki/Category:Articles_with_unsourced_statements_from_July_2015
+1058. file:///wiki/Category:All_articles_lacking_reliable_references
+1059. file:///wiki/Category:Articles_lacking_reliable_references_from_February_2016
+1060. file:///wiki/Category:Wikipedia_articles_needing_factual_verification_from_July_2015
+1061. file:///wiki/Category:Wikipedia_articles_with_GND_identifiers
+1062. file:///wiki/Special:MyTalk
+1063. file:///wiki/Special:MyContributions
+1064. file:///w/index.php?title=Special:CreateAccount&returnto=Cloud+computing
+1065. file:///w/index.php?title=Special:UserLogin&returnto=Cloud+computing
+1066. file:///wiki/Cloud_computing
+1067. file:///wiki/Talk:Cloud_computing
+1068. file:///wiki/Cloud_computing
+1069. file:///w/index.php?title=Cloud_computing&action=edit
+1070. file:///w/index.php?title=Cloud_computing&action=history
+1071. file:///wiki/Main_Page
+1072. file:///wiki/Portal:Contents
+1073. file:///wiki/Portal:Featured_content
+1074. file:///wiki/Portal:Current_events
+1075. file:///wiki/Special:Random
+1076. https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&utm_medium=sidebar&utm_campaign=C13_en.wikipedia.org&uselang=en
+1077. file://shop.wikimedia.org/
+1078. file:///wiki/Help:Contents
+1079. file:///wiki/Wikipedia:About
+1080. file:///wiki/Wikipedia:Community_portal
+1081. file:///wiki/Special:RecentChanges
+1082. file://en.wikipedia.org/wiki/Wikipedia:Contact_us
+1083. file:///wiki/Special:WhatLinksHere/Cloud_computing
+1084. file:///wiki/Special:RecentChangesLinked/Cloud_computing
+1085. file:///wiki/Wikipedia:File_Upload_Wizard
+1086. file:///wiki/Special:SpecialPages
+1087. file:///w/index.php?title=Cloud_computing&oldid=803638643
+1088. file:///w/index.php?title=Cloud_computing&action=info
+1089. https://www.wikidata.org/wiki/Special:EntityPage/Q483639
+1090. file:///w/index.php?title=Special:CiteThisPage&page=Cloud_computing&id=803638643
+1091. file:///w/index.php?title=Special:Book&bookcmd=book_creator&referer=Cloud+computing
+1092. file:///w/index.php?title=Special:ElectronPdf&page=Cloud+computing&action=show-selection-screen&coll-download-url=%2Fw%2Findex.php%3Ftitle%3DSpecial%3ABook%26bookcmd%3Drender_article%26arttitle%3DCloud%2Bcomputing%26returnto%3DCloud%2Bcomputing%26oldid%3D803638643%26writer%3Drdf2latex
+1093. file:///w/index.php?title=Cloud_computing&printable=yes
+1094. https://commons.wikimedia.org/wiki/Category:Cloud_computing
+1095. https://af.wikipedia.org/wiki/Wolkverwerking
+1096. https://ar.wikipedia.org/wiki/%D8%AD%D9%88%D8%B3%D8%A8%D8%A9_%D8%B3%D8%AD%D8%A7%D8%A8%D9%8A%D8%A9
+1097. https://az.wikipedia.org/wiki/Bulud_hesablamalar
+1098. https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%89%E0%A6%A1_%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BF%E0%A6%82
+1099. https://map-bms.wikipedia.org/wiki/Komputasi_lamuk
+1100. https://be.wikipedia.org/wiki/%D0%92%D0%BE%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D1%8B%D1%8F_%D0%B2%D1%8B%D0%BB%D1%96%D1%87%D1%8D%D0%BD%D0%BD%D1%96
+1101. https://bg.wikipedia.org/wiki/%D0%98%D0%B7%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2_%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA
+1102. https://ca.wikipedia.org/wiki/Inform%C3%A0tica_en_n%C3%BAvol
+1103. https://cs.wikipedia.org/wiki/Cloud_computing
+1104. https://da.wikipedia.org/wiki/Cloudcomputing
+1105. https://de.wikipedia.org/wiki/Cloud_Computing
+1106. https://et.wikipedia.org/wiki/Pilvandmet%C3%B6%C3%B6tlus
+1107. https://es.wikipedia.org/wiki/Computaci%C3%B3n_en_la_nube
+1108. https://eo.wikipedia.org/wiki/Nuba_komputado
+1109. https://eu.wikipedia.org/wiki/Hodei_konputazio
+1110. https://fa.wikipedia.org/wiki/%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D8%B4_%D8%A7%D8%A8%D8%B1%DB%8C
+1111. https://fr.wikipedia.org/wiki/Cloud_computing
+1112. https://fy.wikipedia.org/wiki/Kompj%C3%BBterkloft
+1113. https://hak.wikipedia.org/wiki/Y%C3%B9n-t%C3%B4n_yun-son
+1114. https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C_%EC%BB%B4%ED%93%A8%ED%8C%85
+1115. https://hi.wikipedia.org/wiki/%E0%A4%95%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%89%E0%A4%A1_%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A5%8D%E0%A4%AF%E0%A5%82%E0%A4%9F%E0%A4%BF%E0%A4%82%E0%A4%97
+1116. https://id.wikipedia.org/wiki/Komputasi_awan
+1117. https://is.wikipedia.org/wiki/T%C3%B6lvusk%C3%BD
+1118. https://it.wikipedia.org/wiki/Cloud_computing
+1119. https://he.wikipedia.org/wiki/%D7%9E%D7%97%D7%A9%D7%95%D7%91_%D7%A2%D7%A0%D7%9F
+1120. https://kn.wikipedia.org/wiki/%E0%B2%95%E0%B3%8D%E0%B2%B2%E0%B3%8C%E0%B2%A1%E0%B3%8D_%E0%B2%95%E0%B2%82%E0%B2%AA%E0%B3%8D%E0%B2%AF%E0%B3%82%E0%B2%9F%E0%B2%BF%E0%B2%82%E0%B2%97%E0%B3%8D
+1121. https://ka.wikipedia.org/wiki/%E1%83%A6%E1%83%A0%E1%83%A3%E1%83%91%E1%83%9A%E1%83%9D%E1%83%95%E1%83%90%E1%83%9C%E1%83%98_%E1%83%92%E1%83%90%E1%83%9B%E1%83%9D%E1%83%97%E1%83%95%E1%83%9A%E1%83%94%E1%83%91%E1%83%98
+1122. https://kk.wikipedia.org/wiki/%D0%91%D2%B1%D0%BB%D1%82%D1%82%D1%8B%D2%9B_%D0%B5%D1%81%D0%B5%D0%BF%D1%82%D0%B5%D1%83
+1123. https://la.wikipedia.org/wiki/Cloud_computing
+1124. https://lv.wikipedia.org/wiki/M%C4%81ko%C5%86skait%C4%BCo%C5%A1ana
+1125. https://lt.wikipedia.org/wiki/Debes%C5%B3_kompiuterija
+1126. https://hu.wikipedia.org/wiki/Felh%C5%91_alap%C3%BA_sz%C3%A1m%C3%ADt%C3%A1stechnika
+1127. https://mk.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D0%B2%D0%BE_%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA
+1128. https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B5%97%E0%B4%A1%E0%B5%8D_%E0%B4%95%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D%E0%B4%AF%E0%B5%82%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%8D
+1129. https://mr.wikipedia.org/wiki/%E0%A4%95%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%89%E0%A4%A1_%E0%A4%95%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A5%8D%E0%A4%AF%E0%A5%81%E0%A4%9F%E0%A4%BF%E0%A4%82%E0%A4%97
+1130. https://ms.wikipedia.org/wiki/Pengkomputeran_awan
+1131. https://mn.wikipedia.org/wiki/%D2%AE%D2%AF%D0%BB%D1%8D%D0%BD_%D1%82%D0%BE%D0%BE%D1%86%D0%BE%D0%BE%D0%BB%D0%BE%D0%BB
+1132. https://nl.wikipedia.org/wiki/Cloud_computing
+1133. https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0
+1134. https://no.wikipedia.org/wiki/Nettskyen
+1135. https://or.wikipedia.org/wiki/%E0%AC%95%E0%AD%8D%E0%AC%B2%E0%AC%BE%E0%AC%89%E0%AC%A1%E0%AC%BC_%E0%AC%9F%E0%AD%87%E0%AC%95%E0%AD%8D%E0%AC%A8%E0%AD%8B%E0%AC%B2%E0%AD%8B%E0%AC%9C%E0%AC%BF
+1136. https://uz.wikipedia.org/wiki/Bulutli_hisoblash
+1137. https://pl.wikipedia.org/wiki/Chmura_obliczeniowa
+1138. https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_nuvem
+1139. https://ro.wikipedia.org/wiki/Cloud_computing
+1140. https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F
+1141. https://simple.wikipedia.org/wiki/Cloud_computing
+1142. https://sk.wikipedia.org/wiki/Cloud_computing
+1143. https://sl.wikipedia.org/wiki/Ra%C4%8Dunalni%C5%A1tvo_v_oblaku
+1144. https://sr.wikipedia.org/wiki/Ra%C4%8Dunarstvo_u_oblaku
+1145. https://fi.wikipedia.org/wiki/Pilvilaskenta
+1146. https://sv.wikipedia.org/wiki/Datormoln
+1147. https://ta.wikipedia.org/wiki/%E0%AE%AE%E0%AF%87%E0%AE%95%E0%AE%95%E0%AF%8D_%E0%AE%95%E0%AE%A3%E0%AE%BF%E0%AE%AE%E0%AF%88
+1148. https://te.wikipedia.org/wiki/%E0%B0%95%E0%B1%8D%E0%B0%B2%E0%B1%8C%E0%B0%A1%E0%B1%8D_%E0%B0%95%E0%B0%82%E0%B0%AA%E0%B1%8D%E0%B0%AF%E0%B1%82%E0%B0%9F%E0%B0%BF%E0%B0%82%E0%B0%97%E0%B1%8D
+1149. https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A1%E0%B8%A7%E0%B8%A5%E0%B8%9C%E0%B8%A5%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%A1%E0%B8%86
+1150. https://tg.wikipedia.org/wiki/%D0%A0%D0%BE%D1%91%D0%BD%D0%B8%D1%88%D0%B8_%D0%B0%D0%B1%D1%80%D3%A3
+1151. https://tr.wikipedia.org/wiki/Bulut_bili%C5%9Fim
+1152. https://uk.wikipedia.org/wiki/%D0%A5%D0%BC%D0%B0%D1%80%D0%BD%D1%96_%D0%BE%D0%B1%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F
+1153. https://ur.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%DB%8C_%DA%A9%D9%85%D9%BE%DB%8C%D9%88%D9%B9%D9%86%DA%AF
+1154. https://vi.wikipedia.org/wiki/%C4%90i%E1%BB%87n_to%C3%A1n_%C4%91%C3%A1m_m%C3%A2y
+1155. https://war.wikipedia.org/wiki/Komputasyon_ha_dampog
+1156. https://zh-yue.wikipedia.org/wiki/%E9%9B%B2%E7%AB%AF
+1157. https://zh.wikipedia.org/wiki/%E9%9B%B2%E7%AB%AF%E9%81%8B%E7%AE%97
+1158. https://www.wikidata.org/wiki/Special:EntityPage/Q483639#sitelinks-wikipedia
+1159. file://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+1160. file://wikimediafoundation.org/wiki/Terms_of_Use
+1161. file://wikimediafoundation.org/wiki/Privacy_policy
+1162. file://www.wikimediafoundation.org/
+1163. https://wikimediafoundation.org/wiki/Privacy_policy
+1164. file:///wiki/Wikipedia:About
+1165. file:///wiki/Wikipedia:General_disclaimer
+1166. file://en.wikipedia.org/wiki/Wikipedia:Contact_us
+1167. https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute
+1168. https://wikimediafoundation.org/wiki/Cookie_statement
+1169. file://en.m.wikipedia.org/w/index.php?title=Cloud_computing&mobileaction=toggle_view_mobile
+1170. https://wikimediafoundation.org/
+1171. file://www.mediawiki.org/
+
+   Hidden links:
+1173. file://localhost/wiki/File:Cloud_computing.svg
+1174. file://localhost/wiki/File:Cloud_computing.svg
+1175. file://localhost/wiki/File:Cloud_computing_layers.png
+1176. file://localhost/wiki/File:Cloud_computing_layers.png
+1177. file://localhost/wiki/File:Cloud_computing_types.svg
+1178. file://localhost/wiki/File:Cloud_computing_types.svg
+1179. file://localhost/wiki/File:CloudComputingSampleArchitecture.svg
+1180. file://localhost/wiki/File:CloudComputingSampleArchitecture.svg
+1181. file://localhost/wiki/Main_Page
+1182. file://creativecommons.org/licenses/by-sa/3.0/

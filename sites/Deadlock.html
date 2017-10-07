@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Deadlock - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Deadlock","wgTitle":"Deadlock","wgCurRevisionId":803626818,"wgRevisionId":803626818,"wgArticleId":105181,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Use dmy dates from August 2012","All articles with unsourced statements","Articles with unsourced statements from May 2016","Concurrency (computer science)","Software bugs","Software anomalies","Distributed computing problems","Edsger W. Dijkstra"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Deadlock","wgRelevantArticleId":105181,"wgRequestId":"WdPKvwpAMEsAAC-IB-UAAACL","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgPopupsShouldSendModuleToUser":false,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q623276","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["ext.cite.a11y","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.charinsert-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.0-wmf.1"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Process_deadlock.svg/1200px-Process_deadlock.svg.png"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Deadlock"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Deadlock&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Deadlock&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Deadlock"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Deadlock rootpage-Deadlock vector-nav-directionality skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Deadlock</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">This article is about the computer science concept. For other uses, see <a href="/wiki/Deadlock_(disambiguation)" class="mw-disambig" title="Deadlock (disambiguation)">Deadlock (disambiguation)</a>.</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Process_deadlock.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/28/Process_deadlock.svg/220px-Process_deadlock.svg.png" width="220" height="122" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/28/Process_deadlock.svg/330px-Process_deadlock.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/28/Process_deadlock.svg/440px-Process_deadlock.svg.png 2x" data-file-width="451" data-file-height="250" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Process_deadlock.svg" class="internal" title="Enlarge"></a></div>
+Both processes need resources to continue execution. <i>P1</i> requires additional resource <i>R1</i> and is in possession of resource <i>R2</i>, <i>P2</i> requires additional resource <i>R2</i> and is in possession of <i>R1</i>; neither process can continue.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Deadlock_at_a_four-way-stop.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Deadlock_at_a_four-way-stop.gif/220px-Deadlock_at_a_four-way-stop.gif" width="220" height="208" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/2/23/Deadlock_at_a_four-way-stop.gif 1.5x" data-file-width="320" data-file-height="302" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Deadlock_at_a_four-way-stop.gif" class="internal" title="Enlarge"></a></div>
+Four processes (blue lines) compete for one resource (grey circle), following a right-before-left policy. A deadlock occurs when all processes lock the resource simultaneously (black lines). The deadlock can be resolved by breaking the symmetry.</div>
+</div>
+</div>
+<p>In <a href="/wiki/Concurrent_computing" title="Concurrent computing">concurrent computing</a>, a <b>deadlock</b> is a state in which each member of a group is waiting for some other member to take action, such as sending a message or more commonly releasing a lock.<sup id="cite_ref-coulouris_1-0" class="reference"><a href="#cite_note-coulouris-1">[1]</a></sup> Deadlock is a common problem in <a href="/wiki/Multiprocessing" title="Multiprocessing">multiprocessing</a> systems, <a href="/wiki/Parallel_computing" title="Parallel computing">parallel computing</a>, and <a href="/wiki/Distributed_computing" title="Distributed computing">distributed systems</a>, where software and hardware <a href="/wiki/Lock_(computer_science)" title="Lock (computer science)">locks</a> are used to handle shared resources and implement <a href="/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">process synchronization</a>.<sup id="cite_ref-para_enclo_2-0" class="reference"><a href="#cite_note-para_enclo-2">[2]</a></sup></p>
+<p>In an <a href="/wiki/Operating_system" title="Operating system">operating system</a>, a deadlock occurs when a <a href="/wiki/Process_(computing)" title="Process (computing)">process</a> or <a href="/wiki/Thread_(computing)" title="Thread (computing)">thread</a> enters a waiting <a href="/wiki/Process_state" title="Process state">state</a> because a requested <a href="/wiki/System_resource" title="System resource">system resource</a> is held by another waiting process, which in turn is waiting for another resource held by another waiting process. If a process is unable to change its state indefinitely because the resources requested by it are being used by another waiting process, then the system is said to be in a deadlock.<sup id="cite_ref-os_galvin_3-0" class="reference"><a href="#cite_note-os_galvin-3">[3]</a></sup></p>
+<p>In a <a href="/wiki/Communications_system" title="Communications system">communications system</a>, deadlocks occur mainly due to lost or corrupt signals rather than resource contention.<sup id="cite_ref-invi_comp_4-0" class="reference"><a href="#cite_note-invi_comp-4">[4]</a></sup></p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Two_processes,_two_resources.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Two_processes%2C_two_resources.gif/220px-Two_processes%2C_two_resources.gif" width="220" height="343" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/d/df/Two_processes%2C_two_resources.gif 1.5x" data-file-width="320" data-file-height="499" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Two_processes,_two_resources.gif" class="internal" title="Enlarge"></a></div>
+Two processes competing for two resources in opposite order.<br />
+(A) A single process goes through.<br />
+(B) The later process has to wait.<br />
+(C) A deadlock occurs when the first process locks the first resource at the same time as the second process locks the second resource.<br />
+(D) The deadlock can be resolved by cancelling and restarting the first process.</div>
+</div>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div class="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Necessary_conditions"><span class="tocnumber">1</span> <span class="toctext">Necessary conditions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Deadlock_handling"><span class="tocnumber">2</span> <span class="toctext">Deadlock handling</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Ignoring_deadlock"><span class="tocnumber">2.1</span> <span class="toctext">Ignoring deadlock</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Detection"><span class="tocnumber">2.2</span> <span class="toctext">Detection</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Prevention"><span class="tocnumber">2.3</span> <span class="toctext">Prevention</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Livelock"><span class="tocnumber">3</span> <span class="toctext">Livelock</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Distributed_deadlock"><span class="tocnumber">4</span> <span class="toctext">Distributed deadlock</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Necessary_conditions">Necessary conditions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=1" title="Edit section: Necessary conditions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A deadlock situation on a resource can arise if and only if all of the following conditions hold simultaneously in a system:<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<ol>
+<li><i><a href="/wiki/Mutual_exclusion" title="Mutual exclusion">Mutual exclusion</a>:</i> The resources involved must be unshareable; otherwise, the processes would not be prevented from using the resource when necessary. Only one process can use the resource at any given instant of time.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></li>
+<li><i>Hold and wait</i> or <i>resource holding:</i> a process is currently holding at least one resource and requesting additional resources which are being held by other processes.</li>
+<li><i>No <a href="/wiki/Preemption_(computing)" title="Preemption (computing)">preemption</a>:</i> a resource can be released only voluntarily by the process holding it.</li>
+<li><i>Circular wait:</i> each process must be waiting for a resource which is being held by another process, which in turn is waiting for the first process to release the resource. In general, there is a <a href="/wiki/Set_(mathematics)" title="Set (mathematics)">set</a> of waiting processes, <i>P</i> = {<i>P</i><sub>1</sub>, <i>P</i><sub>2</sub>, …, <i>P</i><sub><i>N</i></sub>}, such that <i>P</i><sub>1</sub> is waiting for a resource held by <i>P</i><sub>2</sub>, <i>P</i><sub>2</sub> is waiting for a resource held by <i>P</i><sub>3</sub> and so on until <i>P</i><sub><i>N</i></sub> is waiting for a resource held by <i>P</i><sub>1</sub>.<sup id="cite_ref-os_galvin_3-1" class="reference"><a href="#cite_note-os_galvin-3">[3]</a></sup><sup id="cite_ref-embb_7-0" class="reference"><a href="#cite_note-embb-7">[7]</a></sup></li>
+</ol>
+<p>These four conditions are known as the <i>Coffman conditions</i> from their first description in a 1971 article by <a href="/wiki/Edward_G._Coffman,_Jr." title="Edward G. Coffman, Jr.">Edward G. Coffman, Jr.</a><sup id="cite_ref-embb_7-1" class="reference"><a href="#cite_note-embb-7">[7]</a></sup></p>
+<h2><span class="mw-headline" id="Deadlock_handling">Deadlock handling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=2" title="Edit section: Deadlock handling">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Most current operating systems cannot prevent deadlocks.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> When a deadlock occurs, different operating systems respond to them in different non-standard manners. Most approaches work by preventing one of the four Coffman conditions from occurring, especially the fourth one.<sup id="cite_ref-pric_os_9-0" class="reference"><a href="#cite_note-pric_os-9">[9]</a></sup> Major approaches are as follows.</p>
+<h3><span class="mw-headline" id="Ignoring_deadlock">Ignoring deadlock</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=3" title="Edit section: Ignoring deadlock">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In this approach, it is assumed that a deadlock will never occur. This is also an application of the <a href="/wiki/Ostrich_algorithm" title="Ostrich algorithm">Ostrich algorithm</a>.<sup id="cite_ref-pric_os_9-1" class="reference"><a href="#cite_note-pric_os-9">[9]</a></sup><sup id="cite_ref-distri_tanen_10-0" class="reference"><a href="#cite_note-distri_tanen-10">[10]</a></sup> This approach was initially used by <a href="/wiki/MINIX" title="MINIX">MINIX</a> and <a href="/wiki/UNIX" class="mw-redirect" title="UNIX">UNIX</a>.<sup id="cite_ref-embb_7-2" class="reference"><a href="#cite_note-embb-7">[7]</a></sup> This is used when the time intervals between occurrences of deadlocks are large and the data loss incurred each time is tolerable.</p>
+<h3><span class="mw-headline" id="Detection">Detection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=4" title="Edit section: Detection">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Under the deadlock detection, deadlocks are allowed to occur. Then the state of the system is examined to detect that a deadlock has occurred and subsequently it is corrected. An algorithm is employed that tracks resource allocation and process states, it rolls back and restarts one or more of the processes in order to remove the detected deadlock. Detecting a deadlock that has already occurred is easily possible since the resources that each process has locked and/or currently requested are known to the resource scheduler of the operating system.<sup id="cite_ref-distri_tanen_10-1" class="reference"><a href="#cite_note-distri_tanen-10">[10]</a></sup></p>
+<p>After a deadlock is detected, it can be corrected by using one of the following methods:<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2016)">citation needed</span></a></i>]</sup></p>
+<ol>
+<li><i>Process termination:</i> one or more processes involved in the deadlock may be aborted. One could choose to abort all competing <a href="/wiki/Process_(computing)" title="Process (computing)">processes</a> involved in the deadlock. This ensures that deadlock is resolved with certainty and speed.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2016)">citation needed</span></a></i>]</sup> But the expense is high as partial computations will be lost. Or, one could choose to abort one process at a time until the deadlock is resolved. This approach has high overhead because after each abort an algorithm must determine whether the system is still in deadlock.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2016)">citation needed</span></a></i>]</sup> Several factors must be considered while choosing a candidate for termination, such as priority and age of the process.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2016)">citation needed</span></a></i>]</sup></li>
+<li><i>Resource preemption:</i> resources allocated to various processes may be successively preempted and allocated to other processes until the deadlock is broken.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></li>
+</ol>
+<h3><span class="mw-headline" id="Prevention">Prevention</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=5" title="Edit section: Prevention">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Deadlock_prevention_algorithms" title="Deadlock prevention algorithms">Deadlock prevention algorithms</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:382px;"><a href="/wiki/File:Avoiding_deadlock.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Avoiding_deadlock.gif/380px-Avoiding_deadlock.gif" width="380" height="257" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/6/6c/Avoiding_deadlock.gif 1.5x" data-file-width="480" data-file-height="324" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Avoiding_deadlock.gif" class="internal" title="Enlarge"></a></div>
+(A) Two processes competing for one resource, following a first-come, first-served policy. (B) Deadlock occurs when both processes lock the resource simultaneously. (C) The deadlock can be <i>resolved</i> by breaking the symmetry of the locks. (D) The deadlock can be <i>prevented</i> by breaking the symmetry of the locking mechanism.</div>
+</div>
+</div>
+<p>Deadlock prevention works by preventing one of the four Coffman conditions from occurring.</p>
+<ul>
+<li>Removing the <i>mutual exclusion</i> condition means that no process will have exclusive access to a resource. This proves impossible for resources that cannot be <a href="/wiki/Spooling" title="Spooling">spooled</a>. But even with spooled resources, deadlock could still occur. Algorithms that avoid mutual exclusion are called <a href="/wiki/Non-blocking_synchronization" class="mw-redirect" title="Non-blocking synchronization">non-blocking synchronization</a> algorithms.</li>
+<li>The <i>hold and wait</i> or <i>resource holding</i> conditions may be removed by requiring processes to request all the resources they will need before starting up (or before embarking upon a particular set of operations). This advance knowledge is frequently difficult to satisfy and, in any case, is an inefficient use of resources. Another way is to require processes to request resources only when it has none. Thus, first they must release all their currently held resources before requesting all the resources they will need from scratch. This too is often impractical. It is so because resources may be allocated and remain unused for long periods. Also, a process requiring a popular resource may have to wait indefinitely, as such a resource may always be allocated to some process, resulting in <a href="/wiki/Resource_starvation" class="mw-redirect" title="Resource starvation">resource starvation</a>.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup> (These algorithms, such as <a href="/wiki/Serializing_tokens" title="Serializing tokens">serializing tokens</a>, are known as the <i>all-or-none algorithms</i>.)</li>
+<li>The <i>no <a href="/wiki/Preemption_(computing)" title="Preemption (computing)">preemption</a></i> condition may also be difficult or impossible to avoid as a process has to be able to have a resource for a certain amount of time, or the processing outcome may be inconsistent or <a href="/wiki/Thrashing_(computer_science)" title="Thrashing (computer science)">thrashing</a> may occur. However, inability to enforce preemption may interfere with a <i>priority</i> algorithm. Preemption of a "locked out" resource generally implies a <a href="/wiki/Rollback_(data_management)" title="Rollback (data management)">rollback</a>, and is to be avoided, since it is very costly in overhead. Algorithms that allow preemption include <a href="/wiki/Lock-free_and_wait-free_algorithms" class="mw-redirect" title="Lock-free and wait-free algorithms">lock-free and wait-free algorithms</a> and <a href="/wiki/Optimistic_concurrency_control" title="Optimistic concurrency control">optimistic concurrency control</a>. If a process holding some resources and requests for some another resource(s) that cannot be immediately allocated to it, the condition may be removed by releasing all the currently being held resources of that process.</li>
+<li>The final condition is the <i>circular wait</i> condition. Approaches that avoid circular waits include disabling interrupts during critical sections and using a hierarchy to determine a <a href="/wiki/Partial_order" class="mw-redirect" title="Partial order">partial ordering</a> of resources. If no obvious hierarchy exists, even the memory address of resources has been used to determine ordering and resources are requested in the increasing order of the enumeration.<sup id="cite_ref-os_galvin_3-2" class="reference"><a href="#cite_note-os_galvin-3">[3]</a></sup> <a href="/wiki/Dining_philosophers_problem#Resource_hierarchy_solution" title="Dining philosophers problem">Dijkstra's solution</a> can also be used.</li>
+</ul>
+<h2><span class="mw-headline" id="Livelock">Livelock</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=6" title="Edit section: Livelock">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <i>livelock</i> is similar to a deadlock, except that the states of the processes involved in the livelock constantly change with regard to one another, none progressing.</p>
+<p>The term was defined formally at some time during the 1970s. An early sighting in the published literature is in Babich's 1979 article on program correctness.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> Livelock is a special case of <a href="/wiki/Resource_starvation" class="mw-redirect" title="Resource starvation">resource starvation</a>; the general definition only states that a specific process is not progressing.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></p>
+<p>Livelock is a risk with some <a href="/wiki/Algorithm" title="Algorithm">algorithms</a> that detect and recover from <i>deadlock</i>. If more than one process takes action, the <a href="/w/index.php?title=Deadlock_detection_algorithm&amp;action=edit&amp;redlink=1" class="new" title="Deadlock detection algorithm (page does not exist)">deadlock detection algorithm</a> can be repeatedly triggered. This can be avoided by ensuring that only one process (chosen arbitrarily or by priority) takes action.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup></p>
+<h2><span class="mw-headline" id="Distributed_deadlock">Distributed deadlock</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=7" title="Edit section: Distributed deadlock">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Distributed deadlocks can occur in <a href="/wiki/Distributed_systems" class="mw-redirect" title="Distributed systems">distributed systems</a> when <a href="/wiki/Distributed_transaction" title="Distributed transaction">distributed transactions</a> or <a href="/wiki/Concurrency_control" title="Concurrency control">concurrency control</a> is being used. Distributed deadlocks can be detected either by constructing a global <a href="/wiki/Wait-for_graph" title="Wait-for graph">wait-for graph</a> from local wait-for graphs at a deadlock detector or by a <a href="/wiki/Distributed_algorithm" title="Distributed algorithm">distributed algorithm</a> like <a href="/wiki/Edge_chasing" title="Edge chasing">edge chasing</a>.</p>
+<p><i>Phantom deadlocks</i> are deadlocks that are falsely detected in a distributed system due to system internal delays but don't actually exist. For example, if a process releases a resource <i>R1</i> and issues a request for <i>R2</i>, and the first message is lost or delayed, a coordinator (detector of deadlocks) could falsely conclude a deadlock (if the request for <i>R2</i> while having <i>R1</i> would cause a deadlock).</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div>
+<table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;">
+<tr>
+<td style="width:50%; text-align:left; vertical-align:top;">
+<ul>
+<li><a href="/wiki/Banker%27s_algorithm" title="Banker's algorithm">Banker's algorithm</a></li>
+<li><a href="/wiki/Catch-22_(logic)" title="Catch-22 (logic)">Catch 22</a></li>
+<li><a href="/wiki/Circular_reference" title="Circular reference">Circular reference</a></li>
+<li><a href="/wiki/Dining_philosophers_problem" title="Dining philosophers problem">Dining philosophers problem</a></li>
+<li><a href="/wiki/File_locking" title="File locking">File locking</a></li>
+<li><a href="/wiki/Gridlock" title="Gridlock">Gridlock (in vehicular traffic)</a></li>
+<li><a href="/wiki/Hang_(computing)" title="Hang (computing)">Hang</a></li>
+<li><a href="/wiki/Impasse" title="Impasse">Impasse</a></li>
+<li><a href="/wiki/Infinite_loop" title="Infinite loop">Infinite loop</a></li>
+<li><a href="/wiki/Turn_restriction_routing" title="Turn restriction routing">Turn restriction routing</a></li>
+</ul>
+</td>
+<td style="width:50%; text-align:left; vertical-align:top;">
+<ul>
+<li><a href="/wiki/Linearizability" title="Linearizability">Linearizability</a></li>
+<li><a href="/wiki/Model_checker" class="mw-redirect" title="Model checker">Model checker</a> can be used to formally verify that a system will never enter a deadlock</li>
+<li><a href="/wiki/Ostrich_algorithm" title="Ostrich algorithm">Ostrich algorithm</a></li>
+<li><a href="/wiki/Priority_inversion" title="Priority inversion">Priority inversion</a></li>
+<li><a href="/wiki/Race_condition" title="Race condition">Race condition</a></li>
+<li><a href="/wiki/Sleeping_barber_problem" title="Sleeping barber problem">Sleeping barber problem</a></li>
+<li><a href="/wiki/Stalemate" title="Stalemate">Stalemate</a></li>
+<li><a href="/wiki/Readers-writer_lock" class="mw-redirect" title="Readers-writer lock">Readers-writer lock</a></li>
+<li><a href="/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">Synchronization</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-coulouris-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-coulouris_1-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Coulouris, George (2012). <i>Distributed Systems Concepts and Design</i>. Pearson. p.&#160;716. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-273-76059-7" title="Special:BookSources/978-0-273-76059-7">978-0-273-76059-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=George&amp;rft.aulast=Coulouris&amp;rft.btitle=Distributed+Systems+Concepts+and+Design&amp;rft.date=2012&amp;rft.genre=book&amp;rft.isbn=978-0-273-76059-7&amp;rft.pages=716&amp;rft.pub=Pearson&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-para_enclo-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-para_enclo_2-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Padua, David (2011). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=Hm6LaufVKFEC&amp;pg=PA524#v=onepage&amp;q=deadlock&amp;f=false"><i>Encyclopedia of Parallel Computing</i></a>. Springer. p.&#160;524. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780387097657" title="Special:BookSources/9780387097657">9780387097657</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=David&amp;rft.aulast=Padua&amp;rft.btitle=Encyclopedia+of+Parallel+Computing&amp;rft.date=2011&amp;rft.genre=book&amp;rft.isbn=9780387097657&amp;rft.pages=524&amp;rft.pub=Springer&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DHm6LaufVKFEC%26pg%3DPA524%23v%3Donepage%26q%3Ddeadlock%26f%3Dfalse&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-os_galvin-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-os_galvin_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-os_galvin_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-os_galvin_3-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Silberschatz, Abraham (2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=WjvX0HmVTlMC&amp;dq=deadlock+operating+systems"><i>Operating System Principles</i></a> (7th ed.). Wiley-India. p.&#160;237. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9788126509621" title="Special:BookSources/9788126509621">9788126509621</a><span class="reference-accessdate">. Retrieved <span class="nowrap">29 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=Abraham&amp;rft.aulast=Silberschatz&amp;rft.btitle=Operating+System+Principles&amp;rft.date=2006&amp;rft.edition=7th&amp;rft.genre=book&amp;rft.isbn=9788126509621&amp;rft.pages=237&amp;rft.pub=Wiley-India&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DWjvX0HmVTlMC%26dq%3Ddeadlock%2Boperating%2Bsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-invi_comp-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-invi_comp_4-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Schneider, G. Michael (2009). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=gQK0pJONyhgC&amp;pg=PA271#v=onepage&amp;q=deadlock%20signal%20lost&amp;f=false"><i>Invitation to Computer Science</i></a>. Cengage Learning. p.&#160;271. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0324788592" title="Special:BookSources/0324788592">0324788592</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=G.+Michael&amp;rft.aulast=Schneider&amp;rft.btitle=Invitation+to+Computer+Science&amp;rft.date=2009&amp;rft.genre=book&amp;rft.isbn=0324788592&amp;rft.pages=271&amp;rft.pub=Cengage+Learning&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DgQK0pJONyhgC%26pg%3DPA271%23v%3Donepage%26q%3Ddeadlock%2520signal%2520lost%26f%3Dfalse&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation book">Silberschatz, Abraham (2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=WjvX0HmVTlMC&amp;dq=deadlock+operating+systems"><i>Operating System Principles</i></a> (7 ed.). Wiley-India. p.&#160;239. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9788126509621" title="Special:BookSources/9788126509621">9788126509621</a><span class="reference-accessdate">. Retrieved <span class="nowrap">29 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=Abraham&amp;rft.aulast=Silberschatz&amp;rft.btitle=Operating+System+Principles&amp;rft.date=2006&amp;rft.edition=7&amp;rft.genre=book&amp;rft.isbn=9788126509621&amp;rft.pages=239&amp;rft.pub=Wiley-India&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DWjvX0HmVTlMC%26dq%3Ddeadlock%2Boperating%2Bsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://nob.cs.ucdavis.edu/classes/ecs150-1999-02/dl-cond.html">http://nob.cs.ucdavis.edu/classes/ecs150-1999-02/dl-cond.html</a></span></li>
+<li id="cite_note-embb-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-embb_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-embb_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-embb_7-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Shibu, K. (2009). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=8hfn4gwR90MC&amp;pg=PA446#v=onepage&amp;q=%22waiting%20for%20a%20resource%22&amp;f=false"><i>Intro To Embedded Systems</i></a> (1st ed.). Tata McGraw-Hill Education. p.&#160;446. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780070145894" title="Special:BookSources/9780070145894">9780070145894</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=K.&amp;rft.aulast=Shibu&amp;rft.btitle=Intro+To+Embedded+Systems&amp;rft.date=2009&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=9780070145894&amp;rft.pages=446&amp;rft.pub=Tata+McGraw-Hill+Education&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D8hfn4gwR90MC%26pg%3DPA446%23v%3Donepage%26q%3D%2522waiting%2520for%2520a%2520resource%2522%26f%3Dfalse&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation book">Silberschatz, Abraham (2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=WjvX0HmVTlMC&amp;dq=deadlock+operating+systems"><i>Operating System Principles</i></a> (7 ed.). Wiley-India. p.&#160;237. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9788126509621" title="Special:BookSources/9788126509621">9788126509621</a><span class="reference-accessdate">. Retrieved <span class="nowrap">29 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=Abraham&amp;rft.aulast=Silberschatz&amp;rft.btitle=Operating+System+Principles&amp;rft.date=2006&amp;rft.edition=7&amp;rft.genre=book&amp;rft.isbn=9788126509621&amp;rft.pages=237&amp;rft.pub=Wiley-India&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DWjvX0HmVTlMC%26dq%3Ddeadlock%2Boperating%2Bsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-pric_os-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-pric_os_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-pric_os_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Stuart, Brian L. (2008). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=B5NC5-UfMMwC&amp;pg=PA112#v=onepage&amp;q=coffman%20conditions&amp;f=false"><i>Principles of operating systems</i></a> (1st ed.). Cengage Learning. p.&#160;446<span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=Brian+L.&amp;rft.aulast=Stuart&amp;rft.btitle=Principles+of+operating+systems&amp;rft.date=2008&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.pages=446&amp;rft.pub=Cengage+Learning&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DB5NC5-UfMMwC%26pg%3DPA112%23v%3Donepage%26q%3Dcoffman%2520conditions%26f%3Dfalse&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-distri_tanen-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-distri_tanen_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-distri_tanen_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Tanenbaum, Andrew S. (1995). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=l6sDRvKvCQ0C&amp;pg=PA177#v=onepage&amp;q=Tanenbaum%20ostrich&amp;f=false"><i>Distributed Operating Systems</i></a> (1st ed.). Pearson Education. p.&#160;117<span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=Andrew+S.&amp;rft.aulast=Tanenbaum&amp;rft.btitle=Distributed+Operating+Systems&amp;rft.date=1995&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.pages=117&amp;rft.pub=Pearson+Education&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dl6sDRvKvCQ0C%26pg%3DPA177%23v%3Donepage%26q%3DTanenbaum%2520ostrich%26f%3Dfalse&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.ibm.com/support/knowledgecenter/SSETD4_9.1.2/lsf_admin/resource_preemption_about.html">https://www.ibm.com/support/knowledgecenter/SSETD4_9.1.2/lsf_admin/resource_preemption_about.html</a></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation book">Silberschatz, Abraham (2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=WjvX0HmVTlMC&amp;dq=deadlock+operating+systems"><i>Operating System Principles</i></a> (7 ed.). Wiley-India. p.&#160;244<span class="reference-accessdate">. Retrieved <span class="nowrap">29 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.aufirst=Abraham&amp;rft.aulast=Silberschatz&amp;rft.btitle=Operating+System+Principles&amp;rft.date=2006&amp;rft.edition=7&amp;rft.genre=book&amp;rft.pages=244&amp;rft.pub=Wiley-India&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DWjvX0HmVTlMC%26dq%3Ddeadlock%2Boperating%2Bsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation journal">Babich, A.F. (1979). <a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109/TSE.1979.230192">"Proving Total Correctness of Parallel Programs"</a>. <i>IEEE Transactions on Software Engineering</i>. <b>SE–5</b> (6): 558–574. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1109%2Ftse.1979.230192">10.1109/tse.1979.230192</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Proving+Total+Correctness+of+Parallel+Programs&amp;rft.aufirst=A.F.&amp;rft.aulast=Babich&amp;rft.date=1979&amp;rft.genre=article&amp;rft.issue=6&amp;rft.jtitle=IEEE+Transactions+on+Software+Engineering&amp;rft.pages=558-574&amp;rft.volume=SE-5&amp;rft_id=http%3A%2F%2Fdx.doi.org%2F10.1109%2FTSE.1979.230192&amp;rft_id=info%3Adoi%2F10.1109%2Ftse.1979.230192&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web">Anderson, James H.; Yong-jik Kim (2001). <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/anderson01sharedmemory.html">"Shared-memory mutual exclusion: Major research trends since 1986"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.au=Yong-jik+Kim&amp;rft.aufirst=James+H.&amp;rft.aulast=Anderson&amp;rft.btitle=Shared-memory+mutual+exclusion%3A+Major+research+trends+since+1986&amp;rft.date=2001&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fanderson01sharedmemory.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation journal">Zöbel, Dieter (October 1983). "The Deadlock problem: a classifying bibliography". <i>ACM SIGOPS Operating Systems Review</i>. <b>17</b> (4): 6–15. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0163-5980">0163-5980</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F850752.850753">10.1145/850752.850753</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=The+Deadlock+problem%3A+a+classifying+bibliography&amp;rft.aufirst=Dieter&amp;rft.aulast=Z%C3%B6bel&amp;rft.date=1983-10&amp;rft.genre=article&amp;rft.issn=0163-5980&amp;rft.issue=4&amp;rft.jtitle=ACM+SIGOPS+Operating+Systems+Review&amp;rft.pages=6-15&amp;rft.volume=17&amp;rft_id=info%3Adoi%2F10.1145%2F850752.850753&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=10" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation journal">Kaveh, Nima; Emmerich, Wolfgang. <a rel="nofollow" class="external text" href="http://www.cs.ucl.ac.uk/staff/w.emmerich/publications/ESEC01/ModelChecking/esec.pdf">"Deadlock Detection in Distributed Object Systems"</a> <span style="font-size:85%;">(PDF)</span>. London: University College London.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Deadlock+Detection+in+Distributed+Object+Systems&amp;rft.au=Emmerich%2C+Wolfgang&amp;rft.aufirst=Nima&amp;rft.aulast=Kaveh&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cs.ucl.ac.uk%2Fstaff%2Fw.emmerich%2Fpublications%2FESEC01%2FModelChecking%2Fesec.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Bensalem, Saddek; Fernandez, Jean-Claude; Havelund, Klaus; Mounier, Laurent (2006). "Confirmation of deadlock potentials detected by runtime analysis". <i>Proceedings of the 2006 workshop on Parallel and distributed systems: Testing and debugging</i>. ACM: 41–50. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1595934146" title="Special:BookSources/1595934146">1595934146</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F1147403.1147412">10.1145/1147403.1147412</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Confirmation+of+deadlock+potentials+detected+by+runtime+analysis&amp;rft.au=Fernandez%2C+Jean-Claude&amp;rft.au=Havelund%2C+Klaus&amp;rft.au=Mounier%2C+Laurent&amp;rft.aufirst=Saddek&amp;rft.aulast=Bensalem&amp;rft.date=2006&amp;rft.genre=article&amp;rft.isbn=1595934146&amp;rft.jtitle=Proceedings+of+the+2006+workshop+on+Parallel+and+distributed+systems%3A+Testing+and+debugging&amp;rft.pages=41-50&amp;rft_id=info%3Adoi%2F10.1145%2F1147403.1147412&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Coffman, Edward G., Jr.; Elphick, Michael J.; Shoshani, Arie (1971). <a rel="nofollow" class="external text" href="http://www.cs.umass.edu/~mcorner/courses/691J/papers/TS/coffman_deadlocks/coffman_deadlocks.pdf">"System Deadlocks"</a> <span style="font-size:85%;">(PDF)</span>. <i>ACM Computing Surveys</i>. <b>3</b> (2): 67–78. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F356586.356588">10.1145/356586.356588</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=System+Deadlocks&amp;rft.au=Elphick%2C+Michael+J.&amp;rft.au=Shoshani%2C+Arie&amp;rft.aufirst=Edward+G.%2C+Jr.&amp;rft.aulast=Coffman&amp;rft.date=1971&amp;rft.genre=article&amp;rft.issue=2&amp;rft.jtitle=ACM+Computing+Surveys&amp;rft.pages=67-78&amp;rft.volume=3&amp;rft_id=http%3A%2F%2Fwww.cs.umass.edu%2F~mcorner%2Fcourses%2F691J%2Fpapers%2FTS%2Fcoffman_deadlocks%2Fcoffman_deadlocks.pdf&amp;rft_id=info%3Adoi%2F10.1145%2F356586.356588&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Mogul, Jeffrey C.; Ramakrishnan, K. K. (1997). "Eliminating receive livelock in an interrupt-driven kernel". <i>ACM Transactions on Computer Systems</i>. <b>15</b> (3): 217–252. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0734-2071">0734-2071</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F263326.263335">10.1145/263326.263335</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Eliminating+receive+livelock+in+an+interrupt-driven+kernel&amp;rft.au=Ramakrishnan%2C+K.+K.&amp;rft.aufirst=Jeffrey+C.&amp;rft.aulast=Mogul&amp;rft.date=1997&amp;rft.genre=article&amp;rft.issn=0734-2071&amp;rft.issue=3&amp;rft.jtitle=ACM+Transactions+on+Computer+Systems&amp;rft.pages=217-252&amp;rft.volume=15&amp;rft_id=info%3Adoi%2F10.1145%2F263326.263335&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Havender, James W. (1968). <a rel="nofollow" class="external text" href="http://domino.research.ibm.com/tchjr/journalindex.nsf/a3807c5b4823c53f85256561006324be/c014b699abf7b9ea85256bfa00685a38?OpenDocument">"Avoiding deadlock in multitasking systems"</a>. <i>IBM Systems Journal</i>. <b>7</b> (2): 74. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1147%2Fsj.72.0074">10.1147/sj.72.0074</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Avoiding+deadlock+in+multitasking+systems&amp;rft.aufirst=James+W.&amp;rft.aulast=Havender&amp;rft.date=1968&amp;rft.genre=article&amp;rft.issue=2&amp;rft.jtitle=IBM+Systems+Journal&amp;rft.pages=74&amp;rft.volume=7&amp;rft_id=http%3A%2F%2Fdomino.research.ibm.com%2Ftchjr%2Fjournalindex.nsf%2Fa3807c5b4823c53f85256561006324be%2Fc014b699abf7b9ea85256bfa00685a38%3FOpenDocument&amp;rft_id=info%3Adoi%2F10.1147%2Fsj.72.0074&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Holliday, JoAnne L.; El Abbadi, Amr. <a rel="nofollow" class="external text" href="http://www.cse.scu.edu/~jholliday/dd_9_16.htm">"Distributed Deadlock Detection"</a>. <i>Encyclopedia of Distributed Computing</i>. <a href="/wiki/Kluwer_Academic_Publishers" class="mw-redirect" title="Kluwer Academic Publishers">Kluwer Academic Publishers</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Distributed+Deadlock+Detection&amp;rft.au=El+Abbadi%2C+Amr&amp;rft.aufirst=JoAnne+L.&amp;rft.aulast=Holliday&amp;rft.genre=article&amp;rft.jtitle=Encyclopedia+of+Distributed+Computing&amp;rft_id=http%3A%2F%2Fwww.cse.scu.edu%2F~jholliday%2Fdd_9_16.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Knapp, Edgar (1987). "Deadlock detection in distributed databases". <i>ACM Computing Surveys</i>. <b>19</b> (4): 303–328. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0360-0300">0360-0300</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F45075.46163">10.1145/45075.46163</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=Deadlock+detection+in+distributed+databases&amp;rft.aufirst=Edgar&amp;rft.aulast=Knapp&amp;rft.date=1987&amp;rft.genre=article&amp;rft.issn=0360-0300&amp;rft.issue=4&amp;rft.jtitle=ACM+Computing+Surveys&amp;rft.pages=303-328&amp;rft.volume=19&amp;rft_id=info%3Adoi%2F10.1145%2F45075.46163&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Ling, Yibei; Chen, Shigang; Chiang, Jason (2006). "On Optimal Deadlock Detection Scheduling". <i>IEEE Transactions on Computers</i>. <b>55</b> (9): 1178–1187. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1109%2Ftc.2006.151">10.1109/tc.2006.151</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeadlock&amp;rft.atitle=On+Optimal+Deadlock+Detection+Scheduling&amp;rft.au=Chen%2C+Shigang&amp;rft.au=Chiang%2C+Jason&amp;rft.aufirst=Yibei&amp;rft.aulast=Ling&amp;rft.date=2006&amp;rft.genre=article&amp;rft.issue=9&amp;rft.jtitle=IEEE+Transactions+on+Computers&amp;rft.pages=1178-1187&amp;rft.volume=55&amp;rft_id=info%3Adoi%2F10.1109%2Ftc.2006.151&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deadlock&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>"<a rel="nofollow" class="external text" href="http://www.onjava.com/pub/a/onjava/2004/10/20/threads2.html">Advanced Synchronization in Java Threads</a>" by Scott Oaks and Henry Wong</li>
+<li><a rel="nofollow" class="external text" href="http://www-db.in.tum.de/research/projects/dda.html">Deadlock Detection Agents</a></li>
+<li><a href="http://c2.com/cgi/wiki?DeadLock" class="extiw" title="c2:DeadLock">DeadLock</a> at the Portland Pattern Repository</li>
+<li><a rel="nofollow" class="external text" href="http://www.etymonline.com/index.php?term=deadlock">Etymology of "Deadlock"</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Concurrent_computing" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Concurrent_computing" title="Template:Concurrent computing"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/w/index.php?title=Template_talk:Concurrent_computing&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Concurrent computing (page does not exist)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Concurrent_computing&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Concurrent_computing" style="font-size:114%;margin:0 4em"><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent computing</a></div>
+</th>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">General</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">Concurrency</a></li>
+<li><a href="/wiki/Concurrency_control" title="Concurrency control">Concurrency control</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Process_calculus" title="Process calculus">Process calculi</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Communicating_Sequential_Processes" class="mw-redirect" title="Communicating Sequential Processes">CSP</a></li>
+<li><a href="/wiki/Calculus_of_Communicating_Systems" class="mw-redirect" title="Calculus of Communicating Systems">CCS</a></li>
+<li><a href="/wiki/Algebra_of_Communicating_Processes" title="Algebra of Communicating Processes">ACP</a></li>
+<li><a href="/wiki/Language_Of_Temporal_Ordering_Specification" title="Language Of Temporal Ordering Specification">LOTOS</a></li>
+<li><a href="/wiki/%CE%A0-calculus" title="Π-calculus">π-calculus</a></li>
+<li><a href="/wiki/Ambient_calculus" title="Ambient calculus">Ambient calculus</a></li>
+<li><a href="/wiki/API-Calculus" title="API-Calculus">API-Calculus</a></li>
+<li><a href="/wiki/PEPA" title="PEPA">PEPA</a></li>
+<li><a href="/wiki/Join-calculus" title="Join-calculus">Join-calculus</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%">Classic problems</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/ABA_problem" title="ABA problem">ABA problem</a></li>
+<li><a href="/wiki/Cigarette_smokers_problem" title="Cigarette smokers problem">Cigarette smokers problem</a></li>
+<li><a class="mw-selflink selflink">Deadlock</a></li>
+<li><a href="/wiki/Dining_philosophers_problem" title="Dining philosophers problem">Dining philosophers problem</a></li>
+<li><a href="/wiki/Producer%E2%80%93consumer_problem" title="Producer–consumer problem">Producer–consumer problem</a></li>
+<li><a href="/wiki/Race_condition" title="Race condition">Race condition</a></li>
+<li><a href="/wiki/Readers%E2%80%93writers_problem" title="Readers–writers problem">Readers–writers problem</a></li>
+<li><a href="/wiki/Sleeping_barber_problem" title="Sleeping barber problem">Sleeping barber problem</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" />&#160;<a href="/wiki/Category:Concurrent_computing" title="Category:Concurrent computing">Category: Concurrent computing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1223
+Cached time: 20171003173215
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.284 seconds
+Real time usage: 0.353 seconds
+Preprocessor visited node count: 1701/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 54077/2097152 bytes
+Template argument size: 2069/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 2/500
+Lua time usage: 0.150/10.000 seconds
+Lua memory usage: 4.34 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  286.908      1 -total
+ 36.22%  103.908      1 Template:Reflist
+ 24.36%   69.885      4 Template:Citation_needed
+ 22.62%   64.906     10 Template:Cite_book
+ 22.47%   64.481      4 Template:Fix
+ 15.41%   44.213     10 Template:Cite_journal
+ 11.12%   31.902      4 Template:Delink
+  9.91%   28.435      8 Template:Category_handler
+  7.82%   22.446      1 Template:About
+  6.42%   18.420      1 Template:Concurrent_computing
+-->
+</div>
+<!-- Saved in parser cache with key enwiki:pcache:idhash:105181-0!canonical and timestamp 20171003173324 and revision id 803626818
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Deadlock&amp;oldid=803626818">https://en.wikipedia.org/w/index.php?title=Deadlock&amp;oldid=803626818</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Concurrency_(computer_science)" title="Category:Concurrency (computer science)">Concurrency (computer science)</a></li><li><a href="/wiki/Category:Software_bugs" title="Category:Software bugs">Software bugs</a></li><li><a href="/wiki/Category:Software_anomalies" title="Category:Software anomalies">Software anomalies</a></li><li><a href="/wiki/Category:Distributed_computing_problems" title="Category:Distributed computing problems">Distributed computing problems</a></li><li><a href="/wiki/Category:Edsger_W._Dijkstra" title="Category:Edsger W. Dijkstra">Edsger W. Dijkstra</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Use_dmy_dates_from_August_2012" title="Category:Use dmy dates from August 2012">Use dmy dates from August 2012</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_May_2016" title="Category:Articles with unsourced statements from May 2016">Articles with unsourced statements from May 2016</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Deadlock" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Deadlock" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Deadlock" title="View the content page [c]" accesskey="c">Article</a></span></li>
+							<li id="ca-talk"><span><a href="/wiki/Talk:Deadlock" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Deadlock">Read</a></span></li>
+							<li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Deadlock&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Deadlock&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Deadlock" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Deadlock" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Deadlock&amp;oldid=803626818" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Deadlock&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q623276" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Deadlock&amp;id=803626818" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Deadlock">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Deadlock&amp;action=show-selection-screen&amp;coll-download-url=%2Fw%2Findex.php%3Ftitle%3DSpecial%3ABook%26bookcmd%3Drender_article%26arttitle%3DDeadlock%26returnto%3DDeadlock%26oldid%3D803626818%26writer%3Drdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Deadlock&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%B9%D8%B5%D8%A7%D8%A1" title="استعصاء – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%A1%E0%A7%87%E0%A6%A1%E0%A6%B2%E0%A6%95" title="ডেডলক – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Interbloqueig" title="Interbloqueig – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Deadlock" title="Deadlock – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Deadlock" title="Deadlock – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Deadlock_(Informatik)" title="Deadlock (Informatik) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Bloqueo_mutuo" title="Bloqueo mutuo – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Elkar-blokeatze" title="Elkar-blokeatze – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D9%86%E2%80%8C%D8%A8%D8%B3%D8%AA_(%D8%B9%D9%84%D9%88%D9%85_%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D9%87)" title="بن‌بست (علوم رایانه) – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Interblocage" title="Interblocage – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B5%90%EC%B0%A9_%EC%83%81%ED%83%9C" title="교착 상태 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Deadlock" title="Deadlock – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A7%D7%99%D7%A4%D7%90%D7%95%D7%9F_(%D7%9E%D7%93%D7%A2%D7%99_%D7%94%D7%9E%D7%97%D7%A9%D7%91)" title="קיפאון (מדעי המחשב) – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Rakinimo_aklaviet%C4%97" title="Rakinimo aklavietė – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Holtpont" title="Holtpont – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%97%D0%B0%D1%81%D1%82%D0%BE%D1%98" title="Застој – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/DeadLock" title="DeadLock – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Deadlock_(situatie)" title="Deadlock (situatie) – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%83%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF" title="デッドロック – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Zakleszczenie" title="Zakleszczenie – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Deadlock" title="Deadlock – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B7%D0%B0%D0%B8%D0%BC%D0%BD%D0%B0%D1%8F_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0" title="Взаимная блокировка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Deadlock" title="Deadlock – Simple English" lang="simple" hreflang="simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%97%D0%B0%D1%81%D1%82%D0%BE%D1%98" title="Застој – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Lukkiutuminen" title="Lukkiutuminen – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Bakl%C3%A5s_(datavetenskap)" title="Baklås (datavetenskap) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Deadlock" title="Deadlock – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B7%D0%B0%D1%94%D0%BC%D0%BD%D0%B5_%D0%B1%D0%BB%D0%BE%D0%BA%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" title="Взаємне блокування – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Deadlock" title="Deadlock – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%AD%BB%E9%94%81" title="死锁 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>					</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q623276#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 3 October 2017, at 17:33.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wikimediafoundation.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Deadlock&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.284","walltime":"0.353","ppvisitednodes":{"value":1701,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":54077,"limit":2097152},"templateargumentsize":{"value":2069,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  286.908      1 -total"," 36.22%  103.908      1 Template:Reflist"," 24.36%   69.885      4 Template:Citation_needed"," 22.62%   64.906     10 Template:Cite_book"," 22.47%   64.481      4 Template:Fix"," 15.41%   44.213     10 Template:Cite_journal"," 11.12%   31.902      4 Template:Delink","  9.91%   28.435      8 Template:Category_handler","  7.82%   22.446      1 Template:About","  6.42%   18.420      1 Template:Concurrent_computing"]},"scribunto":{"limitreport-timeusage":{"value":"0.150","limit":"10.000"},"limitreport-memusage":{"value":4554506,"limit":52428800}},"cachereport":{"origin":"mw1223","timestamp":"20171003173215","ttl":1900800,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":64,"wgHostname":"mw1240"});});</script>
+	</body>
+</html>

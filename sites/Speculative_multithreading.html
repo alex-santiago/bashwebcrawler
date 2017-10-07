@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Speculative multithreading - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Speculative_multithreading","wgTitle":"Speculative multithreading","wgCurRevisionId":772354267,"wgRevisionId":772354267,"wgArticleId":8307095,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles in need of updating from March 2017","All Wikipedia articles in need of updating","Articles with obsolete information from March 2017","Articles to be expanded from March 2017","All stub articles","Concurrency control","Parallel computing","Programming language implementation","Instruction processing","Computer science stubs"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Speculative_multithreading","wgRelevantArticleId":8307095,"wgRequestId":"WdRkQApAIC4AAFmdGMoAAAAB","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgPopupsShouldSendModuleToUser":false,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q7575343","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.charinsert-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.0-wmf.1"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Speculative_multithreading"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Speculative_multithreading&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Speculative_multithreading&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Speculative_multithreading"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Speculative_multithreading rootpage-Speculative_multithreading vector-nav-directionality skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Speculative multithreading</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="plainlinks metadata ambox ambox-content ambox-Update" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="Ambox current red.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/42px-Ambox_current_red.svg.png" width="42" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/63px-Ambox_current_red.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/84px-Ambox_current_red.svg.png 2x" data-file-width="360" data-file-height="290" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article needs to be <b>updated</b>. <span class="hide-when-compact">Please update this article to reflect recent events or newly available information.</span> <small><i>(March 2017)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Update" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="Ambox current red.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/42px-Ambox_current_red.svg.png" width="42" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/63px-Ambox_current_red.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/84px-Ambox_current_red.svg.png 2x" data-file-width="360" data-file-height="290" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article's <b><a href="/wiki/Wikipedia:Accuracy_dispute" title="Wikipedia:Accuracy dispute">factual accuracy</a> may be compromised due to out-of-date information</b>. <span class="hide-when-compact">Please update this article to reflect recent events or newly available information.</span> <small><i>(March 2017)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>is incomplete</b>. <span class="hide-when-compact">Please help to improve it, or discuss the issue on the <a href="/wiki/Talk:Speculative_multithreading" title="Talk:Speculative multithreading">talk page</a>.</span> <small><i>(March 2017)</i></small></span></td>
+</tr>
+</table>
+<p><b>Speculative multithreading</b> (SpMT), also known as <b>thread level speculation</b> (TLS), is a dynamic <a href="/wiki/Parallelization" class="mw-redirect" title="Parallelization">parallelization</a> technique that depends on <a href="/wiki/Out-of-order_execution" title="Out-of-order execution">out-of-order execution</a> to achieve speedup on <a href="/wiki/Multiprocessor" class="mw-redirect" title="Multiprocessor">multiprocessor</a> CPUs. It is a kind of <a href="/wiki/Speculative_execution" title="Speculative execution">speculative execution</a> that occurs at the thread level as opposed to the instruction level.</p>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Speculative_multithreading&amp;action=edit&amp;section=1" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation journal">Yiapanis, Paraskevas; Rosas-Ham, Demian; Brown, Gavin; Lujan, Mikel (2013). "Optimizing Software Runtime Systems for Speculative Parallelization". <i>ACM Transactions on Architecture and Code Optimization</i>. <b>9</b> (4). <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F2400682.2400698">10.1145/2400682.2400698</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=Optimizing+Software+Runtime+Systems+for+Speculative+Parallelization&amp;rft.au=Brown%2C+Gavin&amp;rft.au=Lujan%2C+Mikel&amp;rft.au=Rosas-Ham%2C+Demian&amp;rft.au=Yiapanis%2C+Paraskevas&amp;rft.date=2013&amp;rft.genre=article&amp;rft.issue=4&amp;rft.jtitle=ACM+Transactions+on+Architecture+and+Code+Optimization&amp;rft.volume=9&amp;rft_id=info%3Adoi%2F10.1145%2F2400682.2400698&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Johnson, Nick P.; Kim, Hanjun; Prabhu, Prakash; Zaks, Ayal; August, David I. (2012). <a rel="nofollow" class="external text" href="http://liberty.princeton.edu/Publications/pldi12_privateer.pdf">"Speculative separation for privatization and reductions"</a> <span style="font-size:85%;">(PDF)</span>. <i>PLDI</i>. pp.&#160;359–370.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=Speculative+separation+for+privatization+and+reductions&amp;rft.au=August%2C+David+I.&amp;rft.au=Johnson%2C+Nick+P.&amp;rft.au=Kim%2C+Hanjun&amp;rft.au=Prabhu%2C+Prakash&amp;rft.au=Zaks%2C+Ayal&amp;rft.btitle=PLDI&amp;rft.date=2012&amp;rft.genre=conference&amp;rft.pages=359-370&amp;rft_id=http%3A%2F%2Fliberty.princeton.edu%2FPublications%2Fpldi12_privateer.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Bhowmik, Anasua; Franklin, Manoj (2002). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145/564870.564885">A General Compiler Framework for Speculative Multithreading</a>". <i>SPAA</i>. pp.&#160;99–108.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1145%2F564870.564885+A+General+Compiler+Framework+for+Speculative+Multithreading%5D&amp;rft.au=Bhowmik%2C+Anasua&amp;rft.au=Franklin%2C+Manoj&amp;rft.btitle=SPAA&amp;rft.date=2002&amp;rft.genre=conference&amp;rft.pages=99-108&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Bruening, Derek; Devabhaktuni, Srikrishna; Amarasinghe, Saman (2000). "<a rel="nofollow" class="external text" href="http://www.cag.lcs.mit.edu/softspec/FDDO.pdf">Softspec: Software-based Speculative Parallelism</a>". <i>FDDO-3</i>. pp.&#160;1–10.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fwww.cag.lcs.mit.edu%2Fsoftspec%2FFDDO.pdf+Softspec%3A+Software-based+Speculative+Parallelism%5D&amp;rft.au=Amarasinghe%2C+Saman&amp;rft.au=Bruening%2C+Derek&amp;rft.au=Devabhaktuni%2C+Srikrishna&amp;rft.btitle=FDDO-3&amp;rft.date=2000&amp;rft.genre=conference&amp;rft.pages=1-10&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Chen, Michael K.; <a href="/wiki/Kunle_Olukotun" title="Kunle Olukotun">Olukotun, Kunle</a> (1998). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109/PACT.1998.727190">Exploiting Method-Level Parallelism in Single-Threaded Java Programs</a>". <i>PACT</i>. pp.&#160;176–184.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1109%2FPACT.1998.727190+Exploiting+Method-Level+Parallelism+in+Single-Threaded+Java+Programs%5D&amp;rft.au=Chen%2C+Michael+K.&amp;rft.au=Olukotun%2C+Kunle&amp;rft.btitle=PACT&amp;rft.date=1998&amp;rft.genre=conference&amp;rft.pages=176-184&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Chen, Michael K.; <a href="/wiki/Kunle_Olukotun" title="Kunle Olukotun">Olukotun, Kunle</a> (2003). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145/859618.859668">The Jrpm System for Dynamically Parallelizing Java Programs</a>". <i>ISCA</i>. pp.&#160;434–446.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1145%2F859618.859668+The+Jrpm+System+for+Dynamically+Parallelizing+Java+Programs%5D&amp;rft.au=Chen%2C+Michael+K.&amp;rft.au=Olukotun%2C+Kunle&amp;rft.btitle=ISCA&amp;rft.date=2003&amp;rft.genre=conference&amp;rft.pages=434-446&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Cintra, Marcelo; Llanos, Diego R. (2003). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145/781498.781501">Toward Efficient and Robust Software Speculative Parallelization on Multiprocessors</a>". <i>PPoPP</i>. pp.&#160;13–24.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1145%2F781498.781501+Toward+Efficient+and+Robust+Software+Speculative+Parallelization+on+Multiprocessors%5D&amp;rft.au=Cintra%2C+Marcelo&amp;rft.au=Llanos%2C+Diego+R.&amp;rft.btitle=PPoPP&amp;rft.date=2003&amp;rft.genre=conference&amp;rft.pages=13-24&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Cook, Jonathan J. (2002). "Reverse Execution of Java Bytecode". <i>The Computer Journal</i>. <b>45</b> (6): 608–619. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1093%2Fcomjnl%2F45.6.608">10.1093/comjnl/45.6.608</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=Reverse+Execution+of+Java+Bytecode&amp;rft.au=Cook%2C+Jonathan+J.&amp;rft.date=2002&amp;rft.genre=article&amp;rft.issue=6&amp;rft.jtitle=The+Computer+Journal&amp;rft.pages=608-619&amp;rft.volume=45&amp;rft_id=info%3Adoi%2F10.1093%2Fcomjnl%2F45.6.608&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Quinones, Carlos Garcia; Madriles, Carlos; Sanchez, Jesus; Marcuello, Pedro; Gonzalez, Antonio; Tullsen, Dean M. (2005). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145/1065010.1065043">Mitosis Compiler: An Infrastructure for Speculative Threading Based on Pre-Computation Slices</a>". <i>PLDI</i>. pp.&#160;269–279.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1145%2F1065010.1065043+Mitosis+Compiler%3A+An+Infrastructure+for+Speculative+Threading+Based+on+Pre-Computation+Slices%5D&amp;rft.au=Gonzalez%2C+Antonio&amp;rft.au=Madriles%2C+Carlos&amp;rft.au=Marcuello%2C+Pedro&amp;rft.au=Quinones%2C+Carlos+Garcia&amp;rft.au=Sanchez%2C+Jesus&amp;rft.au=Tullsen%2C+Dean+M.&amp;rft.btitle=PLDI&amp;rft.date=2005&amp;rft.genre=conference&amp;rft.pages=269-279&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Hu, Shiwen; Bhargava, Ravi; John, Lizy Kurian (2003). <a rel="nofollow" class="external text" href="http://www.jilp.org/vol5/v5paper14.pdf">"The Role of Return Value Prediction in Exploiting Speculative Method-Level Parallelism"</a> <span style="font-size:85%;">(PDF)</span>. <i>JILP</i>. <b>5</b>: 1–21.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=The+Role+of+Return+Value+Prediction+in+Exploiting+Speculative+Method-Level+Parallelism&amp;rft.au=Bhargava%2C+Ravi&amp;rft.au=Hu%2C+Shiwen&amp;rft.au=John%2C+Lizy+Kurian&amp;rft.date=2003&amp;rft.genre=article&amp;rft.jtitle=JILP&amp;rft.pages=1-21&amp;rft.volume=5&amp;rft_id=http%3A%2F%2Fwww.jilp.org%2Fvol5%2Fv5paper14.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Kazi, Iffat H. (2000). "<a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=931717">A Dynamically Adaptive Parallelization Model Based on Speculative Multithreading</a>". <i>Ph.D. thesis, University of Minnesota</i>. pp.&#160;1–188.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D931717+A+Dynamically+Adaptive+Parallelization+Model+Based+on+Speculative+Multithreading%5D&amp;rft.au=Kazi%2C+Iffat+H.&amp;rft.btitle=Ph.D.+thesis%2C+University+of+Minnesota&amp;rft.date=2000&amp;rft.genre=conference&amp;rft.pages=1-188&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Pickett, Christopher J.F.; Verbrugge, Clark (2005). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145/1108792.1108809">SableSpMT: A Software Framework for Analysing Speculative Multithreading in Java</a>". <i>PASTE</i>. pp.&#160;59–66.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1145%2F1108792.1108809+SableSpMT%3A+A+Software+Framework+for+Analysing+Speculative+Multithreading+in+Java%5D&amp;rft.au=Pickett%2C+Christopher+J.F.&amp;rft.au=Verbrugge%2C+Clark&amp;rft.btitle=PASTE&amp;rft.date=2005&amp;rft.genre=conference&amp;rft.pages=59-66&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Pickett, Christopher J.F.; Verbrugge, Clark (2005). "<a rel="nofollow" class="external text" href="http://www.sable.mcgill.ca/publications/papers/2005-5/pickett-05-software.pdf">Software Thread Level Speculation for the Java Language and Virtual Machine Environment</a>". <i>LCPC</i>. pp.&#160;304–318.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fwww.sable.mcgill.ca%2Fpublications%2Fpapers%2F2005-5%2Fpickett-05-software.pdf+Software+Thread+Level+Speculation+for+the+Java+Language+and+Virtual+Machine+Environment%5D&amp;rft.au=Pickett%2C+Christopher+J.F.&amp;rft.au=Verbrugge%2C+Clark&amp;rft.btitle=LCPC&amp;rft.date=2005&amp;rft.genre=conference&amp;rft.pages=304-318&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Porter, Leo; Choi, Bumyong; Tullsen, Dean M. (2009). "<a rel="nofollow" class="external text" href="http://doi.ieeecomputersociety.org/10.1109/PACT.2009.37">Mapping Out a Path from Hardware Transactional Memory to Speculative Multithreading</a>". <i>PACT</i>. pp.&#160;313–324.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdoi.ieeecomputersociety.org%2F10.1109%2FPACT.2009.37+Mapping+Out+a+Path+from+Hardware+Transactional+Memory+to+Speculative+Multithreading%5D&amp;rft.au=Choi%2C+Bumyong&amp;rft.au=Porter%2C+Leo&amp;rft.au=Tullsen%2C+Dean+M.&amp;rft.btitle=PACT&amp;rft.date=2009&amp;rft.genre=conference&amp;rft.pages=313-324&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Rundberg, Peter; Stenstrom, Per (2001). <a rel="nofollow" class="external text" href="http://www.jilp.org/vol3/rundberg-jilp.pdf">"An All-Software Thread-Level Data Dependence Speculation System for Multiprocessors"</a> <span style="font-size:85%;">(PDF)</span>. <i>JILP</i>. <b>3</b>: 1–28.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=An+All-Software+Thread-Level+Data+Dependence+Speculation+System+for+Multiprocessors&amp;rft.au=Rundberg%2C+Peter&amp;rft.au=Stenstrom%2C+Per&amp;rft.date=2001&amp;rft.genre=article&amp;rft.jtitle=JILP&amp;rft.pages=1-28&amp;rft.volume=3&amp;rft_id=http%3A%2F%2Fwww.jilp.org%2Fvol3%2Frundberg-jilp.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Steffan, J. Gregory; Colohan, Christopher; Zhai, Antonia; Mowry, Todd C. (2005). "The STAMPede Approach to Thread-Level Speculation". <i>TOCS</i>. <b>23</b> (3): 253–300. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1145%2F1082469.1082471">10.1145/1082469.1082471</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=The+STAMPede+Approach+to+Thread-Level+Speculation&amp;rft.au=Colohan%2C+Christopher&amp;rft.au=Mowry%2C+Todd+C.&amp;rft.au=Steffan%2C+J.+Gregory&amp;rft.au=Zhai%2C+Antonia&amp;rft.date=2005&amp;rft.genre=article&amp;rft.issue=3&amp;rft.jtitle=TOCS&amp;rft.pages=253-300&amp;rft.volume=23&amp;rft_id=info%3Adoi%2F10.1145%2F1082469.1082471&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Whaley, John; Kozyrakis, Christos (2005). "<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109/ICPP.2005.44">Heuristics for Profile-driven Method-level Speculative Parallelization</a>". <i>ICPP</i>. pp.&#160;147–156.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fdx.doi.org%2F10.1109%2FICPP.2005.44+Heuristics+for+Profile-driven+Method-level+Speculative+Parallelization%5D&amp;rft.au=Kozyrakis%2C+Christos&amp;rft.au=Whaley%2C+John&amp;rft.btitle=ICPP&amp;rft.date=2005&amp;rft.genre=conference&amp;rft.pages=147-156&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Jose Renau; Karin Strauss; Luis Ceze; Wei Liu; Smruti Sarangi; James Tuck &amp; Josep Torrellas (2006). <a rel="nofollow" class="external text" href="http://www.soe.ucsc.edu/~renau/docs/toppicks06.pdf">"Energy-Efficient Thread-Level Speculation on a CMP"</a> <span style="font-size:85%;">(PDF)</span>: 12.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=Energy-Efficient+Thread-Level+Speculation+on+a+CMP&amp;rft.au=James+Tuck&amp;rft.au=Jose+Renau&amp;rft.au=Josep+Torrellas&amp;rft.au=Karin+Strauss&amp;rft.au=Luis+Ceze&amp;rft.au=Smruti+Sarangi&amp;rft.au=Wei+Liu&amp;rft.date=2006&amp;rft.genre=article&amp;rft.pages=12&amp;rft_id=http%3A%2F%2Fwww.soe.ucsc.edu%2F~renau%2Fdocs%2Ftoppicks06.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Yoshizoe, Kazuki; Matsumoto, Takashi; Hiraki, Kei (1998). "<a rel="nofollow" class="external text" href="http://www.cs.cf.ac.uk/hpjworkshop/papers/okpapers/speculative.ps">Speculative Parallel Execution on JVM</a>". <i>UK Workshop on HPNC</i>. pp.&#160;1–20.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Fwww.cs.cf.ac.uk%2Fhpjworkshop%2Fpapers%2Fokpapers%2Fspeculative.ps+Speculative+Parallel+Execution+on+JVM%5D&amp;rft.au=Hiraki%2C+Kei&amp;rft.au=Matsumoto%2C+Takashi&amp;rft.au=Yoshizoe%2C+Kazuki&amp;rft.btitle=UK+Workshop+on+HPNC&amp;rft.date=1998&amp;rft.genre=conference&amp;rft.pages=1-20&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation conference">Oancea, Cosmin E.; Mycroft, Alan; Harris, Tim (2009). "<a rel="nofollow" class="external text" href="http://timharris.co.uk/papers/2009-spaa.pdf">A Lightweight In-Place Implementation for Software Thread-Level Speculation</a>". <i>SPAA '09</i>. pp.&#160;1–10.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpeculative+multithreading&amp;rft.atitle=%5Bhttp%3A%2F%2Ftimharris.co.uk%2Fpapers%2F2009-spaa.pdf+A+Lightweight+In-Place+Implementation+for+Software+Thread-Level+Speculation%5D&amp;rft.au=Harris%2C+Tim&amp;rft.au=Mycroft%2C+Alan&amp;rft.au=Oancea%2C+Cosmin+E.&amp;rft.btitle=SPAA+%2709&amp;rft.date=2009&amp;rft.genre=conference&amp;rft.pages=1-10&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<p><br /></p>
+<table class="metadata plainlinks stub" role="presentation" style="background:transparent">
+<tr>
+<td><a href="/wiki/File:LampFlowchart.svg" class="image"><img alt="Stub icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/LampFlowchart.svg/22px-LampFlowchart.svg.png" width="22" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/LampFlowchart.svg/33px-LampFlowchart.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/LampFlowchart.svg/44px-LampFlowchart.svg.png 2x" data-file-width="324" data-file-height="442" /></a></td>
+<td><i>This <a href="/wiki/Computer_science" title="Computer science">computer science</a> article is a <a href="/wiki/Wikipedia:Stub" title="Wikipedia:Stub">stub</a>. You can help Wikipedia by <a class="external text" href="//en.wikipedia.org/w/index.php?title=Speculative_multithreading&amp;action=edit">expanding it</a>.</i>
+<div class="plainlinks hlist navbar mini" style="position: absolute; right: 15px; display: none;">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Comp-sci-stub" title="Template:Comp-sci-stub"><abbr title="View this template">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Comp-sci-stub" title="Template talk:Comp-sci-stub"><abbr title="Discuss this template">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Comp-sci-stub&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1243
+Cached time: 20170913213631
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.176 seconds
+Real time usage: 0.222 seconds
+Preprocessor visited node count: 790/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 44569/2097152 bytes
+Template argument size: 1803/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 3/500
+Lua time usage: 0.120/10.000 seconds
+Lua memory usage: 4.06 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  192.279      1 -total
+ 31.64%   60.830     14 Template:Cite_conference
+ 28.62%   55.038      2 Template:Update
+ 28.18%   54.175      6 Template:Cite_journal
+ 20.34%   39.113      3 Template:Main_other
+ 18.97%   36.467      3 Template:Ambox
+  7.25%   13.939      1 Template:Comp-sci-stub
+  6.60%   12.693      1 Template:Asbox
+  3.39%    6.517      1 Template:Incomplete
+  0.79%    1.525      2 Template:SUBJECTSPACE_formatted
+-->
+</div>
+<!-- Saved in parser cache with key enwiki:pcache:idhash:8307095-0!canonical and timestamp 20170913213631 and revision id 772354267
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Speculative_multithreading&amp;oldid=772354267">https://en.wikipedia.org/w/index.php?title=Speculative_multithreading&amp;oldid=772354267</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Concurrency_control" title="Category:Concurrency control">Concurrency control</a></li><li><a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Parallel computing</a></li><li><a href="/wiki/Category:Programming_language_implementation" title="Category:Programming language implementation">Programming language implementation</a></li><li><a href="/wiki/Category:Instruction_processing" title="Category:Instruction processing">Instruction processing</a></li><li><a href="/wiki/Category:Computer_science_stubs" title="Category:Computer science stubs">Computer science stubs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Wikipedia_articles_in_need_of_updating_from_March_2017" title="Category:Wikipedia articles in need of updating from March 2017">Wikipedia articles in need of updating from March 2017</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_in_need_of_updating" title="Category:All Wikipedia articles in need of updating">All Wikipedia articles in need of updating</a></li><li><a href="/wiki/Category:Articles_with_obsolete_information_from_March_2017" title="Category:Articles with obsolete information from March 2017">Articles with obsolete information from March 2017</a></li><li><a href="/wiki/Category:Articles_to_be_expanded_from_March_2017" title="Category:Articles to be expanded from March 2017">Articles to be expanded from March 2017</a></li><li><a href="/wiki/Category:All_stub_articles" title="Category:All stub articles">All stub articles</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Speculative+multithreading" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Speculative+multithreading" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Speculative_multithreading" title="View the content page [c]" accesskey="c">Article</a></span></li>
+							<li id="ca-talk"><span><a href="/wiki/Talk:Speculative_multithreading" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Speculative_multithreading">Read</a></span></li>
+							<li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Speculative_multithreading&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Speculative_multithreading&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Speculative_multithreading" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Speculative_multithreading" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Speculative_multithreading&amp;oldid=772354267" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Speculative_multithreading&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7575343" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Speculative_multithreading&amp;id=772354267" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Speculative+multithreading">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Speculative+multithreading&amp;action=show-selection-screen&amp;coll-download-url=%2Fw%2Findex.php%3Ftitle%3DSpecial%3ABook%26bookcmd%3Drender_article%26arttitle%3DSpeculative%2Bmultithreading%26returnto%3DSpeculative%2Bmultithreading%26oldid%3D772354267%26writer%3Drdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Speculative_multithreading&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+											</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7575343#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 26 March 2017, at 20:15.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wikimediafoundation.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Speculative_multithreading&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.176","walltime":"0.222","ppvisitednodes":{"value":790,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":44569,"limit":2097152},"templateargumentsize":{"value":1803,"limit":2097152},"expansiondepth":{"value":10,"limit":40},"expensivefunctioncount":{"value":3,"limit":500},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  192.279      1 -total"," 31.64%   60.830     14 Template:Cite_conference"," 28.62%   55.038      2 Template:Update"," 28.18%   54.175      6 Template:Cite_journal"," 20.34%   39.113      3 Template:Main_other"," 18.97%   36.467      3 Template:Ambox","  7.25%   13.939      1 Template:Comp-sci-stub","  6.60%   12.693      1 Template:Asbox","  3.39%    6.517      1 Template:Incomplete","  0.79%    1.525      2 Template:SUBJECTSPACE_formatted"]},"scribunto":{"limitreport-timeusage":{"value":"0.120","limit":"10.000"},"limitreport-memusage":{"value":4259785,"limit":52428800}},"cachereport":{"origin":"mw1243","timestamp":"20170913213631","ttl":1900800,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":181,"wgHostname":"mw1325"});});</script>
+	</body>
+</html>
