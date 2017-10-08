@@ -194,62 +194,22 @@ do
     for w in `cat temp/"$filename".v1.txt`
     do
     	echo "$w"
-    done > "temp/"$filename".words.txt"
-    echo "creating copy of words.txt file: ${filename}.v2.txt"
-    # creating a new file to keep debug organization
-    cp temp/"$filename".words.txt temp/"$filename".v2.txt
+    done > "temp/"$filename".v2.txt"
+
     # treating the file, removing some more special characters
     # removing files links "file://"
     # removing real links "https://" "http://" "android-app://"
     # removing special characters starting with -,:. etc
-    echo "removing aditional characters"
-    sed -i "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" "temp/$filename.v2.txt"
+    echo "removing aditional characters from file: ${filename}.v2.txt"
+    sed -i "" "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" temp/${filename}.v2.txt
     echo ""
 
     echo "Sorting file $filename ..."
     # sorting the words for better counting algorithm
     sort "temp/$filename.v2.txt" --output="temp/$filename.sorted.txt"
 
-    #count word occurrance inside the file
-    uniq -c "temp/$filename.sorted.txt" > "temp/$filename.counted.txt"
-
-
-
-
-    # count algorithm, considering words are sorted and treated
-    # lw=""
-    # count=0
-    # first="y"
-    # for w in `cat "temp/$filename.sorted.txt"`;
-    # do
-    #     if [ $first == "y" ];
-    #     then
-    #         first="n"
-    #         lw=$w
-    #     fi
-
-    #     if [ $w == $lw ];
-    #     then
-    #         count=$((count + 1))
-    #     else
-    #         echo "$lw => $count"
-    #         count=1
-    #     fi
-
-    #     lw=$w
-    # done > "temp/$filename.counted.txt"
-    # echo ""
-    # adding the last word because of the algorithm
-    # sed -i "\$a$lw => $count" "temp/$filename.counted.txt"
-
-
-
-
-
-    # moving the final file to the right directory "statistics"
-    echo "Statistics file $filename: Generating statistics..."
-    mv "temp/$filename.counted.txt" "statistics/$filename.txt"
-    echo ""
+    #count word occurrance inside the file and moving the final file to the right directory "statistics"
+    uniq -c "temp/$filename.sorted.txt" > "statistics/$filename.txt"
 
     #remove intermediate files
     # rm -f "temp/$filename.v1.txt"
@@ -265,12 +225,6 @@ END_TIME_2=$(date +%s)
 echo "Step 2 completed at $(date) - $(($END_TIME_2 - $END_TIME_1)) seconds"
 echo
 echo "Process finished!!! $(($END_TIME_2 - $START_TIME)) seconds"
-# echo "Some temporary files were criated in the process, would you like to remove them? (y/n)"
-# read input
-# if [ $input == "y" ] || [ $input == "Y" ];
-# then
-#     rm -r temp/*
-# fi
-# echo "done :)"
+
 
 
