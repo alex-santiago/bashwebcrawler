@@ -6,7 +6,7 @@ echo "ID: 100285742"
 echo "bash web crawler"
 
 # Configuration Variables
-MAXADDRESS=305
+MAXADDRESS=10000
 filename="cloud_computing.html"
 DIRECTORY="./sites"
 
@@ -201,7 +201,10 @@ do
     # removing real links "https://" "http://" "android-app://"
     # removing special characters starting with -,:. etc
     echo "removing aditional characters from file: ${filename}.v2.txt"
-    sed -i "" "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" temp/${filename}.v2.txt
+    # version for Amazon Linux
+    sed -i "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" temp/${filename}.v2.txt
+    # version for mac OS
+    # sed -i "" "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" temp/${filename}.v2.txt
     echo ""
 
     echo "Sorting file $filename ..."
@@ -212,8 +215,8 @@ do
     uniq -c "temp/$filename.sorted.txt" > "statistics/$filename.txt"
 
     #remove intermediate files
-    # rm -f "temp/$filename.v1.txt"
-    # rm -f "temp/$filename.v2.txt"
+    rm -f "temp/${filename}.v1.txt"
+    rm -f "temp/${filename}.v2.txt"
 
 	# Moves to next item in control list
 	COUNT_CONTROL=$(( $COUNT_CONTROL + 1 ))
