@@ -109,7 +109,10 @@ do
 		filename=${filename:6}
 		url="https://en.wikipedia.org/wiki/${filename}"
 		# wget $url -O "sites/${filename}.html"
-		wget $url -q -O "sites/${filename}.html"
+		# wget $url -q -O "sites/${filename}.html"
+		# In server use curl instead of wget
+		curl -s "https://en.wikipedia.org/wiki/${filename}" > "sites/${filename}.html"
+
 		ARRAY_TEMP=($(grep -i "\(href=\"\/wiki\/\w*\"\)" "sites/${filename}.html" -o))
 		# echo ${CONTROL[$COUNT_CONTROL]}
 		# Moves to next item in control list
@@ -136,7 +139,11 @@ do
 	filename=${filename:6}
 	url="https://en.wikipedia.org/wiki/${filename}"
 	# wget $url -O "sites/${filename}.html"
-	wget $url -q -O "sites/${filename}.html"
+	# wget $url -q -O "sites/${filename}.html"
+
+	# In server use curl instead of wget
+	curl -s "https://en.wikipedia.org/wiki/${filename}" > "sites/${filename}.html"
+
 	# echo ${CONTROL[$COUNT_CONTROL]}
 	# Moves to next item in control list
 	COUNT_CONTROL=$(( $COUNT_CONTROL + 1 ))
@@ -173,23 +180,24 @@ COUNT_CONTROL=0
 while [ "$COUNT_CONTROL" -lt "$ARRAY_MAIN_LEN" ]
 do
 
+    echo "Treating file $filename: transforming from HTML to txt, separating words, removing characters..."
 	# get the start file
 	# removes href="
 	filename=$(echo ${ARRAY_MAIN[$COUNT_CONTROL]} | cut -d '"' -f 2)
 	# removes /wiki/
 	filename=${filename:6}
 
-    echo "Treating file $filename: transforming from HTML to txt..."
+    # echo "Treating file $filename: transforming from HTML to txt..."
     # using lynx to transform html file into text file to remove tags
     lynx -dump sites/"$filename".html > temp/"$filename".txt
-    echo ""
+    # echo ""
 
-    echo "Treating file $filename: removing numbers and special characters..."
+    # echo "Treating file $filename: removing numbers and special characters..."
     # treating the file, removing numbers and some special characters
     cat "temp/$filename.txt" | tr -dc "[:alpha:] \-\/\_\.\n\r" | tr "[:upper:]" "[:lower:]" > "temp/$filename.v1.txt"
-    echo ""
+    # echo ""
 
-    echo "Treating file $filename: separating words..."
+    # echo "Treating file $filename: separating words..."
     # treating the file, separating each word in a line
     for w in `cat temp/"$filename".v1.txt`
     do
@@ -200,12 +208,12 @@ do
     # removing files links "file://"
     # removing real links "https://" "http://" "android-app://"
     # removing special characters starting with -,:. etc
-    echo "removing aditional characters from file: ${filename}.v2.txt"
+    # echo "removing aditional characters from file: ${filename}.v2.txt"
     # version for Amazon Linux
     sed -i "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" temp/${filename}.v2.txt
     # version for mac OS
     # sed -i "" "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" temp/${filename}.v2.txt
-    echo ""
+    # echo ""
 
     echo "Sorting file $filename ..."
     # sorting the words for better counting algorithm
