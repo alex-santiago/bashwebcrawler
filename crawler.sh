@@ -10,9 +10,6 @@ MAXADDRESS=305
 filename="cloud_computing.html"
 DIRECTORY="./sites"
 
-echo "WMDD4950 - Security & Cloud & Server Admn"
-echo "Alexandre Santiago da Silva"
-echo "ID:100285742"
 echo
 echo "Web crawler from https://en.wikipedia.org/wiki/Cloud_computing"
 echo
@@ -194,22 +191,27 @@ do
 
     echo "Treating file $filename: separating words..."
     # treating the file, separating each word in a line
-    for w in `cat temp/"$filename".v1.txt`; do echo "$w"; done > temp/"$filename".words.txt
+    for w in `cat temp/"$filename".v1.txt`
+    do
+    	echo "$w"
+    done > "temp/"$filename".words.txt"
+    echo "creating copy of words.txt file: ${filename}.v2.txt"
     # creating a new file to keep debug organization
     cp temp/"$filename".words.txt temp/"$filename".v2.txt
     # treating the file, removing some more special characters
     # removing files links "file://"
     # removing real links "https://" "http://" "android-app://"
     # removing special characters starting with -,:. etc
+    echo "removing aditional characters"
     sed -i "s/^file\/\/.*//g; s/^https\/\/.*//g; s/^http\/\/.*//g; s/^android-app\/\/.*//g; s/^-//g; s/^-//g; s/^-//g; s/^-//g; s/-$//g; s/,$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/\/$//g; s/\.$//g; s/\.$//g; s/\.$//g; s/:$//g; s/\;$//g; /^$/d" "temp/$filename.v2.txt"
     echo ""
 
     echo "Sorting file $filename ..."
     # sorting the words for better counting algorithm
-    sort "temp/$filename.v2.txt" -o "temp/$filename.sorted.txt"
+    sort "temp/$filename.v2.txt" --output="temp/$filename.sorted.txt"
 
     #count word occurrance inside the file
-    uniq -o "temp/$filename.sorted.txt" > "temp/$filename.counted.txt"
+    uniq -c "temp/$filename.sorted.txt" > "temp/$filename.counted.txt"
 
 
 
