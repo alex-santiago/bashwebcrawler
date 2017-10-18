@@ -6,10 +6,13 @@ echo
 
 TOTAL_COUNT=0
 
+# treating uppercase words
+word=$(echo $1 | tr '[:upper:]' '[:lower:]')
+
 for file in statistics/*.txt
 do
 	echo "${file}"
-    FIND_ARRAY=(`grep " $1\>" $file`)
+    FIND_ARRAY=(`grep " $word\>" $file`)
     if [ "${FIND_ARRAY[0]}" != "" ];
     then
         echo "$file : ${FIND_ARRAY[@]}"
